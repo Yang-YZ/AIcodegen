@@ -18,7 +18,7 @@ jobs:
           node-version: 18
 
       - name: Generate AI application ideas
-        run: node scripts/ai_ideas.js
+        run: node scripts/ai_ideas.mjs
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
