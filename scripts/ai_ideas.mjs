@@ -1,4 +1,4 @@
-// scripts/ai_ideas.js
+// scripts/ai_ideas.mjs
 import fs from "fs";
 
 const prompt = `
@@ -35,14 +35,15 @@ async function callOpenAI(prompt) {
 
 (async () => {
   try {
+    if (!process.env.OPENAI_API_KEY) {
+      throw new Error("OPENAI_API_KEY is not set");
+    }
     console.log("🔹 Fetching AI ideas...");
     const ideas = await callOpenAI(prompt);
-    const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
-    const filename = `AI_IDEAS_${timestamp}.md`;
-    fs.writeFileSync(filename, ideas);
-    console.log(`✅ Wrote ${filename}`);
+    fs.writeFileSync("AI_IDEAS.md", ideas);
+    console.log("✅ Wrote AI_IDEAS.md");
   } catch (err) {
     console.error("❌ Error:", err.message);
     process.exit(1);
   }
-})();
+})(); 
