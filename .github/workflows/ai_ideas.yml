@@ -5,12 +5,17 @@ on:
     - cron: "0 14 * * *" # runs every day at 14:00 UTC
   workflow_dispatch: # allow manual run
 
+permissions:
+  contents: write
+
 jobs:
   ai_ideas:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -47,3 +52,15 @@ jobs:
             Here are today's AI application ideas:
 
             ${{ steps.read_ideas.outputs.content }}
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add AI_IDEAS.md data/idea_titles.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: append AI ideas and update titles"
+            git push
+          fi
