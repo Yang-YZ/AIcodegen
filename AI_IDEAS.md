@@ -44,3 +44,44 @@ While fractional jobs for engineers are gaining interest, many experts face inef
 - Real-time chat/video integration with WebRTC or Twilio  
 - Analytics dashboard powered by ElasticSearch or similar for usage insights  
 ```
+
+
+## 2025-08-19
+
+```markdown
+### 1. FocusFilter: AI-Driven Attention Manager for Video Platforms  
+**Description:**  
+While apps exist to simply block Shorts or Reels, FocusFilter instead intelligently analyzes your video streaming habits across platforms and identifies what content fragments cause distraction or unproductive binge patterns. It then adaptively reshapes your feed by suppressing micro-content that triggers impulsive viewing, while promoting longer-form videos aligned with your attention goals. Unlike blunt blockers, it uses personalized behavioral signals over time to create a dynamic, self-improving attention management layer that integrates directly with browsers or apps. This helps users regain control over fragmented video consumption without fully blocking content.  
+
+**Potential tech stack:**  
+- Frontend browser extensions (TypeScript, React) for Chrome/Firefox integration  
+- Backend AI service (Python, PyTorch or TensorFlow) for behavioral pattern analysis and recommendation tuning  
+- Local ML models for privacy-preserving user data processing (ONNX or TensorFlow Lite)  
+- APIs to interface with YouTube, TikTok, Instagram content feeds  
+
+---
+
+### 2. MemoMorph: Local-First Semantic Note Summarizer & Fusion for Knowledge Workers  
+**Description:**  
+Existing note-taking apps (like Obsidian Bases) focus on markdown and linking, but few adapt actively to how your knowledge evolves. MemoMorph uses local-first AI models to semantically summarize and fuse related notes, highlights, and external documents, creating evolving meta-notes that adapt as new input arrives. Unlike cloud-based summarizers, MemoMorph processes all data locally, respecting privacy, and learns your personal knowledge structure to dynamically reorganize and condense insights. It targets researchers, writers, and professionals who juggle scattered notes but want a minimal cognitive load synthesis without leaving their ecosystem.  
+
+**Potential tech stack:**  
+- Electron or native desktop app (TypeScript + Electron or Rust + Tauri)  
+- On-device transformer models optimized with ONNX Runtime or Core ML for semantic summarization  
+- Local encrypted database (SQLite + SQLCipher) to store notes and fused knowledge graphs  
+- Natural language processing pipelines (Rust/Python) for text embedding and similarity search  
+
+---
+
+### 3. GreenBot: AI-Enhanced Open Source Multi-Tool Garden Assistant  
+**Description:**  
+Building on the open hardware trend (like OpenMower), GreenBot is a modular, AI-powered garden assistant robot platform that not only mows but can identify weeds, water plants selectively, and provide real-time soil and plant health diagnostics via computer vision. Unlike single-function garden bots, GreenBot integrates extensible sensor arrays and AI modules locally to analyze plant conditions and perform multiple tasks autonomously or by remote command. It targets urban gardeners and small-scale farmers who need affordable, open source tools for precision gardening without dependency on cloud services.  
+
+**Potential tech stack:**  
+- Embedded system with ARM Cortex processors and TPU accelerator (like Tiny-tpu or Coral Edge TPU)  
+- Computer vision models for plant/weed identification (PyTorch Mobile or TensorFlow Lite)  
+- ROS (Robot Operating System) or custom middleware for modular hardware integration  
+- Mobile/web app control panel (Flutter or React Native) with offline-first capabilities  
+- Open hardware design files (KiCad) and firmware in C/C++  
+```
+
