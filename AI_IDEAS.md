@@ -85,3 +85,52 @@ Building on the open hardware trend (like OpenMower), GreenBot is a modular, AI-
 - Open hardware design files (KiCad) and firmware in C/C++  
 ```
 
+
+
+## 2025-08-20
+
+```markdown
+### 1. RepoSentry: AI-Driven Autonomous Security Auditor for Code Ecosystems
+
+**Description:**  
+While there are many tools for scanning individual repositories, there is a glaring lack of scalable, autonomous AI systems that continuously monitor large code ecosystems (e.g., millions of open-source repos) to detect subtle, evolving security vulnerabilities and suspicious activity patterns — including abnormal permission escalations or backdoors introduced via complex PR chains. RepoSentry would deploy autonomous agents that understand PR context, dependency graphs, and contributor behavior patterns across entire ecosystems, not just isolated repos. The system uses temporal analysis to detect exploitation trends and suspicious escalation patterns (like RCE attempts through chained PRs). Unlike typical static scanners, it adapts its threat models via continual learning from public exploits and community feedback, and coordinates with maintainers through natural language summaries and fix suggestions.
+
+**Potential Tech Stack:**  
+- Large Language Models (LLMs) fine-tuned on code, vulnerability databases, and dependency graphs  
+- Graph Neural Networks (GNNs) for modeling repo and contributor relationships  
+- Streaming data pipelines (Apache Kafka) for real-time PR/repo event ingestion  
+- Kubernetes for scalable autonomous agent orchestration  
+- React + Electron for a desktop dashboard interface  
+- Rust/Python for performance-heavy scanning and analysis modules  
+
+---
+
+### 2. NetProbe AI: Transparent AI-Powered Network Port Behavior Analyzer for Privacy-Conscious Users
+
+**Description:**  
+Users today often face opaque or suspicious network scanning behaviors from websites or apps (e.g., port scanning during visa application processes). Few tools help non-expert users understand exactly *why* these scans happen, flag them in real time, or contextualize the risk. NetProbe AI acts as a “network behavior translator” running locally or as a browser extension. It leverages explainable AI to detect network probing/scanning attempts by web applications and presents intuitive, jargon-free explanations about the purpose, potential risks, and mitigation strategies — empowering users to make informed privacy decisions. Unlike firewall or IDS tools, NetProbe AI focuses on transparency and education for lay users rather than just blocking traffic. It can learn from collective user-consented telemetry to improve contextual awareness of network behaviors tied to specific online services.
+
+**Potential Tech Stack:**  
+- Lightweight on-device AI models implemented in TensorFlow Lite or ONNX Runtime  
+- Browser extension frameworks (Chrome, Firefox) with native messaging for local analysis  
+- Python backend for crowdsourced data aggregation and model improvement  
+- Privacy-first data collection via federated learning pipelines (e.g., TensorFlow Federated)  
+- React Native for companion mobile app  
+- Natural language processing for generating user-friendly summaries  
+
+---
+
+### 3. FrameSculpt: AI-Powered Lightweight Video Trimming & Assembly via Text-Driven Commands within Code Editors
+
+**Description:**  
+While sophisticated video editors exist, developers and creators who work primarily in code editors (e.g., VS Code, Emacs) lack efficient and integrated tools for quick video trimming, assembly, and annotation—especially via natural language or scripted commands. FrameSculpt embeds within IDEs and allows users to trim, join, label, and craft video snippets simply by writing plain English or code-like commands, combined with preview panes rendered as ASCII or simple diagrams (similar to D2’s approach for diagrams). It automates many tedious media handling tasks in developer workflows, making video documentation, tutorials, or presentations seamless and reproducible. This approach differs from GUI-heavy editors or command-line tools by blending programmatic control, AI assistance (for frame detection, scene change), and inline documentation, ideal for tech writers, educators, and devs.
+
+**Potential Tech Stack:**  
+- Large multimodal models (e.g., video-capable LLMs or fine-tuned Vision+Language models)  
+- Integration plugins for VS Code and Emacs (TypeScript for VS Code, Emacs Lisp)  
+- FFmpeg bindings for fast video processing (via Python or Rust)  
+- Electron or webview for preview UI components  
+- Text-to-ASCII rendering libraries (like those used by D2) for visual frame summaries  
+- Node.js backend for command parsing and AI communication  
+```
+
