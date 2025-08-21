@@ -23,17 +23,16 @@ jobs:
           node-version: 18
 
       - name: Generate AI application ideas
-        run: node scripts/ai_ideas.mjs
+        id: ai_ideas
+        run: |
+          output=$(node scripts/ai_ideas.mjs)
+          echo "$output"
+          new_ideas=$(echo "$output" | awk '/::group::new_ideas/{flag=1;next}/::endgroup/{flag=0}flag')
+          echo "new_ideas<<EOF" >> $GITHUB_OUTPUT
+          echo "$new_ideas" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-
-      - name: Read AI_IDEAS.md
-        id: read_ideas
-        run: |
-          content=$(cat AI_IDEAS.md)
-          echo "content<<EOF" >> $GITHUB_OUTPUT
-          echo "$content" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Send email with ideas
         uses: dawidd6/action-send-mail@v3
@@ -51,7 +50,7 @@ jobs:
 
             Here are today's AI application ideas:
 
-            ${{ steps.read_ideas.outputs.content }}
+            ${{ steps.ai_ideas.outputs.new_ideas }}
 
       - name: Commit and push updates
         run: |
