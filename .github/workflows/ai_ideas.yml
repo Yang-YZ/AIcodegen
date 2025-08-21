@@ -26,7 +26,7 @@ jobs:
         id: ai_ideas
         run: |
           output=$(node scripts/ai_ideas.mjs)
-          new_ideas=$(echo "$output" | awk '/::group::new_ideas/{flag=1;next}/::endgroup::{flag=0}flag')
+          new_ideas=$(echo "$output" | awk '/::group::new_ideas/{flag=1;next}/::endgroup/{flag=0}flag')
           echo "new_ideas<<EOF" >> $GITHUB_OUTPUT
           echo "$new_ideas" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
