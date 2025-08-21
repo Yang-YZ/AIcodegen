@@ -151,6 +151,12 @@ function buildPrompt({ hotTopics, historyTitles }) {
     const merged = mergeTitles(history, newTitles);
     writeHistory(merged);
     console.log(`✅ Updated data/idea_titles.json with ${newTitles.length} new titles`);
+
+    // OUTPUT today's new ideas to pipeline (stdout)
+    console.log(`::group::new_ideas`);
+    console.log(block.trim());
+    console.log(`::endgroup::`);
+
   } catch (err) {
     console.error("❌ Error:", err.message);
     process.exit(1);
