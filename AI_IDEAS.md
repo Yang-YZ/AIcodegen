@@ -267,3 +267,46 @@ Facial recognition in retail is controversial and has sparked privacy lawsuitsâ€
 - Optional integration with POS and CRM systems for context-aware analysis  
 ```
 
+
+
+## 2025-08-22
+
+```markdown
+### 1. ScaleShield: Adaptive Defense AI Against Adversarial Image Scaling Attacks  
+**Description:**  
+While adversarial attacks on AI models typically focus on input manipulation or data poisoning, weaponizing image scaling introduces a subtle, underexplored attack vector that can degrade vision system performance without altering raw images perceptibly. ScaleShield uses continuous meta-monitoring of image preprocessing pipelines (especially scaling & resizing operations) combined with adaptive AI models that detect and neutralize scaling-based perturbations in real-time, preserving production AI system reliability. Unlike existing adversarial defenses focused only on model robustness or input sanitization, ScaleShield operates at the data transformation layer and learns the unique fingerprints scaling attacks leave, making it ideal for production pipelines in security-sensitive or autonomous vision contexts.
+
+**Potential tech stack:**  
+- Python, PyTorch / TensorFlow with robust adversarial training modules  
+- OpenCV + custom image preprocessing instrumentation  
+- Kubernetes for scalable deployment with Prometheus & Grafana for monitoring  
+- Rust or Go for performance-critical scaling interception layers  
+- Optional integration with AWS Lambda or cloud edge functions for distributed deployment  
+
+---
+
+### 2. TraceDocs: AI-Driven Transparent Attribution & AI Tool Disclosure Analyzer for Collaborative Documents  
+**Description:**  
+Increased mandates on AI tooling disclosure for content creation highlight the lack of tools to verify and trace AI contributions within documents, codebases, or multimedia projects. TraceDocs uniquely combines natural language processing and code analysis to automatically detect and visualize which sections of a document/code were AI-assisted or generated, while cross-referencing version control and AI tooling metadata. It empowers organizations to meet compliance, ethical, and transparency standards by producing detailed AI usage reports and audit trailsâ€”surpassing simplistic watermark or manual disclosure approaches through automated and fine-grained detection in multi-author workflows.
+
+**Potential tech stack:**  
+- NLP models fine-tuned for style-shift and generation detection (e.g., GPT-based detectors, RoBERTa)  
+- Static and dynamic code analysis tools integrated into CI/CD pipelines  
+- Electron or web UI with D3.js for interactive AI contribution visualization  
+- Backend in Node.js or Python Flask with PostgreSQL for metadata storage  
+- Git hooks & APIs for automatic versioning and change tracking  
+
+---
+
+### 3. JuniorBoost: AI-Augmented Mentorship Platform Focused on Empowering Junior Staff, Not Replacing Them  
+**Description:**  
+Echoing concerns about AI simply replacing junior employees, JuniorBoost is designed exclusively to enhance the growth and confidence of junior professionals by offering AI-facilitated mentorship, contextual learning nudges, and real-time ethical feedback during work tasks. Unlike generic AI assistants, it models human-like mentorship by combining personalized progression paths with AI-powered code review, explanatory coaching, ethical AI usage alerts, and collaborative task scaffolding, effectively reducing burnout and improving retention while preserving human oversight. This addresses the clear gap between AI automation and meaningful human development in workplaces.
+
+**Potential tech stack:**  
+- GPT-4 or similar: fine-tuned for mentorship dialogue and ethical coaching  
+- Web platform built on React + Node.js for real-time chat and collaboration  
+- Integration with IDEs via Language Server Protocol (LSP) for in-context mentoring suggestions  
+- Analytics dashboard powered by ElasticSearch + Kibana to track mentee progress  
+- OAuth / SSO integrations for enterprise adoption  
+
+```
