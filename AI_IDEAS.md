@@ -310,3 +310,45 @@ Echoing concerns about AI simply replacing junior employees, JuniorBoost is desi
 - OAuth / SSO integrations for enterprise adoption  
 
 ```
+
+
+## 2025-08-23
+
+```markdown
+### 1. ClipCascade: AI-Powered Multi-Layer Video CDN Optimization  
+**Description:**  
+While Cloudflare’s Media over QUIC CDN improves the transport layer efficiency for media streaming, ClipCascade focuses on adaptive, AI-driven CDN layer orchestration specifically for multi-bitrate streaming with fragmented, partially cached video segments. This system predicts which video chunks are most likely to be requested next at edge nodes based on real-time user engagement patterns, network conditions, and device profiles—intelligently cascading partial video fragments rather than full files. Unlike current CDNs that rely mainly on heuristics or static caching policies, ClipCascade dynamically restructures video delivery pipelines to minimize latency and bandwidth without sacrificing quality, especially useful for fragmented protocols (HLS/DASH) and emergent codec features in FFmpeg 8.0.
+
+**Potential tech stack:**  
+- AI/ML: TensorFlow or PyTorch for predictive caching and user behavior modeling  
+- Backend: Rust or Go for high-performance CDN edge services  
+- Protocols: QUIC and HTTP/3 integration  
+- Video processing: FFmpeg 8.0 APIs for real-time transcoding and fragmentation  
+- Orchestration: Kubernetes with Envoy proxy for scalability and routing  
+
+---
+
+### 2. InitSense: Context-Aware AI Supervisor for Microservices and IoT Devices  
+**Description:**  
+Inspired by minimal init systems like Nitro but addressing the rising complexity in microservice ecosystems and edge IoT deployments, InitSense is an AI-driven init and process supervisor that dynamically adapts service lifecycles based on real-time context, priority shifts, and system health signals. Unlike traditional rigid init systems or simple supervisors, InitSense predicts service dependencies, optimizes startup sequences, and proactively recovers or scales processes by learning from historical system behavior and failure patterns. This particularly helps embedded IoT or container environments where resource constraints and fluctuating workloads demand intelligent initialization and fault tolerance beyond static configs.
+
+**Potential tech stack:**  
+- AI/ML: Lightweight on-device models with TensorFlow Lite or ONNX Runtime  
+- System-level: Rust or C++ for performant and safe init logic  
+- Monitoring: eBPF tracing combined with Prometheus/Grafana for telemetry  
+- Container/Edge: Integration with Docker or K8s Kubelet lifecycle hooks  
+- Config: Declarative YAML with AI policy overlays  
+
+---
+
+### 3. ShaderTutor: Adaptive AI-Personalized Shader Learning via Interactive Challenges  
+**Description:**  
+Taking inspiration from Shader Academy’s challenge-driven learning but addressing the plateau users face with static lessons, ShaderTutor is an AI-powered interactive tutor that personalizes shader programming education by dynamically generating challenges tailored to a learner’s skill level, preferred graphic APIs (Vulkan, WebGPU), and immediate errors or misconceptions. It integrates live shader code execution with step-by-step semantic hints, real-time debugging AI, and adaptive challenge complexity adjustments. This goes beyond curated repositories and forums by offering an empathic, continuous learning companion that evolves the curriculum as the user progresses.
+
+**Potential tech stack:**  
+- AI/ML: GPT-based code explanation and error diagnosis models fine-tuned on shader languages (GLSL, HLSL, WGSL)  
+- Frontend: WebAssembly + WebGPU for in-browser shader execution and visualization  
+- Backend: Node.js or Deno with real-time websockets for challenge streaming and user state management  
+- Editor: Monaco or CodeMirror customized for shader syntax  
+- Analytics: TensorBoard or custom dashboards to track learner progress and adapt training flow  
+```
