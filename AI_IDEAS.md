@@ -685,3 +685,53 @@ Inspired by Romania’s remarkable success in international Olympiads, OlympiadA
 - Cloud GPU infrastructure (AWS/Azure with A100/H100 GPUs) for online model serving and problem generation  
 ```
 
+
+
+## 2025-08-31
+
+```markdown
+### 1. TariffTuner: AI-Enabled Dynamic Pricing & Compliance Advisor for Multi-Border SMEs
+
+**Description:**  
+Many small and medium-sized enterprises (SMEs) struggle to adapt pricing dynamically as tariffs fluctuate and cross-border regulations shift unpredictably. Unlike bulk-focused ERP plugins or static tariff lookup tools, TariffTuner continuously ingests real-time customs data, geopolitical news, supplier contract changes, and competitor pricing signals to recommend granular, product-specific price adjustments while ensuring tariff compliance and optimizing profit margins. It specifically targets SMEs lacking large pricing teams and offers scenario simulations to forecast the financial impact of potential tariff changes or trade policy announcements. This fills the underserved niche of agile, tariff-aware pricing for smaller but globally active companies.
+
+**Potential tech stack:**  
+- Real-time ETL pipeline (Apache Kafka / Apache Pulsar) to ingest customs, news, pricing APIs  
+- Transformer-based NLP for trade news and policy parsing (HuggingFace, spaCy)  
+- Time-series forecasting (Prophet, DeepAR) for tariff and price trends  
+- Reinforcement Learning for pricing strategy optimization  
+- Web dashboard (React, D3.js) + API backend (Python FastAPI)  
+- Integration with accounting/ERP systems (SAP APIs, QuickBooks SDK)
+
+---
+
+### 2. FeelFlow: AI-Powered Somatic Intelligence Coach for Virtual & Hybrid Workspaces
+
+**Description:**  
+While many emotional AI tools focus on facial expression or voice sentiment, FeelFlow emphasizes *somatic awareness* — i.e., the user's bodily sensations, posture, and breath — to guide real-time emotional regulation and cognitive load balancing during remote or hybrid meetings. It leverages low-friction input from wearable sensors (smartwatch HRV, posture sensors) and subtle computer vision to detect tension, fatigue, or overwhelm and offers personalized micro-break suggestions, breathing exercises, or postural adjustments. Unlike generic wellness or meditation apps, FeelFlow integrates deeply into digital work contexts, aiming to reduce cognitive overload and foster embodied presence without distracting users from core tasks.
+
+**Potential tech stack:**  
+- Edge ML on-device sensor data analysis (TensorFlow Lite, PyTorch Mobile)  
+- Computer vision posture evaluation (MediaPipe, OpenPose)  
+- Real-time biofeedback analytics (HRV, galvanic skin response)  
+- In-app coaching via conversational AI (OpenAI GPT + custom multimodal dialogue management)  
+- Cross-platform integration (Electron or native mobile apps)  
+- Privacy-first local data storage and model inference
+
+---
+
+### 3. ACP-Chain: Decentralized Agent Client Protocol Network for Verifiable Autonomous Collaboration
+
+**Description:**  
+The emerging Agent Client Protocol (ACP) alludes to autonomous agents interacting over decentralized infrastructures, but lacks a unified ecosystem ensuring trust, verifiability, and conflict resolution. ACP-Chain designs a decentralized, blockchain-anchored protocol network where autonomous agents transact, exchange commitments, and verify outcomes with cryptographic proofs and transparent audit trails. This goes beyond simple peer-to-peer agent messaging by introducing a ledger of agent activities, incentive-aligned dispute resolution, and interoperability standards to prevent agent manipulation or sybil attacks. ACP-Chain targets decentralized AI coordination across domains like supply chains, decentralized finance, and collective research — enabling a trust-minimized environment for AI-agent driven ecosystems.
+
+**Potential tech stack:**  
+- Layer-2 blockchain network (Cosmos SDK, Substrate/Polkadot) for scalable on-chain state  
+- Verifiable credentials (DIDs, zk-SNARKs) for agent identity & proof of action  
+- Autonomous agent runtime environments (WebAssembly VMs, Kubernetes-based agent orchestration)  
+- Decentralized messaging protocols (libp2p, Whisper)  
+- Smart contracts for escrow & dispute resolution (Solidity, Rust)  
+- Agent SDKs (Python, Rust) with protocol compliance testing suites
+
+---
+```
