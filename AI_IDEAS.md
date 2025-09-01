@@ -735,3 +735,60 @@ The emerging Agent Client Protocol (ACP) alludes to autonomous agents interactin
 
 ---
 ```
+
+
+## 2025-09-01
+
+```markdown
+### 1. CodeHomestead: Fully Air-Gapped, Owner-First AI Execution Environment for Personal Hardware
+
+**Description:**  
+While cloud AI platforms dominate because of scalability and ease, they force users to submit proprietary code and sensitive data offsite. CodeHomestead empowers developers and hobbyists to run any AI-powered code on *their own hardware* with strong air-gapping, container isolation, and resource scheduling—no cloud needed. Unlike existing on-prem AI runtimes that require heavy enterprise infra or specialized knowledge, CodeHomestead targets enthusiasts with a turnkey environment combining offline AI model deployment, safe code execution sandboxing, and automatic hardware utilization optimization. This simultaneously solves privacy concerns and frees users from dependency on remote AI providers, making AI compute truly personal and sovereign.
+
+**Potential Tech Stack:**  
+- Rust and Python for sandbox & orchestration layers  
+- WebAssembly (WASM) for portable, hardware-agnostic AI workloads  
+- Kubernetes-lite or Nomad for container/job scheduling on local machines  
+- ONNX Runtime or TensorFlow Lite for offline AI model inference  
+- Libseccomp and seccomp-bpf for syscall filtering and isolation  
+- Electron or Tauri for cross-platform user interface  
+
+---
+
+### 2. JujutsuPath: AI-Driven Personalized Martial Arts Mentor with Animated Guidance & Philosophy Integration
+
+**Description:**  
+Popular fitness apps and general exercise AI trainers lack the depth of martial arts knowledge, cultural nuance, and adaptive pedagogy needed for disciplines like Jujutsu. JujutsuPath is a dedicated AI coach that merges biomechanics, motion capture, and philosophical context to guide any user through safe, progressive Jujutsu practice at home or dojo. Unlike video tutorials or generic exercise apps, it offers:  
+- Real-time, AI-corrected posture and technique feedback via smartphone cameras  
+- Dynamic lesson paths reflecting student's physical condition, style preferences, and goals  
+- Embedded cultural stories and philosophy to enrich motivation and mindset  
+- Safe fallback advice minimizing injury risk for non-expert practitioners  
+This hybrid "martial arts tutor and sage" uniquely blends physical training with deep contextual education, democratizing access without sacrificing authenticity.
+
+**Potential Tech Stack:**  
+- TensorFlow/PyTorch for pose estimation and real-time feedback  
+- OpenPose or MediaPipe for skeleton tracking from video feed  
+- Unity or Unreal Engine for interactive 3D animated demonstrations  
+- NLP models (e.g. GPT-style) for philosophy storytelling and spadework  
+- React Native or Flutter for cross-platform mobile delivery  
+
+---
+
+### 3. QuantumCodeQuery: AI-Powered Quantum Algorithm Explainer and Hypothesis Generator for Beginner-Minded Researchers
+
+**Description:**  
+Quantum computing is mystifying and research is highly specialized, partly why even "factoring 21" with quantum advantage remains elusive. QuantumCodeQuery bridges the knowledge gap for beginners, hobbyists, and educators by providing an AI assistant that:  
+- Explains quantum algorithms and code snippets clearly in plain language  
+- Simulates small-scale quantum circuits on local classical hardware with detailed visualization  
+- Generates test hypotheses and experiment designs to probe quantum limitations (e.g. why factoring 21 hasn't been efficiently achieved)  
+- Cross-references academic literature with evolving community insights to summarize leading edge problems  
+This platform uniquely combines accessible explanation with targeted experiment ideation, fostering a broader, more informed, and curious community driving practical quantum research forward from grassroots levels.
+
+**Potential Tech Stack:**  
+- Qiskit and Cirq for quantum circuit simulation  
+- GPT-based models fine-tuned on quantum computing literature for explanations  
+- Jupyter notebook-style interactive environment with visualization (e.g., Plotly/D3.js)  
+- Flask or FastAPI backend serving hybrid classical-quantum workflows  
+- Integration with arXiv API and Semantic Scholar for automatic literature retrieval  
+```
+
