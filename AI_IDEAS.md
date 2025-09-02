@@ -792,3 +792,57 @@ This platform uniquely combines accessible explanation with targeted experiment 
 - Integration with arXiv API and Semantic Scholar for automatic literature retrieval  
 ```
 
+
+
+## 2025-09-02
+
+```markdown
+### 1. SphereScape AI: AI-Powered Procedural Adaptation for True Spherical Gaming Worlds
+
+**Description:**  
+Most “spherical Minecraft” or similar projects are limited to presenting 3D worlds on a sphere, but they rarely deal well with gameplay dynamics, AI pathfinding, physics, or world generation that naturally respects spherical topology. SphereScape AI focuses on procedurally adapting classic voxel and open-world mechanics—terrain generation, entity AI, player navigation, physics, event triggers—to continuous spherical surfaces and planetary scale, using emergent AI to translate traditional planar logic into sphere-native behaviors. This approach helps game developers and modders create genuinely immersive spherical worlds without hacking or oversimplifying core gameplay logic.
+
+Unlike current attempts that mostly wrap flat maps on spheres as a visual effect, SphereScape AI bridges AI-driven procedural content and gameplay mechanics tightly coupled with spherical geometry, making the spherical world feel natural and believable to both players and AI agents.
+
+**Potential tech stack:**  
+- Rust + WebAssembly (for performance-critical geometry and physics modules)  
+- TensorFlow / PyTorch (for emergent AI procedural adaptation models)  
+- Three.js or Babylon.js with custom shader support for spherical voxel rendering  
+- Python microservices for AI training and simulation environments  
+- Node.js + GraphQL API for modder tool integrations  
+
+---
+
+### 2. CodeRun Vault: Owner-First Secure AI Execution Environment for Arbitrary Code on Personal Devices
+
+**Description:**  
+The problem with many “run-any-code” AI platforms is that user code execution is either locked behind cloud providers, sandboxed in limited ways, or difficult to verify for security and privacy. CodeRun Vault proposes a transparent, modular, AI-enhanced local execution environment designed to allow *any* code, including AI models, scripts, or experiments, to run safely on the user’s own hardware with zero external cloud dependence.
+
+Unlike typical local IDEs or containerization tools, CodeRun Vault integrates AI monitoring, behavioral analysis, and anomaly detection in real-time to sandbox user code, auto-explain side-effects, and dynamically adjust execution permissions based on context. It prioritizes security and user data ownership without sacrificing flexibility. This is ideal for researchers, hobbyists, and developers frustrated by closed cloud AI runtimes or wanting offline-first AI experimentation.
+
+**Potential tech stack:**  
+- Rust + LLVM for low-level sandboxing and runtime security  
+- Python + AI safety frameworks like OpenAI Safety Gym for on-the-fly behavior analysis  
+- Electron or Tauri for cross-platform desktop interface  
+- Container-like tech (e.g., Wasmtime with WASI) for lightweight isolated code execution  
+- Local AI models or edge-optimized transformers for security anomaly detection  
+
+---
+
+### 3. NextEase: AI-Guided Modular Refactoring Assistant for Streamlining Complex Web Frameworks
+
+**Description:**  
+Next.js and similar meta-frameworks grow rapidly and accumulate complexity that frustrates developers, especially when upgrading, integrating with legacy code, or optimizing build behavior. NextEase is an AI-powered assistant that analyzes a codebase’s architectural pain points specific to such frameworks and generates modular, stepwise refactor plans with automated code transformations and explanations.
+
+Unlike generic code assistants, NextEase deeply models framework internals, build pipelines, custom server logic, API patterns, and deployment configurations to produce tailored refactoring recipes. It also suggests minimal, incremental scriptable fixes to reduce developer cognitive overload and frustration when confronted with opaque error messages or framework quirks.
+
+This bridges the gap between raw AI code suggestions and concrete, maintainable improvements oriented for complex Next.js projects and similar full-stack setups.
+
+**Potential tech stack:**  
+- TypeScript + Node.js for AST analysis and transformation tooling  
+- OpenAI Codex or similar LLMs fine-tuned on Next.js repo data and issues  
+- VSCode extension + CLI for interactive guidance and automated refactor application  
+- Webpack/Babel/ESBuild plugins integration for project introspection  
+- GraphQL backend for managing refactor plans, history, and user feedback loops  
+```
+
