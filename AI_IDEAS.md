@@ -846,3 +846,47 @@ This bridges the gap between raw AI code suggestions and concrete, maintainable 
 - GraphQL backend for managing refactor plans, history, and user feedback loops  
 ```
 
+
+
+## 2025-09-03
+
+```markdown
+### 1. TrustLens AI: Transparent AI Contract Analysis & Fairness Monitor  
+**Description:**  
+While Google and other tech giants face restrictions on exclusive contracts, smaller companies and regulators lack accessible tools to analyze and challenge these agreements’ fairness or anti-competitive risks. TrustLens AI offers non-experts and policy advocates an interpretable AI assistant that extracts, summarizes, and flags potentially exclusionary clauses or anti-competitive patterns from large contract datasets. Unlike existing contract analysis tools focused on legal jargon parsing or generic risk detection, TrustLens centers on market fairness and vendor diversity impact, powered by multi-party contract comparison and sector regulatory insights. This tool empowers small businesses, consumer rights groups, and regulators with actionable transparency in complex digital economy agreements.  
+
+**Potential Tech Stack:**  
+- Natural Language Processing with domain-tuned Large Language Models (LLMs) (e.g., OpenAI GPT-4 / Claude + Legal-BERT)  
+- Knowledge graph integration for contract clause mapping and cross-reference  
+- Explainable AI modules for clause impact scoring and fairness indicators  
+- React + Redux frontend for interactive, layered document exploration  
+- Python backend with FastAPI or Flask  
+- Cloud-hosted with encrypted data storage and role-based access control  
+
+---
+
+### 2. IdleWake AI: Smart Demand-Triggered Home/Server Power Manager  
+**Description:**  
+Traditional Linux home servers and edge devices either stay fully on, wasting power, or rely on coarse wake-up schedules. IdleWake AI introduces an on-demand, context-aware AI agent embedded in the home network that learns household routines, connected device needs, and cloud sync schedules to dynamically put devices into deep sleep and wake them precisely when needed — including remote usage, background tasks, or network requests. This contrasts with existing wake-on-LAN and timer-based approaches by using pattern recognition and prediction tailored to heterogeneous local devices, improving energy savings without user inconvenience or manual configuration complexity.   
+
+**Potential Tech Stack:**  
+- Edge AI inference with TensorFlow Lite or PyTorch Mobile running on Raspberry Pi / Intel NUC  
+- Combined sensor and network traffic data ingestion (via Linux netlink sockets, IoT device telemetry)  
+- Integration with system sleep states (systemd, rtcwake, ACPI) on Linux-based home servers  
+- Web dashboard built with Svelte or Vue.js for user feedback and manual overrides  
+- Optional federated learning backend for privacy-preserving continual improvement  
+
+---
+
+### 3. Social Credit Lens: AI-Powered Contextual Social Reputation Auditor  
+**Description:**  
+Recognizing that modern societies embed nuanced social credit mechanisms outside of official systems—via social media, job histories, algorithmic moderation, and financial services—Social Credit Lens is an AI tool for end-users and civil society to transparently audit and visualize their "social credit footprint." Unlike opaque score providers or isolated reputation systems, it aggregates cross-platform public data, detects unfair biases or network effects, explains factors driving reputation shifts, and simulates impact of new behaviors or disclosed data. The goal is to democratize understanding of how fragmented social credit operates in daily life and empower users to reclaim autonomy and fairness in these emergent socio-digital dynamics.  
+
+**Potential Tech Stack:**  
+- Federated data aggregation with privacy-first APIs (OAuth, GraphQL) from social media, professional platforms, and financial APIs  
+- Explainable AI modules combining network graph analytics and causal inference (e.g., causal discovery libraries like DoWhy)  
+- Interactive data visualization frameworks (D3.js, Deck.gl) for multi-dimensional credit footprint maps  
+- Cross-platform mobile app with React Native or Flutter to provide real-time alerts and suggestions  
+- Backend in Rust or Go for performance and security, hosting model inference and data processing layers  
+```
+
