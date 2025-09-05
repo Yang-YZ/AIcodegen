@@ -939,3 +939,49 @@ Smart energy management tends to focus on building- or grid-level optimization, 
 - Data backend: InfluxDB / TimescaleDB for high-frequency sensor data storage  
 ```
 
+
+
+## 2025-09-05
+
+```markdown
+### 1. WiFiVitals: AI-Enhanced Continuous Biometric Monitoring via Ambient WiFi Signals
+
+**Description:**  
+While recent studies show WiFi signals can be used to measure heart rate, WiFiVitals takes this further by enabling passive, non-contact, continuous biometric monitoring within smart homes or workplaces without specialized hardware. Unlike existing wearable- or camera-based health tracking, this system leverages the already pervasive WiFi infrastructure combined with AI-driven signal interpretation to detect not only heart rate but stress levels, breathing irregularities, and subtle motion biomarkers linked to early disease signs—addressing populations underserved by wearables (e.g., elderly, privacy-concerned users). Also, the AI adapts dynamically to environments (furniture changes, multiple occupants) for robust, privacy-first health insights without additional sensors or cameras.
+
+**Potential tech stack:**  
+- Edge computing on WiFi access points running lightweight AI models (TensorFlow Lite / ONNX Runtime)  
+- RF signal processing libraries (GNU Radio, MATLAB-inspired DSP toolkits)  
+- Python (for research prototyping) + C/C++ for embedded critical path  
+- Privacy-preserving federated learning methods for personalized model tuning  
+- Visualization dashboard web app (React + D3.js) for health data summaries and alerts
+
+---
+
+### 2. FourierForge: Interactive AI-Powered Fourier Signal Transform Exploration & Synthesis Lab
+
+**Description:**  
+Most AI tools and tutorials around Fourier Transforms are either highly academic or black-box. FourierForge is an AI-powered interactive visualization and experimentation platform explicitly designed for engineers, musicians, data scientists, and students to intuitively understand and creatively manipulate Fourier components of live signals (audio, images, network data). Unlike static demos or pure code libraries, FourierForge uses LLMs and adaptive neural interpreters to explain each transform step responsively, suggest signal alterations, and generate novel synthetic signals via inverse transforms, bridging the gap between theory and hands-on intuition. This targets underserved users who want more than scripted tutorials — a personal AI tutor/master-synthesizer that contextualizes Fourier insights in real time.
+
+**Potential tech stack:**  
+- WebAssembly + Rust for high-performance real-time Fourier computations in browser  
+- React + WebGL for dynamic, multi-dimensional interactive visualizations  
+- Integration with LLM APIs (e.g., GPT-4) for adaptive textual explanations and user Q&A  
+- Audio processing frameworks (Web Audio API) and video/image input pipelines  
+- TensorFlow.js or ONNX.js for embedded, client-side AI synthesis and analysis
+
+---
+
+### 3. SQLiteDocs: AI-Driven, Self-Queryable Documentation & Knowledge Base System Powered by Embedded Databases
+
+**Description:**  
+Inspired by the idea of using a structured embedded DB format (like SQLite) for documents, SQLiteDocs reimagines technical documentation, research papers, and collaborative knowledge as a unified, fully queryable database enriched by AI semantic layers. Unlike typical static text + search engines or LLM-powered doc assistants, SQLiteDocs stores docs as rich relational data—linking code snippets, formulas, dependencies, and explanations—and enables developers and researchers to issue natural language or structured SQL-like queries enhanced by AI understanding. This allows deep, context-aware exploration, cross-document analytics, and versioned knowledge evolution, targeting teams struggling with brittle or fragmented docs and enabling embedded AI agents to autonomously update or reconcile knowledge with live project state.
+
+**Potential tech stack:**  
+- SQLite or DuckDB as embedded knowledge base backend  
+- AI semantic indexing & embedding layers via OpenAI / HuggingFace models  
+- Natural language to SQL query translation powered by specialized LLM fine-tuning  
+- Electron or Tauri for cross-platform desktop app integration with IDEs and note tools  
+- Graph visualization libraries (Cytoscape.js, Neo4j Bloom) for relational knowledge mapping  
+- APIs for syncing with live codebases, issue trackers, and continuous integration pipelines
+```
