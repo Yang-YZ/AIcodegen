@@ -1271,3 +1271,47 @@ Inspired by emerging “desktop without graphics” and textual UI environments 
 
 ---
 ```
+
+
+## 2025-09-12
+
+```markdown
+### 1. FoldEase AI  
+**Description:**  
+With foldable devices gaining prominence and Samsung overtaking Apple by leveraging foldables, FoldEase AI focuses on adaptive UX/UI design that dynamically optimizes app interfaces based on fold state, hinge position, and user habits—tailored not just for developers but for end users through on-device personalization. Unlike existing responsive frameworks that handle only screen size and orientation, FoldEase AI learns individual usage patterns and physical device behaviors (e.g., partial folds, flex angles) to proactively suggest or auto-apply interface transformations, enabling seamless multitasking and ergonomic use. This targets an underserved problem: the lack of user-centric, context-aware foldable UX tools adaptable on-the-fly without developer intervention for millions of existing apps.
+
+**Potential tech stack:**  
+- On-device ML: TensorFlow Lite, Core ML, or MediaPipe for sensor data interpretation  
+- Frontend: React Native/Figma plugins with FoldEase API integrations  
+- Device API hooks: Android Jetpack WindowManager, iOS UIKit (multi-window + folding sensor access)  
+- Cloud sync: Firebase/Google Cloud PubSub for cross-device UX preferences  
+- Data privacy: Differential privacy libraries and federated learning frameworks  
+
+---
+
+### 2. GitSanity AI  
+**Description:**  
+Amid concerns about "Git history leaks" skewing top model benchmarks in software evaluations, GitSanity AI automatically inspects, sanitizes, and reshapes software repositories before they are used in training or benchmarking. Differing from manual or heuristic-based scrubbing tools, it uses intelligent code provenance analysis and semantic change detection to detect "leak risks" such as inadvertent inclusion of benchmarks, test results, or vendor-specific metadata. It further generates sanitized forks preserving semantic integrity but obfuscating overfit-prone artifacts. This supports fairer, reproducible machine learning benchmarks and open-source evaluations—especially in large-scale industry/academic collaborations where code provenance contamination remains under-addressed.
+
+**Potential tech stack:**  
+- Static/Dynamic code analysis: tree-sitter, LLVM, CodeQL  
+- ML models: Graph neural networks (GNNs) for semantic similarity and provenance detection  
+- Backend: Python (FastAPI), Rust for high-performance repo processing  
+- Storage: GitHub/GitLab integrations, IPFS for decentralized fork storage  
+- Collaboration: GitHub Actions and pre-commit hooks  
+
+---
+
+### 3. LiveLingua Pods  
+**Description:**  
+Addressing the gap created by EU restrictions blocking AirPods live translation for users with EU Apple IDs, LiveLingua Pods is a cross-manufacturer, privacy-first AI-powered live translation ecosystem for wireless earbuds. Unlike platform-locked or server-heavy live translation apps, it performs on-device low-latency speech-to-speech translation customized per earbud model (including open Bluetooth protocols). It dynamically adapts translations depending on the conversation context and supports multi-party interactions with selective noise suppression. By abstracting hardware dependency and incorporating user consent & privacy controls, LiveLingua Pods empowers EU users and others globally with immediate, seamless multilingual conversations independent of vendor-imposed account restrictions.
+
+**Potential tech stack:**  
+- On-device ASR and TTS: Whisper.cpp-based customized models, Edge TPU acceleration  
+- Bluetooth LE protocols and custom firmware integration for earbuds (e.g., Nordic nRF SDK)  
+- ML framework: ONNX Runtime, TensorFlow Lite Micro  
+- Privacy: Encrypted local caches, zero-knowledge consent layers  
+- Cross-platform mobile apps: Flutter or React Native for real-time UI and settings controls  
+- Backend (optional): Encrypted cloud sync for user profiles & personalized language models  
+```
+
