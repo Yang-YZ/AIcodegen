@@ -2064,3 +2064,54 @@ With pig organ transplants now experimentally viable, there’s a massive gap in
 - Interactive web app with React and Plotly/D3.js for visualization of predictions and scenarios  
 ```
 
+
+
+## 2025-09-29
+
+```markdown
+### 1. PrivacyBubble AI  
+**Description:**  
+Many users face a tradeoff between sharing hobby or personal videos on popular platforms and preserving privacy—either because of pervasive tracking, unwanted audience exposure, or platform censorship. PrivacyBubble AI is an end-to-end smart video locker and obfuscation assistant that:  
+- Automatically detects personally identifiable data (faces, locations, voices) and suggests in-video obfuscation (blurring, audio masking) tailored to the user’s privacy comfort level.  
+- Provides ephemeral, peer-to-peer encrypted sharing options with fine-grained access control, avoiding centralized platforms entirely.  
+- Integrates lightweight AI-powered summary and highlight creation so users can share “safe” glimpses without revealing raw footage.  
+  
+Unlike conventional privacy tools or platform features, PrivacyBubble AI gives users granular, AI-driven dynamic masking shaped by personal privacy preferences and enables frictionless decentralized sharing without losing social connectivity.  
+  
+**Potential Tech Stack:**  
+- Computer Vision: TensorFlow / PyTorch (face/scene/audio recognition)  
+- Privacy-preserving Federated Learning for AI personalization  
+- End-to-end encryption with libsodium or Web Crypto API  
+- Decentralized storage/sharing: IPFS, WebRTC peer-to-peer communication  
+- React or Flutter frontend for cross-device usability  
+
+---
+
+### 2. CodeTaste AI  
+**Description:**  
+"Good taste" in software engineering is subjective and rarely codified beyond style guides. CodeTaste AI aims to fill that gap by providing personalized, adaptive coding style and architectural feedback that aligns with an individual developer’s skill level, domain, and team culture. Unlike static linters or opinionated style checkers, CodeTaste learns from the codebases and reviews a user interacts with and extrapolates nuanced preferences around readability, maintainability, idiomatic usage, and complexity.  
+  
+It offers evolving, context-aware suggestions—not just about syntax but about design patterns, modularity, naming, and technical debt risks—fostering a dynamic apprenticeship experience. It also helps teams converge on a "taste standard" by aggregate style profiling and conflict detection over time.  
+  
+**Potential Tech Stack:**  
+- Language models fine-tuned on codebases with labeled style and design metadata (OpenAI Codex / GPT + proprietary training)  
+- Static code analysis with Tree-sitter / Language Server Protocol hooks  
+- Graph databases (Neo4j) for architecture and dependency pattern mining  
+- Web app with VSCode plugin integration and collaborative dashboards (React + Node.js)  
+
+---
+
+### 3. Bayesian Query Optimizer AI (BayesQ AI)  
+**Description:**  
+Data scientists and analysts often wrestle with large datasets and complex queries whose performance fluctuates wildly depending on data distribution shifts and usage patterns. BayesQ AI introduces a principled Bayesian optimization framework that adaptively learns query runtime distributions, data latency, and caching effectiveness to dynamically reconfigure query execution plans (across SQL, NoSQL, and graph databases).  
+  
+Unlike traditional rule-based optimizers or ML models limited to fixed heuristics, this system offers continuous uncertainty quantification about performance and incremental improvement suggestions. It supports exploratory “what-if” query tuning with probabilistic outcomes, bridging the gap between black-box auto-tuning and human-expert-guided refinement.  
+  
+**Potential Tech Stack:**  
+- Probabilistic programming: PyMC3 / Edward2 / Stan  
+- AutoML frameworks combined with query engine hooks: Apache Calcite, PostgreSQL extension  
+- Data visualization via D3.js or ObservableHQ notebooks for real-time feedback  
+- Backend orchestration with Python + Rust for performance-critical components  
+  
+---
+```
