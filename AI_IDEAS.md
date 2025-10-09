@@ -2523,3 +2523,46 @@ Building on the idea of personal data timelines but extending well beyond passiv
 - Modern frontend: React or Svelte with offline support (PWA)  
 - Integration APIs for popular platforms (Google Photos, Gmail, Twitter) with user permission model  
 ```
+
+
+## 2025-10-09
+
+```markdown
+### 1. ModeratorIQ AI  
+**Description:**  
+A specialized AI toolkit designed to empower online community moderators (Reddit, Discord, forums) by detecting tactic-driven manipulations and subtle power plays — such as coordinated moderator takeovers, vote brigading, or narrative hijacking. Unlike broad content moderation bots, ModeratorIQ focuses on the *structural dynamics* and *community governance patterns*, identifying emerging risks to community governance health before they escalate, using graph neural networks and behavioral anomaly detection. It also offers ethical coaching and automated recommendation pipelines tailored to each platform’s unique rules, blending human diplomacy with AI-assisted forensic community stewardship. This targets underserviced mid-sized communities vulnerable to influence campaigns, rather than massive networks with robust moderation resources.  
+
+**Tech stack:**  
+- Backend: Python, TensorFlow / PyTorch (GNN + anomaly detection models)  
+- Data pipelines: Apache Kafka for real-time event streaming  
+- Frontend: React + Typescript dashboard with interactive graph visualizations (D3.js, Cytoscape.js)  
+- Integration: Platform APIs (Reddit, Discord, Discourse, etc.) plus custom browser extensions for moderator alerts  
+- Deployment: Kubernetes cluster with auto-scaling, supported by MLflow for model lifecycle  
+
+---
+
+### 2. ARMGuard AI  
+**Description:**  
+An AI-driven compiler assistant aimed specifically at developers writing and debugging code targeting ARM64 architectures, to reduce subtle hardware/compiler bugs like the one recently found in Go's ARM64 compiler. Unlike general-purpose static analyzers or broad LLM coding assistants, ARMGuard deeply models ARM64 microarchitectural behaviors and compiler backend transformations to predict undefined behaviors, timing hazards, and register allocation conflicts at the code snippet level. It also simulates performance regressions and provides targeted patch suggestions. This tool fills a niche for embedded, mobile, and edge developers tackling increasingly complex ARM64 environments with minimal IDE support or detailed hardware simulators available.  
+
+**Tech stack:**  
+- Models: Custom Transformer trained on ARM64 assembly + compiler IR (LLVM/Go) using masked token prediction and anomaly detection  
+- Backend: LLVM + Go compiler plugin integration, with Rust bindings for performance-critical analysis  
+- Frontend: VSCode / JetBrains IDE plugin for inline warnings and suggestions  
+- Simulation: QEMU-based ARM64 sandbox augmented with ML-powered speculative tracing  
+- Cloud: Serverless inference on AWS Lambda / GCP Cloud Run for scalable batch analyses  
+
+---
+
+### 3. IDSafe AI  
+**Description:**  
+A consumer-focused AI agent embedded in popular communication platforms (messengers, social apps) that proactively detects, redacts, and warns users before they share sensitive identity data (photos of government IDs, passports, social security cards) — even if unintentionally via screenshots, file uploads, or embedded images. Different from existing DLP (data loss prevention) systems which target enterprises, IDSafe AI uniquely operates on-device with real-time privacy-first image recognition, leveraging few-shot learning to adapt to new ID formats worldwide without compromising UX. It also educates users on privacy risks with tailored nudges and can optionally encrypt/redact or anonymize IDs before sending, filling the growing gap of privacy for end users in social media and chat apps vulnerable to large-scale leaks.  
+
+**Tech stack:**  
+- On-device ML: TensorFlow Lite or Apple's CoreML with vision transformer models fine-tuned for document detection  
+- Privacy: Differential privacy methods + federated learning for continuously improving detection without raw data exposure  
+- Integration: Plugins or SDKs for major messaging platforms (WhatsApp, Signal, Telegram) and social networks  
+- Cloud: Encrypted cloud backend for consented data sync and model updates  
+- Frontend UX: Native mobile UI components with accessibility and localized privacy education content  
+```
+
