@@ -2974,3 +2974,46 @@ Focused on the problem of lost interdisciplinary insights trapped in domain-spec
 - Infrastructure: GPU clusters for model training; ETL pipelines on Apache Spark or Apache Beam for large-scale data harmonization  
 ```
 
+
+
+## 2025-10-19
+
+```markdown
+### 1. MemDepth AI  
+**Description:**  
+Inspired by the discovery of an intact $62 SanDisk memory card deep underwater on the Titan submersible wreckage, MemDepth AI is designed to recover, reconstruct, and interpret fragmented or corrupted data from extremely harsh environments—underwater, space, disaster zones—where hardware is often damaged but some digital traces survive. Unlike typical data recovery tools that assume standard file system conditions, MemDepth AI leverages physical environment data, device wear patterns, and probabilistic file reconstruction based on semantic context (photos, logs, sensor data) to maximize retrieval from marginal storage media. It also predicts data relevance to help prioritize forensic investigations. This targets investigative teams, archeologists, and disaster responders facing partial data loss under extreme conditions.
+
+**Potential tech stack:**  
+- Deep learning models for semantic file reconstruction (PyTorch, TensorFlow)  
+- Physics-based wear & damage simulation modules  
+- Data forensics frameworks (e.g., SleuthKit integration)  
+- Edge-device integration for field data processing (Rust, C++)  
+- Cloud-based post-processing & result visualization (AWS/GCP, React)  
+
+---
+
+### 2. RootSight AI  
+**Description:**  
+RootSight AI focuses on detailed, personalized plant root system analysis through 3D imaging and AI-driven structural modeling, breaking away from superficial plant phenotyping common in agriculture and ecology. Current approaches largely focus on above-ground traits due to imaging limitations; RootSight combines ground-penetrating sensors, microscopic imaging, and AI to create time-lapse 3D root growth models with functional insights like nutrient uptake, stress responses, and soil interaction. This serves agricultural scientists, horticulturists, and environmentalists aiming to optimize crop resilience, soil health, and sustainable farming without destructive sampling, filling a gap between basic root imaging and actionable agronomic data.
+
+**Potential tech stack:**  
+- Multi-modal sensor fusion (GPR, X-ray CT, MRI data)  
+- 3D reconstruction & point cloud processing (Open3D, PCL)  
+- Graph neural networks for root structure & function modeling (DGL, PyTorch Geometric)  
+- Time series analysis for growth prediction  
+- Web visualization dashboard (Three.js, D3.js)  
+
+---
+
+### 3. EchoMap AI  
+**Description:**  
+Drawing inspiration from tinnitus neuromodulation and the challenges of managing chronic auditory conditions, EchoMap AI is a personalized auditory environment mapper and modulator aimed at people suffering from tinnitus or hyperacusis. Unlike generic sound therapy apps, EchoMap combines real-time ambient sound analysis, personalized ear sensitivity profiling, and neuromodulatory pattern generation to deliver custom soundscapes that adapt dynamically to the environment and user’s neurological feedback. It goes beyond static noise masking by integrating biofeedback (heart rate variability, EEG via wearables) and contextual neural stimulus patterns to reduce auditory discomfort and foster long-term symptom relief, targeting an underserved segment with few adaptive, scientifically guided solutions.
+
+**Potential tech stack:**  
+- Real-time audio signal processing and classification (Python Librosa, Web Audio API)  
+- Biofeedback collection via wearables (Bluetooth integration, BLE protocols)  
+- Adaptive neural pattern generation (reinforcement learning, TensorFlow Lite for mobile)  
+- Mobile app & wearable integration (Flutter, Swift/Kotlin)  
+- Cloud-based user profile & progression analytics (Firebase, AWS Lambda)  
+```
+
