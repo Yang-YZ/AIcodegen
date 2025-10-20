@@ -193,5 +193,8 @@
   "Archaios AI",
   "MemDepth AI",
   "RootSight AI",
-  "EchoMap AI"
+  "EchoMap AI",
+  "OutageSentinel AI",
+  "ElevateLearn AI",
+  "DebrisGuard AI"
 ]
