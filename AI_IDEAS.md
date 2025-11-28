@@ -4842,3 +4842,49 @@ This directly addresses niche but critical user groups in education, research, a
 - Web-based IDE / dashboard for interactive patch review and deployment
 ```
 
+
+
+## 2025-11-28
+
+```markdown
+### 1. LensSentinel AI  
+**Description:**  
+An AI-powered privacy assistant specifically designed to detect, alert, and mitigate unauthorized smart-glass camera usage in public or sensitive spaces. Unlike existing hardware-only detectors or passive warning signs, LensSentinel combines real-time video analysis with context-aware behavioral AI to identify subtle camera activation patterns and potential surveillance risks, including from emerging smart-glass models that hide active indicators. It dynamically adapts detection heuristics via federated learning from global anonymized datasets, enabling faster response against novel device signatures without compromising bystander privacy. The tool targets privacy advocates, venues with strict no-recording policies, and individuals seeking hands-free, automated privacy protection.
+
+**Potential tech stack:**  
+- Edge AI inference with lightweight CNN models (e.g., TensorFlow Lite, ONNX Runtime)  
+- Federated learning framework (e.g., Flower or PySyft)  
+- Real-time video capture via OpenCV or GStreamer  
+- Mobile app integration (iOS/Android with React Native or native Swift/Kotlin)  
+- Privacy-preserving analytics and encrypted model update pipelines  
+- Optional hardware integration for audible/vibrational alerts  
+
+---
+
+### 2. SandGrid AI  
+**Description:**  
+An intelligent energy scheduling and management AI focused on integrating large-scale, low-cost thermal energy storage solutions like "sand batteries" into local microgrids and distributed renewable networks. SandGrid AI optimizes charging, discharging, and energy distribution by predicting demand, weather, and grid conditions using advanced reinforcement learning—distinct from existing battery or grid management software that primarily target chemical batteries. It fills a gap for emerging “thermal batteries” and hybrid energy assets, enabling better renewables integration, grid stability, and cost savings. Ideal for municipalities, smart cities, and renewable infrastructure operators looking to leverage novel solid-state storage tech.
+
+**Potential tech stack:**  
+- Time-series forecasting with Transformer models or LSTMs (PyTorch, TensorFlow)  
+- Reinforcement learning frameworks like RLlib or Stable Baselines3  
+- Microgrid simulation environments (e.g., GridLAB-D, OpenDSS)  
+- Cloud-based control dashboards with React/Node.js or Flask/Django  
+- IoT integration protocols (MQTT, OPC-UA) for real-time device telemetry and control  
+- GIS mapping for asset visualization  
+
+---
+
+### 3. ChainGuard AI  
+**Description:**  
+A supply-chain-aware, open-source AI auditor designed to proactively detect, analyze, and explain risks in JavaScript NPM dependencies and software supply chains at development time. Unlike traditional static scanners or signature-matching tools, ChainGuard AI employs explainable AI models to identify suspicious patterns such as dependency confusion, unexpected code injection, and subtle behavioral anomalies in dependencies—helping developers preempt widespread attacks like recent supply chain compromises. It also provides actionable remediation advice and integrates into CI/CD pipelines, filling a critical gap for dynamically evolving language ecosystems and fast-moving open source projects with complex dependency graphs.
+
+**Potential tech stack:**  
+- Static and dynamic code analysis engines (ESLint plugins, Babel AST parsers)  
+- Graph neural networks (GNNs) for dependency graph anomaly detection (DGL, PyTorch Geometric)  
+- Explainable AI frameworks (LIME, SHAP) to surface risk factors  
+- Integration with GitLab/GitHub Actions or Jenkins pipelines  
+- Web frontend with Vue.js or React for vulnerability dashboards  
+- Containerized microservices in Docker/Kubernetes for scalable audit workloads  
+```
+
