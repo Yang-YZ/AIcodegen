@@ -4888,3 +4888,49 @@ A supply-chain-aware, open-source AI auditor designed to proactively detect, ana
 - Containerized microservices in Docker/Kubernetes for scalable audit workloads  
 ```
 
+
+
+## 2025-11-29
+
+```markdown
+### 1. **FlightData Integrity AI**
+
+**Description:**  
+With growing concerns about intense solar radiation corrupting critical flight data (e.g., Airbus A320 scenario), FlightData Integrity AI focuses on proactively detecting and correcting radiation-induced anomalies in real-time avionics telemetry and sensor streams. Unlike existing flight data monitoring systems that mostly flag faults post-flight or rely on static thresholds, this AI uses adaptive multi-sensor fusion combined with radiation exposure modeling and predictive error correction to maintain trustworthy data streams. It targets medium-to-small commercial aircraft and regional operators lacking sophisticated hardware hardening, helping reduce false alarms, downtime, and improve in-flight safety margins.
+
+**Potential tech stack:**  
+- Real-time streaming analytics (e.g., Apache Flink or Kafka Streams)  
+- Multi-modal sensor fusion with deep learning (PyTorch/TensorFlow)  
+- Physics-informed neural networks modeling solar radiation effects  
+- Edge computing components embedded in avionics systems (C++/Rust)  
+- Aerospace-grade time-series anomaly detection frameworks
+
+---
+
+### 2. **Local RAG Enhancer AI**
+
+**Description:**  
+While retrieval-augmented generation (RAG) has gained popularity, truly private and on-device RAG solutions remain clunky and heavy, especially for individual researchers or small teams working with sensitive datasets offline. Local RAG Enhancer AI creates a lightweight modular framework that dynamically optimizes document embeddings, query strategies, and hybrid neural-symbolic reasoning tailored specifically to enforce privacy, reduce compute, and improve relevance without cloud dependence. It includes a “privacy-first” knowledge update pipeline that incorporates new info without full retraining or costly re-indexing. This differs from large-scale RAG systems by focusing on user-led customization, incremental learning, and offline-friendly architecture.
+
+**Potential tech stack:**  
+- ONNX or TensorFlow Lite for lightweight LLM and embedding models  
+- Faiss + hybrid symbolic rule engine integration  
+- Rust/Python for orchestration layer and privacy enforcement  
+- Secure enclave or trusted execution environment support for data protection  
+- Incremental vector database updates with SQLite/LMDB backends
+
+---
+
+### 3. **AdSneak AI**
+
+**Description:**  
+With OpenAI reportedly preparing to insert ads into ChatGPT, an underserved user group is privacy-conscious productivity tool users and researchers who want to identify, contextualize, and filter AI-generated ads or sponsored content dynamically. AdSneak AI is a browser and app plugin that leverages on-the-fly user-intent detection combined with semantic ad-spotting within AI conversation outputs and related UI. It surfaces ad content transparently, offers customizable filtering levels, and suggests less intrusive user experiences or alternatives. Unlike typical ad-blockers that rely on URL/domain blacklists, AdSneak integrates deep NLP classifiers and contextual reasoning specific to conversational AI advertising, tackling emerging ad formats seamlessly.
+
+**Potential tech stack:**  
+- Browser extension APIs (Chromium, Firefox) + Electron for desktop apps  
+- Transformer-based NLP ad/classifier models fine-tuned on AI-generated text datasets  
+- Reinforcement learning-based intent detection  
+- Local proxy/interceptor with privacy-focused architecture  
+- React or Vue for rich interactive UI controls and feedback loops
+```
+
