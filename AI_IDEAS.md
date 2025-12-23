@@ -6008,3 +6008,46 @@ With surging interest in volumetric and next-gen interactive content (like Disne
 
 ---
 ```
+
+
+## 2025-12-23
+
+```markdown
+### 1. GhostLens AI  
+**Description:**  
+Many surveillance systems now expose AI-powered cameras, creating privacy risks and data leaks (e.g., the Flock incident). GhostLens AI is a privacy-first, decentralized AI layer that automatically detects and masks human subjects and sensitive personal items *in real-time* on any network-exposed camera feed—without requiring access to original video storage or centralized cloud processing. Unlike common anonymization tools that act post-capture or require centralized models, GhostLens AI runs lightweight, federated AI agents on edge devices or connected home routers, collaboratively training and updating with encrypted data. This approach enables community-driven privacy protection that scales securely and respects user autonomy, especially in IoT-heavy environments without homogeneous trust.  
+
+**Potential Tech Stack:**  
+- Federated learning frameworks (e.g., TensorFlow Federated, Flower)  
+- Lightweight on-device vision models (MobileNet variants, EdgeTPU)  
+- End-to-end encrypted communication (MLS or Noise Protocol)  
+- Embedded Linux/RTOS integration for consumer routers and smart cameras  
+- Secure enclave capabilities (e.g., ARM TrustZone) for privacy guarantees  
+
+---
+
+### 2. CodeWhisper Architect  
+**Description:**  
+While advanced LLMs like Claude Code or GLM-4.7 target code writing, there's a lack of AI that comprehensively understands *large, heterogeneous, polyglot codebases* with mixed paradigms (functional, OOP, procedural) and extensive legacy dependencies. CodeWhisper Architect uses hierarchical, multi-modal representation learning combining static code graph embeddings, dynamic execution traces, and developer-written documentation to build an evolving "project mental model." It provides context-aware design refactoring suggestions, architectural impact forecasts, and automated integration of multi-language API contracts. Unlike existing single-language or snippet-focused AI assistants, this is for architects and lead devs managing sprawling, multi-repo systems.  
+
+**Potential Tech Stack:**  
+- Graph Neural Networks for code structure (e.g., DGL, PyG)  
+- Transformer-based multi-modal models (text+code+trace) fine-tuned on large polyglot corpora  
+- Static/dynamic analysis tooling (e.g., LLVM, JVM TI, tracing frameworks)  
+- Microservice-based backend for API contract synthesis (e.g., OpenAPI extraction)  
+- Integration with developer tools (VS Code extensions, CI/CD platforms)  
+
+---
+
+### 3. SonoOnco AI  
+**Description:**  
+Advances in ultrasound cancer treatments suggest non-invasive, localized tumor targeting without debilitating side effects. SonoOnco AI is an adaptive treatment planner that integrates tumor imaging, ultrasound parameters, and patient-specific biophysical models to optimize applicator positioning and ultrasound emission patterns in real time. Unlike existing plans that rely on static protocols or expert heuristics, SonoOnco AI continuously learns from ongoing treatment feedback loops (imaging, thermal, bio-markers) to dynamically tune parameters for maximal tumor ablation while sparing healthy tissue. This closes the gap between AI diagnostic imaging and physically guided ultrasound therapy, empowering personalized oncology interventions.  
+
+**Potential Tech Stack:**  
+- Medical imaging AI (3D CNNs on MRI/ultrasound fusion data)  
+- Biophysical simulation engines (finite element models of tissue ultrasound response)  
+- Reinforcement learning for adaptive parameter tuning  
+- Edge computing for real-time control interfacing with ultrasound hardware  
+- HIPAA/GDPR-compliant secure cloud infrastructure for clinical data aggregation and continuous learning  
+```
+
