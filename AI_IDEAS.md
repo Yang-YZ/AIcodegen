@@ -6405,3 +6405,50 @@ Current climate AI research mostly emphasizes prediction, simulation, or data ag
 - Client apps built in React Native or Progressive Web App (PWA) format for wide accessibility  
 ```
 
+
+
+## 2026-01-01
+
+```markdown
+### 1. MindClear AI  
+**Description:**  
+Building on recent breakthroughs in unlocking the brain’s natural cleanup systems, MindClear AI targets neurorehabilitation beyond stroke recovery. It provides personalized, adaptive cognitive and physical therapy plans by merging brain imaging, real-time biomarker monitoring, and AI-driven neurofeedback. Unlike generic rehab apps or devices, MindClear AI continuously analyzes a patient’s brain health trajectory and dynamically reprograms interventions, combining non-invasive brain stimulation patterns with lifestyle guidance to enhance neuroplasticity and recovery. Its underserved niche is patients with mild traumatic brain injury, early neurodegenerative conditions, or post-intensive care cognitive dysfunction, who often lack tailored, data-driven care that adapts as their brain heals.
+
+**Potential tech stack:**  
+- Multimodal data ingestion: fMRI, EEG, wearable biosensors (e.g., Oura Ring, Muse)  
+- Machine learning: Temporal deep learning (LSTMs, Transformers) for brain state prediction  
+- Reinforcement learning for personalized intervention scheduling  
+- Cloud platform with GPU acceleration (AWS/GCP/Azure) for real-time analysis  
+- Mobile app with AR-driven neurofeedback exercises  
+- Privacy-preserving federated learning for cross-patient model improvement  
+
+---
+
+### 2. PopUpControl AI  
+**Description:**  
+In response to the new reality where web browsers have stopped blocking pop-ups by default, PopUpControl AI is a privacy-first, user-centric AI assistant that dynamically manages and prioritizes pop-up content instead of outright blocking it. Unlike traditional ad-blockers or popup blockers that operate with rigid blacklists or block everything, this AI evaluates pop-ups for user relevance, potential security risks, and interaction patterns in real time. It then curates a non-intrusive “popup digest” or intelligently filters out “pop-under” windows while preserving legitimate, beneficial notifications. It serves users who want control over pop-ups without losing important alerts or context, common in e-commerce or SaaS platforms.
+
+**Potential tech stack:**  
+- Browser extension built on Chromium / Firefox WebExtension APIs  
+- Real-time NLP classifiers (BERT-style models) to parse popup content intent  
+- Anomaly detection models for security risk assessment  
+- Edge ML inference for latency-sensitive processing  
+- Lightweight local sandboxing for suspicious popups  
+- React/TypeScript front-end for controlling preferences and viewing digests  
+
+---
+
+### 3. OrbitOps AI  
+**Description:**  
+Inspired by the ongoing space tech renaissance but addressing a gap left by high-level spacecraft design rules (e.g., Akin’s Laws), OrbitOps AI targets satellite constellation operators and smallsat OEMs with an autonomous, continuous orbital operations assistant. Unlike existing tools that mostly focus on design or simulation before launch, OrbitOps AI integrates live satellite telemetry, collision avoidance, space weather forecasts, and ground station scheduling into a predictive operations dashboard. It automates orbital slot negotiations, dynamically adapts mission plans under disruptions (e.g., solar storms, debris clouds), and suggests optimal laser-based anti-drone defense protocols inspired by Iron Beam tech for on-orbit threats. It’s a first mover in AI-driven real-time satellite fleet resilience and operational agility.
+
+**Potential tech stack:**  
+- Real-time telemetry ingestion pipelines (Kafka, MQTT)  
+- Time series forecasting with attention-based models / Spatiotemporal GNNs  
+- Integration with public SSA (Space Situational Awareness) data APIs  
+- Reinforcement learning for adaptive mission replanning  
+- Secure cloud orchestration with Kubernetes + WASM plugins for custom modules  
+- Web-based dashboard with WebGL visualization for 3D orbital maps  
+- APIs for interfacing with laser/weapon control software for threat mitigation  
+
+```
