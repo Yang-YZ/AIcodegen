@@ -7033,3 +7033,50 @@ Inspired by the creative chaos of “1000 Blank White Cards,” this application
 - Deployment: Containerized with Kubernetes or serverless architecture (AWS Lambda)  
 ```
 
+
+
+## 2026-01-15
+
+```markdown
+### 1. **LocalRAGsmith AI**  
+**Description:**  
+While Retrieval-Augmented Generation (RAG) is gaining traction, many struggle to implement truly private, efficient RAG workflows on local infrastructure without expensive setups or complex dev ops. LocalRAGsmith AI focuses on making *personalized, private, and lightweight RAG pipelines* that run fully on local devices (laptops, home servers) with minimal setup and resource usage. It intelligently orchestrates local document ingestion, vectorization, and caching, optimizing for low-latency querying without sending data to the cloud—ideal for privacy-conscious researchers, journalists, or small teams with confidential data. Unlike cloud-first RAG platforms, it auto-tunes indexing and retrieval tailored to local hardware constraints and personal use-cases, making it accessible to non-expert users.
+
+**Potential tech stack:**  
+- Python backend (FastAPI)  
+- Hugging Face Transformers + SentenceTransformers for embeddings  
+- FAISS or Chroma for local vector search  
+- SQLite / lightweight DB for metadata  
+- Electron or Tauri-based local GUI  
+- Docker for easy local deployment and updates  
+
+---
+
+### 2. **OutlierPub Finder**  
+**Description:**  
+Finding local pubs or bars is common, but few services highlight places that *actively want community support*, such as under-recognized venues struggling post-pandemic or seeking niche patronage (e.g., live music nights, queer-friendly, non-corporate). OutlierPub Finder uses real-time socio-economic and crowd-sourced signals to spotlight pubs and bars that *need* visitors most—and tailor recommendations based on your social mood and values. Unlike traditional discovery apps, it highlights underserved or overlooked venues, helping users align weekend plans with community impact, plus provides small venue owners with simple AI tools to signal specials or events dynamically.
+
+**Potential tech stack:**  
+- Mobile front-end (React Native or Flutter)  
+- Backend with Node.js or Go, using geospatial queries (PostGIS)  
+- Crowdsourced input via app prompts and local social media scraping  
+- Sentiment analysis and NLP for event/offer extraction  
+- Real-time notification pipelines (Firebase / AWS SNS)  
+- Optional integration with local government/regeneration data feeds  
+
+---
+
+### 3. **SuspicionSharer AI**  
+**Description:**  
+URL shorteners are ubiquitous, but suspicion often arises when clicking shortened links—often due to opaque domains, suspicious patterns, or overused shorteners. SuspicionSharer AI flips this expectation by *intentionally crafting suspicious-looking but fully transparent and verifiable short URLs* that include embedded visual risk signals (e.g., dynamic favicon badges, color codes, or metadata snippets) and context to build trust whilst alerting users to be cautious and confirm intent. This tool targets privacy advocates, infosec trainers, and educators who want to teach safe link-sharing habits and phishing awareness by gamifying or visually demonstrating suspicion — instead of hiding risks behind innocuous links.
+
+**Potential tech stack:**  
+- Backend (Python Flask or Node.js) to generate short links  
+- Custom domain management + smart DNS routing  
+- Visual link overlay generator with SVG and Canvas APIs  
+- Browser extensions or bookmarklets for quick use  
+- Integration with open phishing/malware feeds (VirusTotal, PhishTank)  
+- Front-end with React for dashboard and analytics  
+
+```
+
