@@ -7508,3 +7508,48 @@ Inspired by 'Gas Town’s' agent patterns and vibecoding, AgentVibe AI is a mult
 - Microservices architecture (Docker + Kubernetes) for scalable agent orchestration  
 ```
 
+
+
+## 2026-01-25
+
+```markdown
+### 1. SmogCycle AI  
+**Description:**  
+While EV adoption is growing, many cities lack real-time, hyper-localized pollution impact feedback that ties transportation choices (like cycling routes, EV trips, public transit) directly to air quality changes. SmogCycle AI leverages IoT air sensors, user trip data (including e-bikes, scooters, public transit), and predictive modeling to offer commuters dynamic route and transport mode recommendations that optimize for personal health and neighborhood pollution reduction. Unlike generic pollution maps or static advisory apps, SmogCycle AI personalizes air quality impact in near real-time and suggests actionable daily choices. It also enables municipalities to track pollution reductions from specific transportation policy changes, closing the loop between individual actions and urban air quality outcomes.
+
+**Potential tech stack:**  
+- Edge IoT sensors (LoRaWAN/NB-IoT connectivity)  
+- Mobile app (React Native/Flutter) for user trip data and recommendations  
+- Geospatial databases (PostGIS) & streaming data (Apache Kafka)  
+- ML models for pollution dispersion prediction (PyTorch/TensorFlow)  
+- Cloud serverless infra (AWS Lambda/GCP Cloud Functions)  
+- APIs integrating public transit & e-bike usage data  
+
+---
+
+### 2. SideloadSafe AI  
+**Description:**  
+With Android’s "high-friction" sideloading flows coming to heighten security, many users and developers will struggle navigating the complex permission models and risks of sideloaded apps — particularly in regions with limited Play Store access or for niche/indie developers. SideloadSafe AI is an intelligent middleware and mobile agent that guides users step-by-step through sideloading, dynamically scans apps for suspicious behavior (using on-device federated learning), warns about potential privacy or security risks before installation, and auto-generates a minimal set of permissions required for each app. It bridges the gap between strict security policies and user freedom, enabling safer, transparent sideloading while educating users on the risks.
+
+**Potential tech stack:**  
+- Android native components & accessibility services (Java/Kotlin)  
+- On-device ML with TensorFlow Lite or PyTorch Mobile  
+- Federated learning frameworks (Google’s Federated Learning or Flower)  
+- User interaction via conversational UI (Dialogflow or Rasa)  
+- Cloud backend for threat intelligence sharing (AWS/GCP)  
+
+---
+
+### 3. PiFarm AI  
+**Description:**  
+Raspberry Pi clusters are widely used for hobbyists and edge computing, but monitoring heterogeneous Pi farms over time for performance, hardware faults, and energy efficiency remains fragmented and manual. PiFarm AI is a unified management and predictive analytics platform that automatically inventories Raspberry Pi models and versions on a network, benchmarks their real-time performance (using smart scheduling), forecasts hardware degradation or failures via anomaly detection (e.g., aging SD cards, thermal issues), and optimizes workloads across the cluster to balance energy use and compute efficiency. The platform will especially serve education labs, makerspaces, and small edge farms — offering an easy-to-use web dashboard and alerting system, going beyond manual monitoring tools.
+
+**Potential tech stack:**  
+- Lightweight agent running on each Pi (Python + lightweight REST API)  
+- Centralized dashboard with React + Node.js (Express) backend  
+- Time-series DB for performance metrics (InfluxDB/TimescaleDB)  
+- Anomaly detection & predictive maintenance models (Scikit-learn/XGBoost)  
+- Containerized workloads managed with lightweight orchestrators (k3s, Docker Swarm)  
+- Optional integrations with environmental sensors for temperature & power monitoring  
+```
+
