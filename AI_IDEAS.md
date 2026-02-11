@@ -8293,3 +8293,52 @@ Frontier AI agents often violate ethical constraints under KPI pressure, but sol
 
 ---
 ```
+
+
+## 2026-02-11
+
+```markdown
+### 1. FlightPath AI
+
+**Description:**  
+An AI-driven real-time airspace disruption prediction and adaptive routing assistant for airlines and drone operators. Instead of just reacting to FAA closures or temporary groundings (like the recent El Paso airspace shutdown), FlightPath AI predicts hidden or unofficial airspace risks by continuously aggregating sensor data, weather reports, NOTAMs, and geopolitical shifts, then dynamically proposes alternative flight paths or schedules. This goes beyond traditional static flight plan optimizers, incorporating crowdsourced near-real-time pilot and UAV operator inputs plus anomaly detection from ADS-B data feeds to reduce downtime and improve safety for commercial and autonomous aviation stakeholders.
+
+**Potential tech stack:**  
+- Data ingestion / streaming: Apache Kafka, AWS Kinesis  
+- Machine Learning: PyTorch or TensorFlow for time series forecasting and anomaly detection  
+- GIS / mapping: Mapbox APIs, CesiumJS for 3D airspace visualization  
+- Backend: Python/Go microservices with REST/GraphQL API  
+- Frontend: React with real-time dashboards, WebSocket for live updates  
+- Cloud: AWS/GCP with Kubernetes orchestration  
+
+---
+
+### 2. CodeShadow AI
+
+**Description:**  
+A privacy-first AI assistant that automatically analyzes and vets browser extensions and small third-party web add-ons for potential data leakage or spying behaviors *before* a user installs them. Unlike existing extension stores that rely largely on manual review or after-the-fact user reports, CodeShadow uses static and dynamic code analysis powered by AI to uncover suspicious network behavior, hidden tracking, or unexpected data access patterns. It also suggests safer alternative extensions and generates simplified permission summaries in plain language, targeting tech-averse users and enterprises that want proactive browser hygiene without sacrificing customization.
+
+**Potential tech stack:**  
+- Static code analysis: Custom parsers for JS/JSON + AI models trained on malicious pattern detection  
+- Dynamic sandbox environment: Containerized browser instances (e.g., Puppeteer / Playwright) with behavior monitoring  
+- AI/ML: Transformer models fine-tuned for code pattern recognition and anomaly detection  
+- Backend: Node.js + Express for serving analysis results with REST APIs  
+- Frontend: Vue.js or React for user interface and permissions summary visualization  
+- Infrastructure: Serverless (AWS Lambda) for on-demand extension scans, with secure data handling  
+
+---
+
+### 3. FeynmanTutor AI
+
+**Description:**  
+An AI-driven learning companion that reconstructs complex physics concepts from foundational experimental principles, inspired by *The Feynman Lectures on Physics*, but tailored for today’s learners using adaptive pedagogy. Unlike typical physics tutoring apps or video series, FeynmanTutor AI employs clean-room reverse engineering of physics problems to generate intuitive, step-by-step explorations that visualize abstract concepts (e.g., quantum mechanics, electromagnetism) in real time with incremental difficulty adjustments based on student input and understanding. This re-imagines physics education as an interactive dialogue between learner and AI, blending simulation, storytelling, and inquiry-driven learning.
+
+**Potential tech stack:**  
+- AI/NLP: GPT-style models fine-tuned on physics literature and problem sets  
+- Simulation engine: WebAssembly-powered physics simulations (e.g., custom particle systems, circuit simulators)  
+- Visualization: D3.js, Three.js or Babylon.js to create interactive graphical explanations  
+- Frontend: React or Svelte for dynamic UI/UX with conversational interfaces  
+- Backend: Python Flask or FastAPI serving AI models and simulation orchestration  
+- Data: Open physics datasets, academic papers, and interactive problem repositories (e.g., OpenStax)  
+```
+
