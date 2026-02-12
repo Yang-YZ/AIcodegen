@@ -1,0 +1,53 @@
+{
+  "pipeline": {
+    "name": "AI Coding Agent Pipeline",
+    "version": "1.0.0",
+    "description": "Automated pipeline for implementing AI ideas using coding agents"
+  },
+  "defaults": {
+    "ai_model": "gpt-4o-mini",
+    "coding_model": "gpt-4o",
+    "max_iterations": 3,
+    "test_timeout": 300000
+  },
+  "sources": {
+    "github_issues": {
+      "enabled": true,
+      "labels": ["idea"],
+      "state": "open"
+    },
+    "ai_ideas_file": {
+      "enabled": true,
+      "path": "AI_IDEAS.md",
+      "max_ideas": 3
+    }
+  },
+  "implementation": {
+    "output_dir": "implementations",
+    "create_issue": true,
+    "create_pr": true,
+    "run_tests": true
+  },
+  "agents": {
+    "planner": {
+      "role": "software architect",
+      "temperature": 0.7,
+      "max_tokens": 4000
+    },
+    "coder": {
+      "role": "expert developer",
+      "temperature": 0.5,
+      "max_tokens": 4000
+    },
+    "tester": {
+      "role": "QA engineer",
+      "temperature": 0.3,
+      "max_tokens": 2000
+    }
+  },
+  "quality_checks": {
+    "code_review": true,
+    "security_scan": true,
+    "lint": true
+  }
+}
