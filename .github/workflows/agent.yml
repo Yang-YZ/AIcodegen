@@ -55,6 +55,11 @@ jobs:
           pip install -r requirements.txt
           pytest
 
+      - name: Show git status
+        run: |
+          git status
+          git diff
+
       # Step 6: create pull request if tests pass
       - name: Create Pull Request
         if: success()
