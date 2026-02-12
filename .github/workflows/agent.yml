@@ -2,11 +2,12 @@ name: AI Agent
 
 on:
   issues:
-    types: [labeled]
+    types: [opened, labeled]
+  workflow_dispatch:  # allows manual run for testing
 
 jobs:
   agent:
-    if: github.event.label.name == 'ai-task'
+    if: github.event.label.name == 'ai-task' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     permissions:
@@ -14,29 +15,47 @@ jobs:
       pull-requests: write
 
     steps:
+      # Step 0: checkout repo
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # Step 1: setup python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
+      # Step 2: install dependencies
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
           pip install openai pytest
 
+      # Step 3: debug
+      - name: Debug event
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Issue title: ${{ github.event.issue.title }}"
+          echo "Label: ${{ github.event.label.name }}"
+
+      # Step 4: run agent (generate code)
       - name: Run agent (generate code)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_BODY: ${{ github.event.issue.body }}
+          PYTHONPATH: ${{ github.workspace }}   # ← important for imports
         run: python .github/scripts/agent.py
 
+      # Step 5: run tests before PR
       - name: Run tests before PR
-        run: pytest
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          pip install -r requirements.txt
+          pytest
 
+      # Step 6: create pull request if tests pass
       - name: Create Pull Request
         if: success()
         uses: peter-evans/create-pull-request@v6
