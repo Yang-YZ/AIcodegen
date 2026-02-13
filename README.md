@@ -418,13 +418,33 @@ node scripts/pipeline_cli.mjs run --idea "PrivacyGuardian"
 
 ## Future Enhancements
 
-- [ ] Support for multiple AI providers (Anthropic, Google)
+- [x] Support for multiple AI providers (OpenAI, Anthropic, Custom) ✅
 - [ ] Interactive mode for idea selection
 - [ ] Advanced code quality metrics
 - [ ] Deployment automation
 - [ ] Multi-language support
 - [ ] Team collaboration features
 - [ ] Integration with project management tools
+
+## Documentation
+
+- **[README.md](README.md)** - Project overview and quick start (this file)
+- **[DESIGN_DECISIONS.md](DESIGN_DECISIONS.md)** - Why Node.js? Architecture decisions
+- **[PROVIDER_GUIDE.md](PROVIDER_GUIDE.md)** - Complete AI provider configuration guide
+- **[PIPELINE_README.md](PIPELINE_README.md)** - Detailed pipeline documentation
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture and flow diagrams
+- **[EXAMPLES.md](EXAMPLES.md)** - Real usage examples and tutorials
+- **[AI_IDEAS.md](AI_IDEAS.md)** - Archive of generated ideas
+
+### Quick Links
+
+| Topic | Document |
+|-------|----------|
+| Why Node.js over Python? | [DESIGN_DECISIONS.md](DESIGN_DECISIONS.md#why-nodejs-esmmjs-instead-of-python) |
+| How to use Anthropic Claude? | [PROVIDER_GUIDE.md](PROVIDER_GUIDE.md#2-anthropic-claude) |
+| How to use custom coding agents? | [PROVIDER_GUIDE.md](PROVIDER_GUIDE.md#3-custom-provider--coding-agent-proxy) |
+| Provider fallback configuration | [PROVIDER_GUIDE.md](PROVIDER_GUIDE.md#strategy-2-provider-fallback) |
+| Cost optimization strategies | [PROVIDER_GUIDE.md](PROVIDER_GUIDE.md#strategy-1-cost-optimization) |
 
 ## Contributing
 
