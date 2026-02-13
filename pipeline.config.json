@@ -4,6 +4,37 @@
     "version": "1.0.0",
     "description": "Automated pipeline for implementing AI ideas using coding agents"
   },
+  "ai_provider": {
+    "primary": "openai",
+    "fallbacks": ["anthropic"],
+    "providers": {
+      "openai": {
+        "models": {
+          "planning": "gpt-4o-mini",
+          "coding": "gpt-4o"
+        },
+        "base_url": "https://api.openai.com/v1"
+      },
+      "anthropic": {
+        "models": {
+          "planning": "claude-3-5-sonnet-20241022",
+          "coding": "claude-3-5-sonnet-20241022"
+        },
+        "base_url": "https://api.anthropic.com/v1"
+      },
+      "custom": {
+        "enabled": false,
+        "name": "Custom Coding Agent",
+        "models": {
+          "planning": "default",
+          "coding": "default"
+        },
+        "base_url": "",
+        "auth_header": "Authorization",
+        "auth_prefix": "Bearer"
+      }
+    }
+  },
   "defaults": {
     "ai_model": "gpt-4o-mini",
     "coding_model": "gpt-4o",

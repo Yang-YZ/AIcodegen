@@ -3,34 +3,101 @@
 import fs from "fs";
 import { execSync } from "child_process";
 import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+import { AIProviderFactory } from "./ai_providers.mjs";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const REPO_OWNER = process.env.REPO_OWNER || "Yang-YZ";
 const REPO_NAME = process.env.REPO_NAME || "AIcodegen";
 
-// Helper to call OpenAI API
-async function callOpenAI(messages, model = "gpt-4o-mini") {
-  const resp = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({ 
-      model, 
-      messages,
-      temperature: 0.7,
-      max_tokens: 4000
-    }),
+// Global AI provider instance
+let aiProvider = null;
+
+// Load configuration
+function loadConfig() {
+  try {
+    const configPath = path.join(__dirname, "..", "pipeline.config.json");
+    const configData = fs.readFileSync(configPath, "utf8");
+    return JSON.parse(configData);
+  } catch (err) {
+    console.warn("Could not load config, using defaults:", err.message);
+    return {
+      ai_provider: {
+        primary: "openai",
+        fallbacks: [],
+        providers: {
+          openai: {
+            models: { planning: "gpt-4o-mini", coding: "gpt-4o" }
+          }
+        }
+      }
+    };
+  }
+}
+
+// Initialize AI provider
+function initializeAIProvider() {
+  const config = loadConfig();
+  const providerConfig = config.ai_provider || {};
+  
+  // Build provider chain (primary + fallbacks)
+  const providerNames = [
+    providerConfig.primary || "openai",
+    ...(providerConfig.fallbacks || [])
+  ];
+  
+  const providerConfigs = providerNames.map(name => {
+    const providerSettings = providerConfig.providers?.[name] || {};
+    
+    // Map provider-specific API keys
+    const apiKeyMap = {
+      'openai': process.env.OPENAI_API_KEY,
+      'anthropic': process.env.ANTHROPIC_API_KEY,
+      'custom': process.env.CUSTOM_API_KEY,
+    };
+    
+    return {
+      name,
+      config: {
+        apiKey: apiKeyMap[name],
+        baseUrl: providerSettings.base_url,
+        ...providerSettings,
+      }
+    };
   });
   
-  if (!resp.ok) {
-    const errText = await resp.text();
-    throw new Error(`OpenAI API error ${resp.status}: ${errText}`);
+  try {
+    aiProvider = AIProviderFactory.createWithFallbacks(providerConfigs);
+    console.log(`✅ Initialized AI provider: ${aiProvider.getPrimaryProvider().getName()}`);
+    if (providerConfigs.length > 1) {
+      console.log(`   Fallbacks: ${providerConfigs.slice(1).map(p => p.name).join(", ")}`);
+    }
+  } catch (err) {
+    console.error("Failed to initialize AI provider:", err.message);
+    throw err;
+  }
+}
+
+// Helper to call AI API (replaces callOpenAI)
+async function callAI(messages, modelType = "planning") {
+  if (!aiProvider) {
+    initializeAIProvider();
   }
   
-  return resp.json();
+  const config = loadConfig();
+  const primaryProvider = config.ai_provider?.primary || "openai";
+  const providerSettings = config.ai_provider?.providers?.[primaryProvider] || {};
+  
+  // Get model name for the task type
+  const model = providerSettings.models?.[modelType] || 
+                (modelType === "coding" ? "gpt-4o" : "gpt-4o-mini");
+  
+  const response = await aiProvider.generateCompletion(messages, { model });
+  return response;
 }
 
 // Helper to call GitHub API
@@ -152,10 +219,10 @@ Generate a JSON object with the following structure:
 
 Focus on creating a minimal viable implementation. Keep it simple and achievable.`;
 
-  const response = await callOpenAI([
+  const response = await callAI([
     { role: "system", content: "You are a helpful software architect. Always respond with valid JSON only." },
     { role: "user", content: prompt }
-  ]);
+  ], "planning");
   
   const content = response.choices?.[0]?.message?.content || "{}";
   
@@ -194,10 +261,10 @@ Generate the necessary code files for this task. Return a JSON array of files:
 
 Make the code production-ready with proper error handling and comments.`;
 
-  const response = await callOpenAI([
+  const response = await callAI([
     { role: "system", content: "You are an expert developer. Always respond with valid JSON only." },
     { role: "user", content: prompt }
-  ], "gpt-4o");
+  ], "coding");
   
   const content = response.choices?.[0]?.message?.content || "[]";
   
@@ -296,9 +363,16 @@ ${phase.tasks.map(task => `- [ ] ${task}`).join("\n")}
 async function executePipeline() {
   console.log("🚀 Starting Coding Pipeline\n");
   
-  // Validate environment
-  if (!OPENAI_API_KEY) {
-    throw new Error("OPENAI_API_KEY is required");
+  // Initialize AI provider (will validate configuration and API keys)
+  try {
+    initializeAIProvider();
+  } catch (err) {
+    console.error("❌ Failed to initialize AI provider:", err.message);
+    console.error("   Make sure you have set the appropriate API key environment variable:");
+    console.error("   - OPENAI_API_KEY for OpenAI");
+    console.error("   - ANTHROPIC_API_KEY for Anthropic Claude");
+    console.error("   - CUSTOM_API_KEY and CUSTOM_API_BASE_URL for custom providers");
+    throw err;
   }
   
   // Step 1: Fetch ideas
