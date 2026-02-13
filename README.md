@@ -32,14 +32,34 @@ AIcodegen is a comprehensive system that:
 ### Prerequisites
 
 - Node.js 18 or higher
-- OpenAI API key
+- AI Provider API key (choose one):
+  - **OpenAI** (GPT-4, GPT-3.5) - Default
+  - **Anthropic** (Claude 3.5 Sonnet, Claude 3 Opus)
+  - **Custom Provider** (self-hosted or coding agent proxy)
 - GitHub token (optional, for GitHub API operations)
 
 ### Environment Setup
 
+**For OpenAI (Default):**
 ```bash
 export OPENAI_API_KEY=your_openai_api_key
 export GITHUB_TOKEN=your_github_token
+```
+
+**For Anthropic Claude:**
+```bash
+export ANTHROPIC_API_KEY=your_anthropic_api_key
+export GITHUB_TOKEN=your_github_token
+# Set provider in pipeline.config.json or:
+export AI_PROVIDER=anthropic
+```
+
+**For Custom Provider:**
+```bash
+export CUSTOM_API_KEY=your_api_key
+export CUSTOM_API_BASE_URL=https://your-api-endpoint.com/v1
+export GITHUB_TOKEN=your_github_token
+# Configure in pipeline.config.json
 ```
 
 ### Usage
@@ -137,6 +157,103 @@ implementations/project-name/
 ```
 
 ## Configuration
+
+### AI Provider Configuration
+
+The pipeline supports multiple AI providers. Edit `pipeline.config.json` to configure:
+
+```json
+{
+  "ai_provider": {
+    "primary": "openai",           // Primary provider: "openai", "anthropic", or "custom"
+    "fallbacks": ["anthropic"],    // Fallback providers if primary fails
+    "providers": {
+      "openai": {
+        "models": {
+          "planning": "gpt-4o-mini",    // Model for planning tasks
+          "coding": "gpt-4o"             // Model for code generation
+        }
+      },
+      "anthropic": {
+        "models": {
+          "planning": "claude-3-5-sonnet-20241022",
+          "coding": "claude-3-5-sonnet-20241022"
+        }
+      },
+      "custom": {
+        "enabled": false,
+        "name": "Custom Coding Agent",
+        "base_url": "https://your-endpoint.com/v1",
+        "models": {
+          "planning": "default",
+          "coding": "default"
+        }
+      }
+    }
+  }
+}
+```
+
+### Provider Options
+
+#### 1. OpenAI (Default)
+Best for general-purpose code generation with GPT-4.
+
+**Setup:**
+```bash
+export OPENAI_API_KEY=sk-...
+```
+
+**Models:**
+- `gpt-4o` - Best quality for coding
+- `gpt-4o-mini` - Fast and cost-effective for planning
+- `gpt-3.5-turbo` - Economical option
+
+#### 2. Anthropic Claude
+Excellent for advanced reasoning and longer context windows.
+
+**Setup:**
+```bash
+export ANTHROPIC_API_KEY=sk-ant-...
+# Update pipeline.config.json to set "primary": "anthropic"
+```
+
+**Models:**
+- `claude-3-5-sonnet-20241022` - Best balance of speed and quality
+- `claude-3-opus-20240229` - Highest quality for complex tasks
+
+#### 3. Custom Provider
+For self-hosted models, coding agent proxies, or specialized endpoints.
+
+**Setup:**
+```bash
+export CUSTOM_API_KEY=your_key
+export CUSTOM_API_BASE_URL=https://your-api.com/v1
+```
+
+**Configuration:**
+```json
+{
+  "ai_provider": {
+    "primary": "custom",
+    "providers": {
+      "custom": {
+        "enabled": true,
+        "name": "My Coding Agent",
+        "base_url": "https://your-api.com/v1",
+        "auth_header": "Authorization",
+        "auth_prefix": "Bearer",
+        "models": {
+          "planning": "codex-planning",
+          "coding": "codex-coding"
+        }
+      }
+    }
+  }
+}
+```
+
+### Pipeline Configuration
 
 Edit `pipeline.config.json` to customize behavior:
 

@@ -288,7 +288,136 @@ EOF
 node scripts/pipeline_cli.mjs run --config custom-pipeline.config.json
 ```
 
-## Example 6: Verbose Logging
+## Example 6: Using Different AI Providers
+
+### Example 6a: Using Anthropic Claude
+
+**Step 1: Set up Anthropic API key**
+```bash
+export ANTHROPIC_API_KEY="sk-ant-api03-..."
+```
+
+**Step 2: Update configuration**
+Edit `pipeline.config.json`:
+```json
+{
+  "ai_provider": {
+    "primary": "anthropic",
+    "providers": {
+      "anthropic": {
+        "models": {
+          "planning": "claude-3-5-sonnet-20241022",
+          "coding": "claude-3-5-sonnet-20241022"
+        }
+      }
+    }
+  }
+}
+```
+
+**Step 3: Run pipeline**
+```bash
+node scripts/pipeline_cli.mjs run
+```
+
+**Output:**
+```
+🚀 Starting Coding Pipeline
+
+✅ Initialized AI provider: Anthropic
+📥 Step 1: Fetching ideas...
+```
+
+### Example 6b: Using Custom Provider (e.g., Ollama Local)
+
+**Step 1: Start Ollama**
+```bash
+ollama serve
+```
+
+**Step 2: Configure custom provider**
+Edit `pipeline.config.json`:
+```json
+{
+  "ai_provider": {
+    "primary": "custom",
+    "providers": {
+      "custom": {
+        "enabled": true,
+        "name": "Ollama Local",
+        "base_url": "http://localhost:11434/v1",
+        "auth_header": "Authorization",
+        "auth_prefix": "Bearer",
+        "models": {
+          "planning": "codellama",
+          "coding": "deepseek-coder"
+        }
+      }
+    }
+  }
+}
+```
+
+**Step 3: Set environment (optional for local)**
+```bash
+export CUSTOM_API_KEY="not-required-for-local"
+```
+
+**Step 4: Run pipeline**
+```bash
+node scripts/pipeline_cli.mjs run
+```
+
+### Example 6c: Multi-Provider with Fallback
+
+**Configuration:**
+```json
+{
+  "ai_provider": {
+    "primary": "openai",
+    "fallbacks": ["anthropic"],
+    "providers": {
+      "openai": {
+        "models": {
+          "planning": "gpt-4o-mini",
+          "coding": "gpt-4o"
+        }
+      },
+      "anthropic": {
+        "models": {
+          "planning": "claude-3-5-sonnet-20241022",
+          "coding": "claude-3-5-sonnet-20241022"
+        }
+      }
+    }
+  }
+}
+```
+
+**Set both API keys:**
+```bash
+export OPENAI_API_KEY="sk-..."
+export ANTHROPIC_API_KEY="sk-ant-..."
+```
+
+**Run:**
+```bash
+node scripts/pipeline_cli.mjs run
+```
+
+**Output shows fallback behavior:**
+```
+✅ Initialized AI provider: OpenAI
+   Fallbacks: anthropic
+
+# If OpenAI fails:
+Attempting with provider: OpenAI
+⚠️  Provider OpenAI failed: API error 429
+Attempting with provider: Anthropic
+✅ Successfully used Anthropic
+```
+
+## Example 7: Verbose Logging
 
 For debugging, use verbose mode:
 
@@ -303,7 +432,7 @@ node scripts/pipeline_cli.mjs run --verbose
 - File operations
 - Error stack traces
 
-## Example 7: Generated Project Usage
+## Example 8: Generated Project Usage
 
 ### Install Dependencies
 ```bash
@@ -321,7 +450,7 @@ npm start
 npm test
 ```
 
-## Example 8: Viewing Workflow Logs
+## Example 9: Viewing Workflow Logs
 
 ### In GitHub Actions
 1. Go to **Actions** tab

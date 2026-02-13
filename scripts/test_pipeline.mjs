@@ -64,8 +64,39 @@ test('Config is valid JSON', () => {
   const config = JSON.parse(content);
   
   if (!config.pipeline) throw new Error('Missing pipeline section');
+  if (!config.ai_provider) throw new Error('Missing ai_provider section');
   if (!config.defaults) throw new Error('Missing defaults section');
   if (!config.sources) throw new Error('Missing sources section');
+});
+
+test('AI provider configuration is valid', () => {
+  const configPath = path.join(rootDir, 'pipeline.config.json');
+  const content = fs.readFileSync(configPath, 'utf8');
+  const config = JSON.parse(content);
+  
+  if (!config.ai_provider.primary) throw new Error('Missing primary provider');
+  if (!config.ai_provider.providers) throw new Error('Missing providers section');
+  
+  const primary = config.ai_provider.primary;
+  if (!config.ai_provider.providers[primary]) {
+    throw new Error(`Primary provider ${primary} not configured`);
+  }
+  
+  // Check that each provider has required fields
+  const providers = config.ai_provider.providers;
+  for (const [name, settings] of Object.entries(providers)) {
+    if (name === 'custom' && !settings.enabled) continue;
+    if (!settings.models) throw new Error(`Provider ${name} missing models`);
+    if (!settings.models.planning) throw new Error(`Provider ${name} missing planning model`);
+    if (!settings.models.coding) throw new Error(`Provider ${name} missing coding model`);
+  }
+});
+
+test('AI providers module exists', () => {
+  const filePath = path.join(rootDir, 'scripts', 'ai_providers.mjs');
+  if (!fs.existsSync(filePath)) {
+    throw new Error('ai_providers.mjs not found');
+  }
 });
 
 // Test 3: Check implementations directory
