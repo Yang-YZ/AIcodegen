@@ -37,7 +37,8 @@ if not os.path.exists(init_file):
         f.write("# init file for app package\n")
 
 # Write code to main.py
-with open("app/main.py", "w") as f:
+with open("app/main.py", "a") as f:
+    f.write("\n# AI generated code\n")
     f.write(code)
 
 print("Agent code written to app/main.py")

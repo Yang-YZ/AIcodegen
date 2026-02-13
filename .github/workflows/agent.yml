@@ -47,6 +47,14 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}   # ← important for imports
         run: python .github/scripts/agent.py
 
+      - name: Show main.py
+        run: cat app/main.py
+
+      - name: Show git status
+        run: |
+          git status
+          git diff
+
       # Step 5: run tests before PR
       - name: Run tests before PR
         env:
@@ -54,11 +62,6 @@ jobs:
         run: |
           pip install -r requirements.txt
           pytest
-
-      - name: Show git status
-        run: |
-          git status
-          git diff
 
       # Step 6: create pull request if tests pass
       - name: Create Pull Request
