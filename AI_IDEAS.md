@@ -8570,3 +8570,49 @@ While “audio AI” is rapidly advancing, small labs and indie creators are oft
 - Tooling: Rollup/Webpack for bundling to single HTML, wasm-pack for compiling audio DSP modules  
 - Optional P2P sync layer with WebRTC for collaborative sessions  
 ```
+
+
+## 2026-02-17
+
+```markdown
+### 1. OrigamiStrength AI
+
+**Description:**  
+Drawing inspiration from the remarkable strength-to-weight ratio of origami structures like Miles Wu’s 10k-weight-holding fold, OrigamiStrength AI is a design assistant for engineers and makers focused on ultra-lightweight, foldable materials and structures. Unlike traditional CAD or topology optimization tools primarily tuned for rigid or simple folds, this AI leverages advanced simulations and AI-guided folding pattern discovery to create novel, load-bearing origami-inspired designs optimized for deployable shelters, portable medical devices, or aerospace components. It fills a gap by democratizing origami mechanical optimization beyond experts, combining physics-informed ML with user-driven constraints.
+
+**Potential tech stack:**  
+- Physics-informed neural networks (PINNs) for stress-strain simulation  
+- Deep reinforcement learning for pattern optimization  
+- 3D mesh processing (PyTorch3D or JAX)  
+- WebGL/Three.js for interactive visual folding preview  
+- Python backend with Flask or FastAPI  
+
+---
+
+### 2. DarkTrace Guardian AI
+
+**Description:**  
+Inspired by the success of spotting clues on bedroom walls to rescue abuse victims, DarkTrace Guardian AI is an AI-powered privacy-respecting digital guardian for vulnerable individuals operating largely on-device. It uses multimodal analysis of user-generated content (photos, voice notes, text messages) to detect subtle "help signals" (visual or linguistic cues) indicating abuse, coercion, or distress, while maintaining privacy via edge processing and zero-knowledge proofs. Unlike prior surveillance or harassment detection tools that require data uploads or overt user intervention, this solution empowers at-risk users discreetly and securely without exposing their sensitive data externally.
+
+**Potential tech stack:**  
+- On-device multimodal transformers (e.g., lightweight ViT + wav2vec + BERT variants)  
+- Differential privacy and federated learning for model improvements  
+- Secure enclaves (e.g., ARM TrustZone) for data isolation  
+- Mobile-first frameworks (Flutter or React Native with native bindings)  
+- Privacy-preserving communication protocols like Signal Protocol  
+
+---
+
+### 3. BlueLens Privacy AI
+
+**Description:**  
+Following concerns about what Bluetooth devices reveal about users, BlueLens Privacy AI is a smart privacy auditor and anomaly detector for Bluetooth ecosystems. Instead of just alerting users to standard permission overreach (a solved problem in app stores), BlueLens detects behavioral patterns from Bluetooth traffic—like unusual scanning frequencies, unexpected device correlations, or triangulation risk—and provides an explainable risk score. It also trains personalized AI models to predict which devices might be privacy-invasive based on observed metadata patterns, enabling users to proactively blacklist or sandbox suspicious devices. This addresses a blind spot between Bluetooth protocol security and real-world data privacy.
+
+**Potential tech stack:**  
+- Real-time BLE packet capture and metadata extraction (libpcap, BlueZ stack)  
+- Explainable AI models with attention visualization (XGBoost + SHAP values or Explainable Transformers)  
+- Embedded edge compute on smartphones or IoT hubs (TensorFlow Lite, ONNX Runtime)  
+- User-friendly dashboard built in Electron or native mobile apps  
+- Secure local logging and differential privacy layers for analytics  
+```
+
