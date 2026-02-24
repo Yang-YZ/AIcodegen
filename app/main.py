@@ -7,6 +7,13 @@ def multiply(a, b):
     return a * b
 # AI generated code
 import ast
+
+# Compatibility alias for older Python versions that used ast.Num
+try:
+    AST_NUM = ast.Num  # type: ignore[attr-defined]
+except AttributeError:  # Python 3.12+ where ast.Num is removed
+    AST_NUM = ()
+
 import operator
 
 class Calculator:
@@ -35,7 +42,7 @@ def _eval_ast(node):
         if isinstance(node.value, (int, float)):
             return node.value
         raise ValueError(f"Unsupported constant: {node.value}")
-    if isinstance(node, ast.Num):  # pragma: no cover (compat)
+    if isinstance(node, AST_NUM):  # pragma: no cover (compat)
         return node.n
 
     # Unary operations: +, -
