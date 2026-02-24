@@ -8929,3 +8929,52 @@ An AI-powered research assistant designed specifically for early-career research
 
 ---
 ```
+
+
+## 2026-02-24
+
+```markdown
+### 1. TrustFrame AI
+
+**Description:**  
+Age verification today often sacrifices user privacy, requiring intrusive data sharing or exposing users to tracking. TrustFrame AI introduces a privacy-first, decentralized approach to age verification based on zero-knowledge proofs combined with local AI biometric liveness and contextual behavioral signals. Instead of sending sensitive data to verifiers, users generate cryptographic proofs locally that confirm age eligibility without revealing any personal info. Unlike typical third-party age checks that trade security for convenience or vice versa, TrustFrame AI balances regulatory compliance, user privacy, and usability in an open protocol design that can be embedded into any app or website with minimal friction.
+
+**Potential tech stack:**  
+- Cryptography: zk-SNARKs / zk-STARKs (e.g., Circom, SnarkJS)  
+- Local AI: TensorFlow Lite or ONNX Runtime for biometric liveness & gesture behavioral modeling  
+- WebAssembly: For sandboxed cross-platform local proof generation in browser and mobile apps  
+- Decentralized tech: IPFS for proof publication (optional), Ethereum / Polygon smart contracts for selective disclosure validation  
+- Frontend: React/Next.js with WebAuthn integration  
+- Backend: Node.js with Express for API gateways, Go for performant proof verification servers
+
+---
+
+### 2. SynapSeed AI
+
+**Description:**  
+The early detection of neurodegenerative diseases (like Alzheimer's) is becoming more accurate but remains costly and limited in reach to specialized clinics. SynapSeed AI is a virtual neurocognitive assistant that works with smartphone sensors and simple blood test markers to offer continuous, contextual risk assessment and cognitive health monitoring for underserved populations. Unlike existing solutions that require specialized devices or one-off screenings, SynapSeed AI leverages multimodal passive data (speech patterns, typing dynamics, eye movement tracking through a standard camera) combined with intermittent, affordable biomarker input to produce personalized risk trajectories. It provides actionable guidance and prompts early clinical consultation when needed, democratizing neuro-health vigilance.
+
+**Potential tech stack:**  
+- AI/ML: PyTorch or TensorFlow for multimodal deep learning (speech, vision, time-series)  
+- Mobile SDKs: React Native or Flutter for cross-platform sensor integration  
+- Cloud: AWS SageMaker or GCP AI Platform for scalable model training and deployment  
+- Data Storage: HIPAA-compliant secure databases, e.g., AWS HealthLake  
+- Edge AI: TensorFlow Lite Micro for on-device processing of sensitive sensor data  
+- APIs: FHIR for integration with healthcare providers and labs
+
+---
+
+### 3. FluxWeave AI
+
+**Description:**  
+Modern hardware development is accelerating, but testing complex hardware-software co-development environments remains fragmented, with disparate tools for simulation, hardware description, and software integration. FluxWeave AI is a unified AI-powered fabric that intelligently weaves together hardware design, in-situ simulation, and adaptive code generation to optimize co-development cycles for embedded systems. It learns from historical hardware-software iteration patterns to predict integration bottlenecks, suggest optimized simulation configurations, and proactively rewrite hardware drivers and firmware snippets conditioned on detected state and target performance goals. Unlike existing isolated simulators or code generators, FluxWeave creates a dynamic feedback loop between hardware models and software stacks, significantly reducing time-to-market for IoT, robotics, and edge devices.
+
+**Potential tech stack:**  
+- Hardware description & simulation: SystemVerilog, Verilator, custom AI interpreters  
+- Machine learning: Transformer-based models pretrained on hardware-software corpora (Hugging Face, fairseq)  
+- Backend: Rust or C++ for performance-critical simulation control and state management  
+- Frontend: Electron or WebAssembly dashboards for real-time visualization and interaction  
+- Integration: gRPC or REST APIs for connecting with existing hardware design tools (Vivado, Quartus, etc.) and CI pipelines  
+- DevOps: Kubernetes for scalable simulation orchestration and autoscaling
+```
+
