@@ -8978,3 +8978,47 @@ Modern hardware development is accelerating, but testing complex hardware-softwa
 - DevOps: Kubernetes for scalable simulation orchestration and autoscaling
 ```
 
+
+
+## 2026-02-25
+
+```markdown
+### 1. **FetchQuest AI**  
+**Description:**  
+While pet tech has focused on health monitoring or basic activity tracking, FetchQuest AI transforms dog playtime into an interactive, adaptive game experience that pets can "code" through problem-solving toys and responsive environments. It uses multi-modal sensing (motion, sound, touch) to learn individual dog behaviors and preferences, then generates evolving physical and digital puzzles the dog “codes” by manipulating objects or completing sequences. Unlike typical dog training apps or simple smart toys, FetchQuest AI enables deep engagement and mental stimulation by leveraging reinforcement learning personalized to the animal’s style, encouraging cognitive growth and reducing boredom or anxiety.
+
+**Potential tech stack:**  
+- Sensors: IMU, pressure, microphones embedded in toys  
+- Embedded edge AI: TensorFlow Lite for on-device inference  
+- Reinforcement Learning backend: PyTorch, custom dog behavior models  
+- Mobile app (React Native) for owner insights and puzzle design  
+- Cloud syncing + analytics (AWS or GCP)
+
+---
+
+### 2. **GlassRoute Navigator**  
+**Description:**  
+Augmented reality glasses have potential for navigation, but most AR guides are rigid or overwhelmed by environmental noise. GlassRoute Navigator is a lightweight, privacy-first AR navigation assistant specifically designed for pedestrians in dynamic urban settings. Instead of constant visual overlays, it employs selective contextual hints tied to eye gaze patterns and environmental triggers (bus stops, landmarks) to reduce cognitive load and distraction. It integrates real-time transit data visually and audibly, emphasizing safety and subtle cues over cluttered instructions. What makes it unique is its integration of local transit timetables hacked from public displays (similar to the Kindle bus project) and its adaptive UI that evolves with user habits over weeks.
+
+**Potential tech stack:**  
+- AR glasses SDK (e.g., Apple Vision Pro SDK or open AR frameworks)  
+- Eye tracking hardware integration  
+- Real-time public transit data from open APIs + web scraping modules  
+- Lightweight NLP for voice-guided hints (Edge Whisper or Moonshine STT models)  
+- Privacy-focused local processing (Rust or C++ for edge client)
+
+---
+
+### 3. **OpenCode Coach**  
+**Description:**  
+Despite the rise of coding education tools, many beginners struggle with workflow setup and terminal environments, a gap highlighted by minimal terminal tools like Pi. OpenCode Coach is an AI-powered terminal companion that dynamically assists new and intermediate programmers by teaching best practices, debugging, and environment setup *in situ*, through conversational interaction right inside the terminal. Unlike typical code assistants that respond within IDEs or web interfaces, this tool acts as a smart shell overlay, offering commands, explanations, and usage examples contextually without breaking focus. It's invaluable for users migrating from GUIs and can adapt advice based on coding style, project type, and even target OS (e.g., for devs moving away from Microsoft stacks).
+
+**Potential tech stack:**  
+- Terminal UI framework (e.g., Node.js + blessed or Rust + tui-rs)  
+- Language models fine-tuned on shell usage and beginner programming queries (using Moonshine Open-Weights or Anthropic-ish models)  
+- Integration with popular shells (bash, zsh, fish)  
+- Offline-first design, with optional cloud sync for user profiles and usage analytics  
+- Plugin architecture for extensibility (Python or JS)
+
+---
+```
