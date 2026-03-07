@@ -9432,3 +9432,46 @@ Bit flips in memory causing frequent app crashes is an under-acknowledged hardwa
 
 ---
 ```
+
+
+## 2026-03-07
+
+```markdown
+### 1. SkillPivot AI
+
+**Description:**  
+The tech job market’s downturn since 2023–2024 has left many mid-to-late career professionals struggling to stay relevant, especially in rapidly evolving fields. SkillPivot AI focuses specifically on helping experienced workers (40+) identify adjacent, less saturated or emerging roles that leverage their transferable skills and domain knowledge rather than trying to reskill from scratch. Unlike generic job-matching platforms, it integrates deep occupational skill taxonomies with personalized career trajectory simulations, real-time labor market dynamics, and direct employer demand signals. It also provides micro-project opportunities and peer mentorship from similarly experienced professionals transitioning roles. This uniquely serves a historically underserved demographic often ignored by typical early-career-focused upskilling tools.
+
+**Potential tech stack:**  
+- Backend: Python (FastAPI) + GraphQL API  
+- AI / ML: Large-scale skill embedding models + labor market trend NLP analysis + reinforcement learning for trajectory simulation  
+- Frontend: React + D3.js for interactive career maps  
+- Data sources: LinkedIn Open Skills, O*NET, job boards, real-time Github/Stack Overflow trends  
+- Integrations: Zoom/Slack API for mentorship chat and project collaboration  
+
+
+### 2. PlasmaInteract AI
+
+**Description:**  
+With new ultra-large display interfaces like Plasma Bigscreen gaining traction, interface paradigms must evolve beyond mouse & keyboard or simple voice to fit the 10+ foot distance and mixed-use environments (living room, classrooms, remote collaboration). PlasmaInteract AI proposes a context-aware multimodal assistant that adapts KDE’s Plasma environment to support natural gesture recognition, spatial voice commands, and proxemic UI changes tailored dynamically by user role and environment (family, solo, group). Unlike static UI scaling or simple voice assistants, the system learns user habits, interprets social contexts, and dynamically reconfigures interface elements (widgets, notifications) while preserving productivity and focus on giant screens.
+
+**Potential tech stack:**  
+- Backend: Rust + Node.js (for device bridging & event processing)  
+- AI / ML: Edge-based computer vision (MediaPipe, TensorFlow Lite) for gesture recognition + NLP models fine-tuned for spatial voice commands  
+- Frontend: KDE Plasma plugin development (Qt/QML)  
+- Devices: Depth cameras/sensors (Intel RealSense, Azure Kinect), spatial microphones array  
+- Integration: DBus APIs for KDE environment intelligence and control  
+
+
+### 3. MedScan Collaborative AI
+
+**Description:**  
+Current health wearables collect vast physiological data, and recent CT scan applications promise deeper diagnostics, but coordinated interpretation between consumer-grade wearables, clinical imaging, and patient history is fragmented. MedScan Collaborative AI is designed for longitudinal, multi-modal health data collaboration between patients, clinicians, and AI agents. It aggregates wearables data, medical imaging (CT/MRI), genetic info, and clinical notes, and enables explainable, iterative hypothesis exploration during diagnostics or treatment planning. Unlike black-box AI diagnostic tools, it empowers clinicians and patients jointly to define acceptance criteria for risk, thresholds, and intervention timing, and visualizes discrepancies or deteriorations interactively. This hybrid human-AI system tackles trust and interpretability gaps in multi-source health data integration.
+
+**Potential tech stack:**  
+- Backend: Go + gRPC microservices for high-throughput data ingestion and retrieval  
+- AI / ML: Multimodal transformer architectures (e.g., MedFuse) + Bayesian models for uncertainty quantification  
+- Frontend: React + WebGL (3D medical imaging visualization) + interactive dashboards  
+- Interoperability: HL7 FHIR standards, DICOM processing libraries  
+- Security: HIPAA-compliant encryption and consent management frameworks  
+```
