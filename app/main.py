@@ -121,17 +121,6 @@ def calculate(expr):
 # For convenience, provide an alias
 evaluate = calculate
 
-if __name__ == "__main__":
-    # Simple REPL for manual testing if run directly
-    calc = Calculator()
-    while True:
-        try:
-            s = input("calc> ").strip()
-            if s in ("", "quit", "exit"):
-                break
-            print(calculate(s))
-        except Exception as e:
-            print("Error:", e)
 # AI generated code
 import random
 from typing import Callable, Dict, Optional
