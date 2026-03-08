@@ -121,14 +121,76 @@ def calculate(expr):
 # For convenience, provide an alias
 evaluate = calculate
 
-if __name__ == "__main__":
-    # Simple REPL for manual testing if run directly
-    calc = Calculator()
-    while True:
+# AI generated code
+import random
+from typing import Callable, Dict, Optional
+
+def guessing_game(secret: Optional[int] = None,
+                  max_attempts: int = 10,
+                  input_fn: Callable[[str], str] = input,
+                  print_fn: Callable[..., None] = print) -> Dict[str, object]:
+    """
+    Play a number guessing game.
+
+    Parameters:
+    - secret: if provided, the number to guess; otherwise a random int 1..100 is chosen.
+    - max_attempts: maximum number of valid guess attempts allowed.
+    - input_fn: function used to read user input (default: built-in input).
+    - print_fn: function used to output messages (default: built-in print).
+
+    Returns a dict with:
+    - 'success': bool whether the player guessed correctly.
+    - 'attempts': number of valid attempts used.
+    - 'secret': the secret number.
+    """
+    if secret is None:
+        secret = random.randint(1, 100)
+
+    attempts = 0
+
+    while attempts < max_attempts:
         try:
-            s = input("calc> ").strip()
-            if s in ("", "quit", "exit"):
-                break
-            print(calculate(s))
-        except Exception as e:
-            print("Error:", e)
+            prompt = f"Enter your guess (1-100) [{attempts+1}/{max_attempts}]: "
+            raw = input_fn(prompt)
+        except (EOFError, KeyboardInterrupt):
+            print_fn("")  # keep behavior tidy if interrupted
+            break
+
+        if raw is None:
+            # Treat None like interruption
+            break
+
+        raw = raw.strip()
+        if not raw:
+            print_fn("Invalid input. Please enter an integer.")
+            continue
+
+        try:
+            guess = int(raw)
+        except ValueError:
+            print_fn("Invalid input. Please enter an integer.")
+            continue
+
+        attempts += 1
+
+        if guess < secret:
+            print_fn("Too low.")
+        elif guess > secret:
+            print_fn("Too high.")
+        else:
+            print_fn(f"Correct! You got it in {attempts} {'try' if attempts == 1 else 'tries'}.")
+            return {"success": True, "attempts": attempts, "secret": secret}
+
+    print_fn(f"Game over. The number was {secret}.")
+    return {"success": False, "attempts": attempts, "secret": secret}
+
+
+def main():
+    """
+    Run an interactive guessing game using standard input/output.
+    """
+    guessing_game()  # use defaults that rely on built-in input/print
+
+
+if __name__ == "__main__":
+    main()
