@@ -10027,3 +10027,46 @@ Nvidia’s GreenBoost transparently extends GPU VRAM but still faces bottlenecks
 - User interface: Electron app for monitoring and manual override  
 - Deployment: Containerized via Docker with native GPU support, possibly using NVIDIA’s DL frameworks like Triton Inference Server for model serving  
 ```
+
+
+## 2026-03-20
+
+```markdown
+### 1. SideloadSafe AI  
+**Description:**  
+With Google introducing a 24-hour sideloading process for unverified Android apps, there's a growing risk of installing harmful or privacy-invasive software. SideloadSafe AI is a real-time behavioral and static analysis assistant that evaluates sideloaded apps *before* installation completes, using minimal on-device AI combined with cloud verification. Unlike existing app stores that rely on pre-publish vetting, SideloadSafe adapts to the bursty, unofficial distribution channels by dynamically flagging suspicious patterns in app binaries, network behaviors, and permission escalations—alerting users and sandboxing risky apps immediately. This approach fills a gap for everyday users who want to sideload apps safely without deep technical expertise or lengthy manual vetting.
+
+**Potential tech stack:**  
+- On-device TinyML models for quick static analysis (TensorFlow Lite, PyTorch Mobile)  
+- Cloud-based dynamic behavioral sandboxing (Kubernetes + custom microservices)  
+- Graph-based feature extraction for app binaries (Graph Neural Networks)  
+- Mobile-friendly UI using Flutter or React Native  
+- Secure communication via gRPC and encrypted channels
+
+---
+
+### 2. ArxivGuard AI  
+**Description:**  
+ArXiv recently declared independence from Cornell, highlighting the importance of decentralized and community-driven scientific repositories. ArxivGuard AI is an open, decentralized moderation and quality-assurance assistant for preprint servers and open academic archives without centralized control. It uses AI to detect plagiarism, fabricated data, methodological flaws, and biased language automatically from submissions and community comments. Unlike traditional centralized peer reviews, this system leverages federated learning across multiple nodes hosting mirrors of preprints, ensuring the moderation AI grows more robust while preserving author privacy and archive independence. It addresses the emerging need for trustworthy but decentralized scientific archives in a post-centralized era.
+
+**Potential tech stack:**  
+- Federated learning frameworks (TensorFlow Federated, Flower)  
+- NLP transformer models fine-tuned on scientific text (SciBERT, Longformer)  
+- Blockchain or DAG-based metadata tamper-proofing (Hyperledger, IPFS)  
+- Web front-end with Next.js or SvelteKit  
+- API integrations for ORCID, DOI, and citation tracking
+
+---
+
+### 3. KittenVoice Lite  
+**Description:**  
+Recent advances produced ultra-light TTS models (less than 25MB) aimed at mobile or embedded devices. KittenVoice Lite focuses on democratizing voice AI for low-resource languages and niche dialects where large datasets and corpora are unavailable. It combines transfer learning from existing large multilingual TTS models together with active user-in-the-loop corrections to produce high-quality, personalized synthetic voices that run efficiently on low-end hardware. Unlike general-purpose TTS that neglect minor languages or require heavy compute, KittenVoice Lite creates a community-powered, incremental voice training platform that grows better with user feedback and offline iterations, making voice AI accessible globally and locally.
+
+**Potential tech stack:**  
+- Lightweight sequence-to-sequence TTS architectures (FastPitch lite, Tacotron variants)  
+- Transfer learning on multilingual speech corpora (Mozilla Common Voice, VoxForge)  
+- On-device fine-tuning and feedback loops using mobile accelerators (Edge TPU, Apple's CoreML)  
+- User annotation & voice correction app built with React Native  
+- Backend orchestration using Python Flask + Redis queues for syncing user updates
+```
+
