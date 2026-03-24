@@ -10205,3 +10205,47 @@ An AI-driven optimizer designed explicitly for legacy and resource-constrained h
 - Cross-platform hooking frameworks for Windows/macOS/Linux support  
 ```
 
+
+
+## 2026-03-24
+
+```markdown
+### 1. WhisperWall AI  
+**Description:**  
+Modern homes increasingly integrate smart devices, but their networks remain vulnerable, especially with foreign-made routers and legacy IoT devices. WhisperWall AI is a personal, on-premise AI firewall and privacy auditor that continuously listens passively to network traffic and device behaviors across all home devices without cloud dependency. Unlike traditional firewalls or centralized cloud analysis, it uses edge LLM compression and anomaly detection to identify suspicious signals or unexpected data exfiltration within encrypted streams — alerting users in natural language and suggesting real-time containment actions. It targets underserved users who rely on mixed-origin consumer routers and have limited cybersecurity knowledge but high privacy concerns.
+
+**Tech Stack:**  
+- LLM optimized for edge deployment (e.g., distilled 30B LLM variant)  
+- On-device encrypted traffic metadata analysis via eBPF/similar kernel tech  
+- Rust or Go backend for performant packet inspection and anomaly detection  
+- React Native + Swift + Kotlin for multi-platform (iOS/Android) native privacy dashboard  
+- Optional integration with Apple Home ecosystem for device contextualization
+
+---
+
+### 2. ResearchSpark AI  
+**Description:**  
+Many researchers struggle with “burying the lede” in old or half-formed research ideas, often losing valuable mental context or failing to see new adjacent directions. ResearchSpark AI specializes in interactive re-interpretation of dormant research notes, code, and partial drafts by blending autoresearch summary + knowledge-gap detection + hypothesis expansion. It automatically identifies overlooked assumptions or unexplored axes of variation and proposes novel mini-experiments or pivot ideas keyed to the user's existing corpus, unlike general-purpose LLM note-takers or code assistants. This tool is designed for independent scientists, academics returning to old work, and startups in exploration mode trying to unlock value from prior R&D.
+
+**Tech Stack:**  
+- Large open LLM fine-tuned on scientific texts (BioMed, Arxiv, patents)  
+- Graph embeddings to represent corpus context + concept maps (e.g., PyTorch + Faiss)  
+- Python-based interactive notebook UI with in-line AI suggestions  
+- Plugin interface for fetching external databases (Google Scholar, Semantic Scholar API)  
+- VSCode extension or JupyterLab integration for seamless workflow embedding
+
+---
+
+### 3. RegexRadar AI  
+**Description:**  
+Regex is notoriously inefficient and error-prone, especially in large-scale log or data processing (due to O(n²) worst-case bottlenecks) and difficult for novices to master. RegexRadar AI combines neural program synthesis with symbolic automata optimization to generate not just correct, but performance-guaranteed regex patterns tailored to specific datasets and usage contexts. It also visualizes step-by-step matching dynamics interactively, exposing hidden inefficiencies and proposing provably faster equivalent alternatives. This is unlike existing regex helper tools or simple LLM regex generators, as it deeply merges AI synthesis with classical automata theory and runtime profiling, helping engineers from beginner to expert and across industry-scale logs, telemetry, and batch data scenarios.
+
+**Tech Stack:**  
+- Neural program synthesis models trained on regex corpus (transformers, e.g., Codex-like)  
+- Compilation to optimized automaton using formal methods libraries (e.g., AutomataLib in Java or equivalent Rust libraries)  
+- WebAssembly for interactive UI in browser-based visual runtime  
+- Profiling engine for O(n) vs O(n²) behavior detection in real-time  
+- Backend in Rust or C++ for regexp engine integration and speed  
+
+---
+```
