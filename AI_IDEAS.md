@@ -10249,3 +10249,48 @@ Regex is notoriously inefficient and error-prone, especially in large-scale log 
 
 ---
 ```
+
+
+## 2026-03-25
+
+```markdown
+### 1. KernelCraft AI  
+**Description:**  
+An AI-powered dynamic kernel optimizer that learns in real-time how to tailor operating system kernels (Linux, Windows, ARM) specifically for running complex workloads like gaming, virtualization, or AI inference. Unlike existing static or semi-static kernel tuning tools, KernelCraft AI continuously profiles the system, predicts workload shifts, and automatically rewrites or swaps kernel modules for maximal performance and stability. Inspired by projects optimizing Windows-on-Linux gaming performance but targeting a broader adaptive kernel orchestration approach, it serves underserved users needing tailored kernel customizations without deep OS expertise. This could revolutionize performance for heterogeneous hardware, hybrid cloud-edge environments, and containerized workloads.
+
+**Potential tech stack:**  
+- Rust/C (kernel module development)  
+- Python/Go backend orchestration  
+- Reinforcement learning models (PyTorch/TensorFlow) for workload prediction  
+- eBPF for lightweight system introspection and fine-grained telemetry  
+- Web UI in React with real-time kernel optimization insights
+
+---
+
+### 2. PestPatrol AI  
+**Description:**  
+A vertical SaaS AI assistant and augmented reality (AR) toolkit for pest control technicians, expanding far beyond basic scheduling or inventory tools. PestPatrol AI blends AI-driven pest identification (from phone videos/photos), outbreak prediction using environmental and historical data, AR-guided treatment procedures, and IoT sensor integration for real-time infestation monitoring. Unlike generic field service apps, it targets pest control’s nuances—helping technicians with instant, on-site diagnosis and compliance reporting while optimizing treatment effectiveness and reducing unnecessary pesticide use. This addresses a niche with limited tech coverage despite large market importance.
+
+**Potential tech stack:**  
+- Mobile app (Flutter or React Native)  
+- Computer vision models (TensorFlow Lite, CoreML) for species detection  
+- Edge AI hardware integration (IoT sensors for environment monitoring)  
+- ARKit/ARCore for AR procedural overlays  
+- Backend: Node.js/Express with PostgreSQL  
+- Data pipeline for environmental data ingestion (weather APIs, satellite imagery)
+
+---
+
+### 3. VidQuiz AI  
+**Description:**  
+A tool that automatically generates sub-second educational and training quizzes directly from video content—targeted at professional learning platforms, corporate training, and niche video creators. Unlike existing video quiz tools that rely on manual question creation or simple timestamped quizzes, VidQuiz AI uses NLP and video content analysis to identify key concepts, speaker emphasis, and visual elements, creating relevant multi-choice, true/false, or flashcard style questions on the fly. This empowers more engaging, interactive video learning at scale, dramatically reducing content creator workload and boosting retention for underserved verticals such as internal company training or specialized professional certification prep.
+
+**Potential tech stack:**  
+- Video analysis with FFmpeg + OpenCV  
+- Speech-to-text transcription (using Whisper or Google Speech APIs)  
+- NLP pipelines (Hugging Face transformers) for summarization & question generation  
+- Frontend React or Vue.js for quiz interface and embedding  
+- Backend in Python (FastAPI) for processing and API delivery  
+- Integration with LMS platforms via SCORM/xAPI standards
+```
+
