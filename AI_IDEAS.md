@@ -10529,3 +10529,52 @@ The retro demo scene and pixel art communities cherish techniques that squeeze m
 - Storage: Git LFS or IPFS for storing large demo assets and versioning optimization runs  
 ```
 
+
+
+## 2026-03-31
+
+```markdown
+### 1. RouterMorph AI
+
+**Description:**  
+While DIY router solutions exist, they mostly require highly technical knowledge to repurpose generic devices into network routers. RouterMorph AI targets underserved non-expert users in small homes, remote offices, or pop-up events needing fast, secure, and adaptable routing setups without complex configuration. It uses AI to automatically detect hardware capabilities (phones, old laptops, IoT hubs), network conditions, and security threats to morph the device’s network stack in real-time, optimizing bandwidth, privacy, and firewall policies. Unlike rigid firmware-only approaches, RouterMorph AI continuously learns from usage patterns and emerging threats to reconfigure the device dynamically, turning *any* connected device into a smart, adaptive router.
+
+**Potential tech stack:**  
+- Edge AI frameworks (TensorFlow Lite, ONNX Runtime)  
+- Rust and Go for performant network stack manipulation  
+- OS-level hooks via eBPF or DPDK to monitor and manage traffic  
+- WebAssembly for cross-platform network policy plugins  
+- Secure enclave or ARM TrustZone for sensitive key management  
+- Cloud backend (AWS Lambda, Azure Functions) for threat intelligence updates  
+
+---
+
+### 2. WriteFlow AI
+
+**Description:**  
+Most writing assistants focus on single outputs—grammar fixes, style recommendations, or increasing productivity with autocomplete. WriteFlow AI is a holistic AI collaborator that seamlessly integrates with the entire writing workflow, offering personalized real-time feedback, workflow-aware suggestions (e.g., restructuring for various genres: research, narrative, email), and motivation nudges to maintain momentum. Crucially, it adapts suggestions based on user’s preferred rhetorical style and emotional tone detected from their writing history, integrating human creativity with AI assistance without overwhelming or copying. WriteFlow AI also supports multi-modal brainstorming, allowing users to shoot ideas via voice or sketch, which it then weaves into coherent drafts.
+
+**Potential tech stack:**  
+- Large language models fine-tuned with stylistic embeddings (OpenAI GPT + custom tunings)  
+- NLU (Natural Language Understanding) pipelines with transformers  
+- Cross-platform desktop client (Electron, SwiftUI for Mac, .NET MAUI for Windows)  
+- Voice and image processing models (Mozilla DeepSpeech, OpenCV)  
+- Real-time collaboration backend (WebSockets, Firebase, or Supabase)  
+- Privacy-first local inference options (ONNX, CoreML on-device models)  
+
+---
+
+### 3. Civicode Sentinel AI
+
+**Description:**  
+Government and public sector apps often collect excessive user data or have hidden spying capabilities, fueling mistrust. Civicode Sentinel AI addresses this gap by automatically analyzing, reverse-engineering, and auditing government and civic tech apps and websites for privacy invasions, hidden tracking, and misuse of permissions. Unlike existing static scanners, it uses behavioral AI models that simulate user interactions to uncover covert spyware-like behaviors or unauthorized data exfiltration patterns dynamically. It generates easy-to-understand, actionable reports and privacy ratings targeting activists, journalists, and concerned citizens, helping them advocate for safer digital public services.
+
+**Potential tech stack:**  
+- Dynamic instrumentation with frameworks like Frida, and custom emulators  
+- Behavior modeling using reinforcement and anomaly detection ML algorithms  
+- Static & dynamic code analysis (AST parsing, taint analysis, symbolic execution)  
+- Cross-platform mobile automation (Appium, XCTest, Espresso)  
+- Secure cloud backend for report generation and anonymized data aggregation  
+- Progressive Web App (PWA) frontend for broad user accessibility  
+```
+
