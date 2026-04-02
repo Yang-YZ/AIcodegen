@@ -10622,3 +10622,51 @@ Building on the need for faster, lightweight cloud development environments (ins
 
 ---
 ```
+
+
+## 2026-04-02
+
+```markdown
+### 1. BookBack AI
+
+**Description:**  
+Amidst increasing screen fatigue and the resurgence of traditional reading habits (like Sweden’s move back to books in classrooms), BookBack AI is an intelligent assistant designed to bridge analog reading with digital augmentation. It uses a smartphone camera or smart glasses to scan a page of a physical book and instantly provides contextual, multi-modal enhancements—summarizing difficult passages, linking historical or scientific references, suggesting complementary multimedia content, or enabling collaborative annotation with peers. Unlike e-readers, BookBack AI supports printed books, benefiting students, educators, and lifelong learners who want richer engagement without abandoning paper.
+
+**Potential tech stack:**  
+- Computer Vision: TensorFlow / PyTorch with OCR models fine-tuned for book fonts/layouts (e.g., Tesseract + Transformer-based contextual recognition)  
+- NLP: OpenAI GPT or a fine-tuned LLaMA variant for summarization and contextual linking  
+- Augmented Reality SDKs: Apple ARKit / Google ARCore for smart glasses integration  
+- Mobile Backend: Node.js / Python Flask with cloud (AWS/Azure) for heavy processing  
+- Annotation & Collaboration: Real-time DBs like Firebase or Supabase  
+
+---
+
+### 2. QuantumDebug AI
+
+**Description:**  
+With quantum computing accelerating rapidly but prone to subtle, non-deterministic bug patterns (akin to the recent discoveries of complex quantum error modes), QuantumDebug AI is designed specifically for quantum developers struggling to isolate stochastic errors and system-level faults. It applies advanced Bayesian inference and probabilistic graphical models to quantum circuit execution logs and hardware telemetry, providing probabilistic root cause analysis and suggesting error mitigation paths. Unlike classical debugging tools or naive trial-and-error, this AI embraces quantum uncertainty, delivering actionable insights resistant to noise and randomness intrinsic to quantum systems.
+
+**Potential tech stack:**  
+- Probabilistic Programming: Pyro / Edward2 (built on PyTorch / TensorFlow Probability)  
+- Quantum SDKs: IBM Qiskit / Google Cirq for data integration  
+- Data Analytics: Pandas, NumPy, and advanced statistical packages  
+- Dashboard/UI: React + D3.js for visualizing probabilistic debugging insights  
+- Backend AI: Python with Bayesian optimization libraries  
+
+---
+
+### 3. SubScrub AI
+
+**Description:**  
+Subscription bombing (fraudulent over-signups to SaaS/streaming services) threatens providers and users, especially lightning-fast signup bots. SubScrub AI is an AI-driven adaptive fraud prevention system designed specifically for subscription services at risk of systemic bombing attacks. It continuously learns from behavioral signals, device fingerprints, and signup histories to detect evolving attack patterns. Unlike traditional static CAPTCHA or rule-based rate limiting, SubScrub AI dynamically tailors verification friction per risk level, reducing false positives that annoy genuine users and minimizing friction for loyal customers. It provides explainable AI alerts and auto-adjusting prevention policies in real-time for subscription managers.
+
+**Potential tech stack:**  
+- Machine Learning: Scikit-learn / XGBoost for risk scoring; deep learning with TensorFlow for behavior pattern extraction  
+- Data Streaming: Kafka or AWS Kinesis for real-time event ingestion  
+- Device Fingerprinting Libraries: Open source tools augmented with custom models  
+- Backend: Go / Python (FastAPI) for scalable microservices  
+- Dashboard & Alerts: Vue.js or React with Kibana/ElasticSearch for visualization and anomaly alerts  
+- Cloud: AWS or GCP with serverless components for elasticity  
+
+```
+
