@@ -10670,3 +10670,49 @@ Subscription bombing (fraudulent over-signups to SaaS/streaming services) threat
 
 ```
 
+
+
+## 2026-04-03
+
+```markdown
+# 1. SentinelScope AI
+
+**Description:**  
+In an era where privacy concerns rise amid widespread browser extension surveillance (e.g., LinkedIn scanning extensions), SentinelScope AI offers a transparent AI-powered watchdog for users’ browser environments. It continuously analyzes and identifies any intrusive or privacy-violating behaviors of installed extensions and web apps in real-time without sending data to the cloud. Unlike conventional privacy tools that rely on fixed blacklists or static permission reviews, SentinelScope adapts dynamically to new extension versions, suspicious access patterns, and novel data exfiltration techniques using on-device behavioral anomaly detection. This empowers users—especially tech novices and privacy-conscious professionals—to understand and mitigate privacy risks proactively, rather than reactively after breaches.
+
+**Potential tech stack:**  
+- On-device ML models using TensorFlow Lite or ONNX Runtime for behavioral anomaly detection  
+- WebExtension APIs for deep integration with browser extension metadata  
+- Rust or Go for performant, secure local monitoring agents  
+- Electron or native macOS/Windows front-end for user interface and reports  
+- Differential privacy techniques to enable optional anonymized crowd-sourced threat intelligence without compromising user data  
+
+---
+
+# 2. AgentQube AI
+
+**Description:**  
+Inspired by advances in open AI agent models (e.g., Qwen3.6-Plus) but focusing on *small-business and freelance ecosystems*, AgentQube AI is a modular, no-code AI agent platform customizable for micro-enterprises lacking dedicated AI/IT staff. Unlike complex, heavy agents geared toward large enterprise or research environments, AgentQube creates lightweight task agents that integrate with commonly-used small business tools (email, invoicing, calendars) to automate routine admin tasks, customer follow-ups, or lead qualification. It includes easy “build-your-agent” workflows with domain-specific templates and ethics guardrails tailored for SMB use cases—helping underserved segments jumpstart AI adoption without expensive consultancy fees or technical overhead.
+
+**Potential tech stack:**  
+- Hugging Face transformers for domain-adapted NLP tasks  
+- Node.js or Python backend with plug-and-play connectors to Google Workspace, QuickBooks, Slack, etc.  
+- Low-code/no-code UI builder with React or Vue.js  
+- Federated learning framework to allow users to share anonymized improvements without data leakage  
+- Lightweight agent orchestration runners leveraging Docker or serverless functions for scaling  
+
+---
+
+# 3. TrustLens AI
+
+**Description:**  
+Following recent controversies around ethical concerns in enterprise data platforms (e.g., Palantir in NHS) and cloud trust erosion (e.g., Azure), TrustLens AI is a transparency and governance assistant designed for internal enterprise use to assess the ethical, privacy, and compliance footprint of third-party cloud or AI tools before adoption. It combines AI-driven document analysis, contracts parsing, technical risk simulation, and ethical impact scoring into an interactive dashboard for procurement teams, compliance officers, and business leaders. Unlike traditional compliance checklists or static audit reports, TrustLens proactively simulates potential ethical dilemmas and data misuse scenarios based on a vendor’s policies and implementation details, helping enterprises make trust-based decisions aligned with their values and regulatory environment.
+
+**Potential tech stack:**  
+- Large language models fine-tuned on regulatory documents, vendor contracts, and code of ethics (e.g., GPT-4, Anthropic Claude)  
+- Knowledge graph databases (Neo4j, Amazon Neptune) to link policies, entities, and risks  
+- Front-end dashboards with D3.js for interactive scenario simulation  
+- Secure API connectors for vendor SaaS platform policy extraction  
+- Privacy-preserving computation frameworks (e.g., homomorphic encryption) to handle sensitive document analysis  
+```
+
