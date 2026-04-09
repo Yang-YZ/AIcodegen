@@ -10940,3 +10940,50 @@ Inspired by scale model enthusiasts and geographic preservation efforts, TerraSc
 - Real-time rendering with WebGL/Three.js and cloud GPU acceleration for large-scale models  
 ```
 
+
+
+## 2026-04-09
+
+```markdown
+### 1. **CodeContext Navigator AI**
+
+**Description:**  
+While many tools help you understand code syntax or run git commands, developers often struggle with contextualizing *why* certain code or commits exist, especially when onboarding or revisiting legacy projects. CodeContext Navigator AI actively mines project history, pull requests, issue trackers, and even developer conversations (e.g., chat logs or code review comments) to generate a rich narrative around a code section or commit. It goes beyond static documentation by reconstructing intent, design decisions, and tradeoffs over time, surfaced in an interactive timeline and enriched with links to related bugs and design docs. This fills a gap between raw commit logs and knowledge base wikis, helping teams reduce onboarding friction and revive legacy projects without heavy manual knowledge capture.
+
+**Potential tech stack:**  
+- Natural Language Processing: GPT-4 style transformers, domain-adapted embeddings  
+- Graph databases: Neo4j or AWS Neptune for storing code+commit+issue+chat relationships  
+- Integration layer: Git providers (GitHub/GitLab APIs), Jira/Trello API, Slack/Discord chat APIs  
+- Frontend: React + D3.js for interactive timeline visualization  
+- Backend: Node.js or Python Flask for orchestration and API serving  
+
+---
+
+### 2. **LinuxNetGuard AI**
+
+**Description:**  
+Inspired by "LittleSnitch for Linux," LinuxNetGuard AI targets an underserved demographic—privacy-conscious Linux users and developers—offering AI-powered, context-aware network permissioning. Unlike traditional firewall or network monitoring tools which require manual rules, this system learns normal application behavior over time, flags anomalous or suspicious network requests dynamically, and suggests safe or restrictive actions with confidence scores. It understands user behavior patterns, network conditions, and application update states to reduce false positives inherent in manual whitelist/blacklist systems. This makes network monitoring and intrusion prevention more accessible and less noisy for Linux desktop and server users alike.
+
+**Potential tech stack:**  
+- Network packet inspection: libpcap, nftables/iptables integration  
+- ML models: anomaly detection using unsupervised techniques (Autoencoders, Isolation Forest) combined with contextual embeddings of application metadata  
+- Backend service: Rust or Go for performant packet capture and real-time classification  
+- User interface: GTK4 + WebAssembly frontend for desktop notifications, rule management  
+- Optional cloud sync and telemetry opt-in for collective threat intelligence  
+
+---
+
+### 3. **RadarSense Kalman AI**
+
+**Description:**  
+Building on classical estimation tools like the Kalman filter but targeting applied accessibility, RadarSense Kalman AI bridges theory with practice by offering an explainable, interactive AI assistant specialized in state estimation problems across disciplines (robotics, finance, aerospace). Instead of black-box ML models, it integrates symbolic reasoning with learned components to help users design, tune, and visualize filters on their own streaming data (e.g., radar, sensors), automatically generating tailored tutorials and diagnostics in real-time. It demystifies complex math through layered explanations, visual abstraction, and hands-on exercises, ideal for engineers and researchers who want to leverage probabilistic filtering without deep expertise.
+
+**Potential tech stack:**  
+- Computational math: JAX or PyTorch for automatic differentiation and probabilistic programming (Pyro/NumPyro)  
+- Visualization: Bokeh or Plotly Dash for dynamic signal and state visualization  
+- Explainability: Natural language generation (fine-tuned transformers for technical tutoring)  
+- Backend: Python with FastAPI for interactive sessions and model fitting APIs  
+- Integration: Support for sensor data streams via MQTT or custom APIs for real-time inference and user feedback  
+
+---
+```
