@@ -11126,3 +11126,47 @@ The breakthrough in atomic-scale memory (447 TB/cm² on fluorographane) unlocks 
 - WebAssembly-based frontend for interactive visualization  
 - High-performance cloud GPUs/nodes for heavy simulation batches
 ```
+
+
+## 2026-04-13
+
+```markdown
+### 1. FluxJuggle AI  
+**Description:**  
+While juggling is typically a physical skill, FluxJuggle AI is an interactive personal coach that uses computer vision and biomechanical modeling to teach *dynamic multitasking* beyond just juggling balls—training users to coordinate complex, time-sensitive hand-eye tasks involving arbitrary objects (e.g., tools, devices, even soft goods). Unlike existing sports or juggling apps, it uniquely integrates object recognition, physics simulation, and cognitive workload analysis to personalize difficulty progression and develop fine motor skills for rehabilitation, esports, and manual professions. This addresses a subtle gap: many people struggle with managing *one* task or object, yet little AI targets foundational motor coordination with adaptivity beyond rote repetition or augmented reality overlays.  
+
+**Potential tech stack:**  
+- Computer vision: PyTorch / OpenCV / MediaPipe  
+- Physics simulation: Unity3D or Bullet Physics integration  
+- Real-time feedback & UX: React Native + TensorFlow Lite  
+- Edge AI inference on smartphones or AR glasses  
+- Cloud backend: AWS Lambda + S3 for progress tracking and model updates  
+
+---
+
+### 2. LocallyAware Cloud Proxy  
+**Description:**  
+Inspired by geo-blocking issues like Docker pull failures due to region-specific network censorship (e.g., Spain’s football content blocks), LocallyAware Cloud Proxy creates an on-demand, smart regional proxy that dynamically routes users’ specific app or API requests through compliant, context-aware cloud edge nodes. Unlike generic VPNs or CDNs, it leverages fine-grained content-type and usage pattern detection combined with continuously updated policy datasets (from crowdsourced reports and AI analysis) to instantly adapt routing and access methods. This uniquely caters to developers, SaaS customers, and enterprises struggling with regional content filtering or platform throttling—without breaking terms of service or requiring manual VPN management.  
+
+**Potential tech stack:**  
+- Edge compute & routing: Cloudflare Workers / AWS CloudFront + Lambda@Edge  
+- AI for policy & content classification: FastAPI + Hugging Face Transformers  
+- Crowdsource reporting platform: React + Firebase or Supabase  
+- Real-time analytics & monitoring: Grafana + Prometheus  
+- Container orchestration for multi-region proxies: Kubernetes + Envoy  
+
+---
+
+### 3. MicroTaste AI  
+**Description:**  
+DIY soft drink enthusiasts lack personalized flavor adaptation systems beyond static recipes or manual tweaking. MicroTaste AI uses molecule-level flavor prediction and user sensory feedback loops via phone cameras and taste surveys to recommend ingredient substitutions or enhancements in real time. Unlike standard recipe apps or generic flavor predictors, MicroTaste AI leverages AI-driven chemical analysis integrated with crowd-sourced flavor mapping databases to help users craft drinks matching their unique taste profiles, dietary restrictions, and local ingredient availability. This targets health-conscious, experimental consumers and local artisans underserved by mass commercial products or rigid recipe platforms.  
+
+**Potential tech stack:**  
+- Flavor molecule database & prediction: RDKit + Graph Neural Networks  
+- User sensory input: Mobile app with camera + UX survey forms (Flutter or SwiftUI)  
+- Recommendation engine: Python (Flask or FastAPI) + Scikit-learn / PyTorch  
+- Cloud platform: Google Cloud (BigQuery for ingredient data + Vertex AI for model training)  
+- Integration with local supplier APIs or marketplaces for ingredient sourcing  
+
+```
+
