@@ -11260,3 +11260,52 @@ Most modern UI frameworks rely on rigid rectangular bounding boxes and standard 
 - Constraint solvers and layout engines powered by AI heuristics (Z3 SMT solver enhanced with learned heuristics)
 ```
 
+
+
+## 2026-04-16
+
+```markdown
+### 1. **IPv6Mapper AI**
+
+**Description:**  
+As IPv6 adoption surpasses 50% of internet traffic, many network monitoring and cybersecurity tools still heavily focus on IPv4 or treat IPv6 superficially. IPv6Mapper AI is a specialized AI tool that dynamically maps and visualizes the evolving topologies, traffic patterns, and potential attack surfaces specific to IPv6 networks. Unlike traditional network analyzers that treat IPv6 as an extension of IPv4, this AI deeply understands IPv6’s unique features such as SLAAC, privacy extensions, and its vastly larger address space. It automatically identifies misconfigurations, potential vulnerabilities in IPv6 routing and DNS, and provides actionable insights for network admins and cybersecurity teams—bridging a critical observability gap in IPv6 environments.
+
+**Potential tech stack:**  
+- Data ingestion: Kafka, IPv6 packet sensors (e.g., Suricata, Zeek)  
+- AI/ML: PyTorch or TensorFlow for anomaly detection on IPv6 traffic  
+- Graph processing: Neo4j or DGraph to model IPv6 network topology  
+- Visualization: D3.js, Grafana dashboards with custom widgets  
+- Backend: Go or Rust for efficient packet processing and API services  
+- Deployment: Kubernetes for scalable, real-time monitoring  
+
+---
+
+### 2. **IdleMac Secure Compute**
+
+**Description:**  
+Inspired by concepts like Darkbloom but focused on a broader, privacy-first computation marketplace specifically targeting underutilized personal devices (mainly Macs) for private AI inference tasks. IdleMac Secure Compute enables Mac users to safely lease their idle CPU/GPU cycles to trusted requesters who need confidential AI model execution (e.g., on financial data, medical images, or proprietary code) without exposing raw data or models. The system leverages secure enclave capabilities, innovative local differential privacy techniques, and verifiable computing primitives to guarantee privacy and integrity. Unlike existing distributed computing projects, this one emphasizes trustless private inference with end-user control, focusing on a large, underleveraged user base of Macs worldwide.
+
+**Potential tech stack:**  
+- Secure Enclave APIs (Apple TEE) for trusted execution  
+- Differential Privacy SDKs (Google’s DP or Microsoft)  
+- Federated learning frameworks (TensorFlow Federated) adapted for private inference  
+- Zero-Knowledge Proof systems for verifiable computation (e.g., zk-SNARKs)  
+- Swift + Python microservices for client and server coordination  
+- P2P networking protocols for workload distribution (libp2p, WebRTC)  
+
+---
+
+### 3. **Spreadsheet AI Auditor**
+
+**Description:**  
+While ChatGPT for Excel enhances productivity by generating formulas and automations, Spreadsheet AI Auditor focuses on the integrity and trustworthiness of complex, collaborative spreadsheets widely used in finance, compliance, and scientific research. This AI automatically inspects multi-sheet workbooks for logical inconsistencies, anomalous data entries, hidden external data connections, and potential circular references that could bias analytics or decision-making. Unlike existing formula checkers, it applies semantic code analysis, anomaly detection, and provenance tracking across versions and users, making it indispensable in high-stakes environments where spreadsheet errors have caused costly failures.
+
+**Potential tech stack:**  
+- Excel JS API + Python (xlwings) for spreadsheet parsing and manipulation  
+- Static code analysis adapted for Excel formulas and VBA macros  
+- NLP models fine-tuned for spreadsheet language and user comments (BERT, GPT variants)  
+- Anomaly detection models using PyOD or sklearn  
+- Cloud backend on Azure or AWS Lambda for scalable auditing jobs  
+- Web UI with React + TypeScript for interactive report visualization  
+```
+
