@@ -11356,3 +11356,48 @@ A specialized AI assistant designed to help game design educators and students r
 
 ---
 ```
+
+
+## 2026-04-18
+
+```markdown
+# 1. DustSense AI
+
+**Description:**  
+Inspired by the lunar hay fever case where moon dust had unexpected physical effects, DustSense AI is an environmental hazard simulator and early warning system that analyzes micro-particles, dust, and airborne compounds in closed or semi-closed environments (space habitats, industrial workplaces, smart homes). Unlike current air-quality AI which focuses mainly on common pollutants, DustSense AI uses multimodal sensor fusion and generative modeling to predict not only toxicity but also unexpected chemical or physical reactions at a micro-scale — for example, identifying “reactive dust” that behaves like gunpowder or disrupts sensitive equipment. This helps protect vulnerable users like astronauts, cleanroom workers, and advanced lab techs, addressing an underserved niche in toxicology and occupational health.
+
+**Potential tech stack:**  
+- Sensor array integration (IoT dust, chemical, optical sensors)  
+- Multimodal transformer-based sensor fusion (PyTorch/TensorFlow)  
+- GANs or diffusion models for simulating reactive particle behavior  
+- Edge computing with lightweight inference (ONNX, TensorRT)  
+- Web dashboard using React + D3.js for real-time risk visualization  
+- Cloud backend on AWS or GCP for long-range modeling and historical data aggregation
+
+
+# 2. SnapStart VM AI
+
+**Description:**  
+Taking inspiration from ultra-fast coldstart virtual machines ("Smol machines"), SnapStart VM AI is a developer productivity assistant designed specifically to optimize the lifecycle and logic of subsecond boot VMs/containers in serverless and edge computing contexts. Unlike generic orchestration or benchmarking tools, SnapStart VM AI uses reinforcement learning and code static analysis to suggest optimal VM snapshot states, preload configurations, and lightweight dependency packing—reducing cold start times and cost simultaneously. This fills a gap for cloud developers pushing extreme latency limits or running diverse services on spotty or constrained hardware.
+
+**Potential tech stack:**  
+- Static and dynamic code analysis tools (Rust, LLVM)  
+- Reinforcement learning frameworks (Ray RLlib, Stable Baselines3)  
+- Container and VM runtime instrumentation (libvirt, Firecracker)  
+- Cloud APIs (AWS Lambda/Graviton, Azure Container Instances)  
+- Visualization & CLI tools in Go or Rust with WebAssembly front-end  
+
+
+# 3. CoinQuest AI
+
+**Description:**  
+Building on the fascinating story of a middle schooler finding a rare coin from Troy in Berlin, CoinQuest AI is an AI-powered artifact provenance and discovery assistant targeted at amateur historians, archeology enthusiasts, and small museums. Unlike purely academic or commercial provenance systems, CoinQuest AI leverages computer vision on phone photos, NLP over multilingual historical documents, and crowdsourced knowledge graphs to identify, date, and assess artifacts’ cultural significance in real-time. It also gamifies the exploration, encouraging more diverse and global engagement with historical preservation, democratizing what is often an elitist field.
+
+**Potential tech stack:**  
+- Mobile app using TensorFlow Lite or CoreML for on-device CV (artifact image recognition)  
+- Large language models fine-tuned on historical and archeological texts (Hugging Face)  
+- Knowledge graph databases (Neo4j, Amazon Neptune)  
+- Crowdsourcing via gamified UX built in Flutter or React Native  
+- Backend serverless functions for verifying and cross-referencing metadata  
+```
+
