@@ -11739,3 +11739,49 @@ Ancient text fragments, such as newly discovered Iliad passages or lost cultural
 - Cloud GPU infrastructure for model training and inference (AWS/GCP/Azure)  
 ```
 
+
+
+## 2026-04-26
+
+```markdown
+### 1. MakeRevive AI
+
+**Description:**  
+While much attention focuses on AI-assisted coding or high-level manufacturing automation, “making” or physical prototyping — especially by Western hobbyists and small makers — has seen a decline due to lost tacit knowledge and fragmented skillsets. MakeRevive AI acts as a contextual maker mentor that bridges gaps in hands-on fabrication by integrating digitized workshop manuals, localized supply sourcing, and adaptive troubleshooting specific to even obscure legacy tools and techniques. Unlike existing platforms focused just on CAD or standard tutorials, this AI actively learns from maker communities worldwide, suggests hybrid digital-analog solutions, and helps resurrect stalled or abandoned physical projects by intelligently adapting designs for current materials and tools.
+
+**Potential tech stack:**  
+- Large Language Model (LLM) fine-tuned on maker forums, workshop manuals, vintage tool catalogs  
+- Computer vision for recognizing user-submitted photos of fabricated parts and tools  
+- Supply chain API integrations for localized materials and equipment availability  
+- Edge deployment support for offline use in remote or workshop environments  
+- Web & mobile frontend with AR-based step-by-step guidance  
+
+---
+
+### 2. NeuroProgress Tracker AI
+
+**Description:**  
+Alzheimer’s and neurodegenerative disease research has traditionally focused on biomarker discovery or drug trials, often missing timely and personalized progression tracking outside clinical environments. NeuroProgress Tracker AI offers a deeply personalized, privacy-first approach to track cognitive, behavioral, motor, and speech changes by integrating daily device usage patterns, passive sensors, voice diary analysis, and cognitive mini-games tailored per patient. Crucially, it contrasts these subtle signals against population-level models and experimental datasets to alert caregivers and clinicians early, guiding personalized interventions. Unlike existing apps that focus on single assessment domains or require active user input, this AI operates continuously in the background and adapts dynamically to digital lifestyle changes over years.
+
+**Potential tech stack:**  
+- Multimodal data ingestion (smartphone sensors, voice, wearables)  
+- Time-series anomaly detection with federated learning to respect user privacy  
+- Personalized baseline modeling using transfer learning from clinical datasets  
+- Explainable AI dashboard for clinicians and family members  
+- Integration with telemedicine platforms and secure health data repositories  
+
+---
+
+### 3. GhostApp Sentinel AI
+
+**Description:**  
+App transparency and privacy on mobile devices remain a critical problem, particularly as some apps silently install or activate themselves without explicit user consent—often as part of complex ad/analytics/covert update chains. GhostApp Sentinel AI is a proactive watchdog that combines on-device behavioral modeling with network traffic fingerprinting to detect and flag apps exhibiting “ghost installation” behavior patterns — such as auto-downloading binaries, stealth background activity spikes, or unauthorized inter-app chaining. Unlike existing permission managers or antivirus apps, this AI learns typical user-device behavioral baselines and reveals silent app installs and hidden app proxies in near real-time, with actionable remediation advice, while preserving user privacy via local analytics.
+
+**Potential tech stack:**  
+- On-device lightweight ML models trained on app behavior logs and system API call tracing  
+- Network packet inspection using eBPF or similar kernel-level hooks  
+- Secure enclaves for privacy-preserving behavioral baselining  
+- Mobile OS integration via app sandbox monitoring frameworks (iOS MDM/Android Accessibility Services)  
+- User notification and guided steps UI with privacy-first data-sharing options  
+```
+
