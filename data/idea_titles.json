@@ -805,5 +805,8 @@
   "StaticBinaryLens AI",
   "KernelVision AI",
   "NeedleSpin AI",
-  "CivicMesh AI"
+  "CivicMesh AI",
+  "ModuFree AI",
+  "LocalBench LLM Finder",
+  "RefugeePath AI"
 ]
