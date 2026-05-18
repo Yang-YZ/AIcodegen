@@ -12696,3 +12696,53 @@ SANA-WM highlights open-source world models for short video understanding, but t
 - Optional edge inference with ONNX or NVIDIA TensorRT for efficiency
 ```
 
+
+
+## 2026-05-18
+
+```markdown
+### 1. IdentityQuiet AI
+
+**Description:**  
+With growing awareness of personal data exposure, many users find current "opt-out" tools too narrow or cumbersome, focusing largely on websites or ad trackers. IdentityQuiet AI is a comprehensive, cross-platform personal data scrubber that not only automates opt-out requests to brokers but also monitors and suppresses personal data leaks via emerging AI-driven content generators (e.g., deepfakes, voice synthesis) and social media aggregators. It uses a privacy-first framework to proactively identify sensitive data footprints in text, voice, images, and metadata across user devices and cloud accounts, then generates targeted removal or obfuscation requests leveraging federated, decentralized AI models, without sending raw data to the cloud. Unlike existing tools, it actively adapts to new leak vectors and integrates with identity verification frameworks to confirm removal success over time.
+
+**Potential tech stack:**  
+- Federated Learning frameworks (TensorFlow Federated, Flower)  
+- On-device ML (TensorFlow Lite, CoreML)  
+- NLP and Multi-modal AI models for entity recognition (HuggingFace transformers)  
+- Secure Data Orchestration (Rust, Go for performance and security)  
+- End-to-end encrypted communication protocols for broker interaction (noise protocol, TLS 1.3)  
+- Cross-platform desktop/mobile frameworks (Electron, Swift, Kotlin)  
+
+---
+
+### 2. AstroArchive AI
+
+**Description:**  
+Despite the large amount of astronaut Q&A, interview footage, mission data, and logs becoming public, accessing targeted insights or correlating technical knowledge with user queries remains cumbersome and fragmented. AstroArchive AI is an intelligent knowledge retrieval and synthesis platform exclusively focused on space exploration data and astronaut experiences. It ingests heterogeneous sources (video Q&A, transcripts, mission reports, telemetry data) and produces context-rich, conversational responses with dynamic visualizations, timelines, and mission context. Unlike generic search or video indexing tools, it integrates domain-specific reasoning with temporal and spatial event linking so users can, for example, query “What challenges did astronauts face during long-duration spacewalks in ISS Expeditions 30-40?” to receive synthesized, multi-modal answers supported by direct source snippets and official mission metadata.
+
+**Potential tech stack:**  
+- Multimodal analysis (video+audio transcription + NLP) with transformer models (Whisper, BERT-based)  
+- Knowledge graph construction (Neo4j, RDF triple stores) for event and timeline linking  
+- Vector search engines (Pinecone, FAISS) for semantic retrieval  
+- Web front-end with interactive visualizations (D3.js, React)  
+- Backend ML orchestration (Python, FastAPI)  
+- Cloud infrastructure with GPU support (AWS/GCP/Azure)  
+
+---
+
+### 3. Jankless DevSec AI
+
+**Description:**  
+Modern software projects increasingly suffer from "jank" — hidden inefficiencies and suboptimal code paths that compromise security and performance. Yet most security tools focus purely on vulnerability detection or static analysis without considering runtime behavior and developer workflows holistically. Jankless DevSec AI is a developer assistant that combines custom intermediate representation (IR) analysis with real-time resource profiling (CPU, memory, I/O latency) and fuzzing feedback. It surfaces not only security flaws but also "jank vectors"—patterns leading to security risks via race conditions, resource starvation, or unusual packet flows. It proactively suggests micro-optimizations and security fixes optimized for the target environment (e.g., embedded, cloud). Unlike current tools, it integrates developer ergonomics and continuous integration feedback loops, learning from team-specific code patterns for tailored recommendations.
+
+**Potential tech stack:**  
+- Custom IR tooling and analysis (LLVM/MLIR, custom IR layers)  
+- Runtime tracing/profiling agents (eBPF, SystemTap, DTrace)  
+- Automated fuzz testing frameworks (AFL, libFuzzer) integrated with AI models for suggestion synthesis  
+- ML model frameworks for anomaly detection on profiling data (PyTorch, Scikit-learn)  
+- IDE integration plugins (VSCode, JetBrains)  
+- CI/CD pipeline orchestration (GitHub Actions, Jenkins)  
+
+```
+
