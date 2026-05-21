@@ -12839,3 +12839,58 @@ In regions where Meta and other platforms limit the reach of human rights and ci
 
 ```
 
+
+
+## 2026-05-21
+
+```markdown
+### 1. GeoConflux AI
+
+**Description:**  
+Inspired by the recent breakthrough disproving a central conjecture in discrete geometry, GeoConflux AI is a research assistant specifically designed to explore, generate, and test novel geometric conjectures in discrete and combinatorial geometry. Instead of merely assisting with known problems or general math, it specializes in recognizing subtle patterns and counterexamples within complex geometric configurations, using a mix of symbolic reasoning and neural-guided search. It fills the gap for geometry researchers who currently rely heavily on manual intuition or brute-force computational experiments, providing an intuitive interface to develop, visualize, and verify complex geometric statements beyond established boundaries.
+
+Unlike generic math AI assistants, GeoConflux focuses on *discrete geometry conjecture discovery and verification*, integrating geometric visualization tightly with conjecture generation adaptive to user feedback.
+
+**Potential Tech Stack:**  
+- Foundation: OpenAI GPT + Symbolic Computation Engine (e.g., SymPy, GeoGebra API)  
+- Visualization: WebGL-based dynamic geometry viewers (e.g., three.js integration)  
+- Verification: SMT solvers (Z3), custom geometric constraint solvers  
+- Frontend: React + D3.js for interactive diagrams  
+- Backend: Python Flask server orchestrating symbolic computations and ML inference  
+- Data: Curated discrete geometry problem sets, past proofs, and geometric datasets  
+
+---
+
+### 2. FlipperOne ScriptGuard AI
+
+**Description:**  
+Building on the Flipper One device ecosystem but targeting a critical underserved problem—automated security and compliance auditing of custom scripts, firmware flashes, and microcontroller modifications pushed through hacking tools like Flipper One. This AI assists users (including hobbyists and security researchers) in detecting potentially unsafe or privacy-violating scripts, unauthorized firmware modifications, or covert access attempts embedded in third-party plugin scripts.
+
+Unlike generic static analysis tools, ScriptGuard AI is fine-tuned to understand the embedded devices and IoT hacking community’s scripting languages and workflows (RFID, IR, GPIO signals, sub-GHz protocols). It offers realtime feedback and risk scoring, helping hobbyists maintain ethical and secure modding practices and reducing the spread of malicious payloads disguised in community scripts.
+
+**Potential Tech Stack:**  
+- Language Models fine-tuned on Flipper One script repositories and IoT firmware codebases  
+- Static and dynamic analysis frameworks for embedded/interpreted languages  
+- Signal processing libraries to detect suspicious radio or hardware interaction patterns  
+- Integration with Flipper One (via Bluetooth or companion apps) for real-time code vetting  
+- Frontend: Electron or PWA app with live linting, risk visualization, and sandbox testing  
+
+---
+
+### 3. AuthorshipTransparency AI
+
+**Description:**  
+Addressing the hot topic of AI-generated content as “unauthorized plagiarism at scale,” AuthorshipTransparency AI is a toolkit and browser extension designed to estimate the originality and trace the sources behind a given text or multimedia content. Rather than merely detecting if AI was involved, it aims to reconstruct a layered provenance map showing: sourced fragments, paraphrased segments, and novel synthesis—fusing stylometric analysis, citation chasing, and source database cross-referencing.
+
+It empowers content creators, publishers, educators, and readers to understand *how* a piece of content was assembled, highlighting potential ethical, copyright, or research integrity issues. This is distinct from generic AI content detectors by focusing on *transparency and detailed origin mapping* rather than binary AI/non-AI classification.
+
+**Potential Tech Stack:**  
+- Large-scale embedding search engines (FAISS, ElasticSearch) for source matching  
+- Stylometric and semantic similarity models (BERT-based + classical linguistic features)  
+- Citation extraction and metadata parsing from academic, media, and open web corpora  
+- Browser extension frontend (e.g., Chrome/Firefox) with interactive provenance visualization  
+- Backend API serving provenance reports and similarity heatmaps  
+- Privacy-preserving mechanisms to protect user queries and source data compliance  
+
+---
+```
