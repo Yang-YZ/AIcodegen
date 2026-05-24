@@ -12989,3 +12989,49 @@ Building on recent breakthroughs in sleep research and new sleep apnea drugs, Dr
 - Explainable AI interfaces for clinician interaction and patient education  
 ```
 
+
+
+## 2026-05-24
+
+```markdown
+### 1. VisaVista AI
+
+**Description:**  
+VisaVista AI is an intelligent guidance and simulation platform for international visa applicants, specifically addressing challenges like the new U.S. green card rule that mandates leaving the country to apply. Unlike generic immigration apps, VisaVista dynamically analyzes individual cases by integrating constantly updated immigration policies, embassy wait times, and travel restrictions. It simulates the best application pathway and timing to minimize applicant risk (e.g., time spent outside the country, interview scheduling conflicts, visa denials). It also offers personalized travel risk forecasts based on geopolitical events. This solves a critical real-world problem for migrants caught in shifting regulations with little accessible, personalized, or real-time data.
+
+**Potential tech stack:**  
+- NLP pipeline for continuous governmental and consulate policy updates (transformers + web scraping)  
+- Predictive modeling using Bayesian networks for risk/time forecasting  
+- An interactive agent interface via a mobile/web app (React Native, Node.js)  
+- Cloud-hosted backend with secure user data handling (AWS/GCP, encrypted databases)  
+- Integration with calendar APIs and travel data (FlightAware APIs, Google Calendar)  
+
+---
+
+### 2. ReText AI – Legacy E-Reader Revival Assistant
+
+**Description:**  
+ReText AI tackles the problem of old e-reader devices (like classic Kindles) becoming obsolete due to discontinued software and firmware support from manufacturers like Amazon. Instead of forcing users to upgrade hardware, this AI system helps revive these devices by optimizing and tailoring document conversion, text reflow, and UI rendering for legacy screens. It leverages AI to enhance readability (adaptive fonts, context-aware reflow), compress and reformat modern document formats for limited hardware, and even predict and fix UI glitches automatically. This bridges the huge underserved base of loyal users with aging devices who resist forced hardware churn.
+
+**Potential tech stack:**  
+- Lightweight on-device ML models (TensorFlow Lite, ONNX Runtime) for text/layout optimization  
+- Python-based desktop tool to preprocess popular document types (PDF/docx/epub) integrating HuggingFace transformers for semantic understanding and reflow  
+- Custom firmware patch manager via open-source e-reader OS (e.g., Kindle's Linux-based system or KOReader)  
+- React web dashboard for batch conversion jobs and user preference management  
+- Edge compute support for offline processing  
+
+---
+
+### 3. SpamSleuth AI – Internal Account Exploit Detector
+
+**Description:**  
+Given rising exploitation of internal corporate accounts (e.g., Microsoft internal accounts used for spam campaigns), SpamSleuth AI aims to proactively detect, visualize, and neutralize supply chain spam and phishing that come from trusted internal email platforms or collaboration tools. Unlike standard spam filters that focus on external IP reputation or content heuristics, SpamSleuth leverages behavioral anomaly detection on authenticated users/services, network graph analysis of email flows, and contextual scoring (internal process usage patterns, changes in credential behavior). It surfaces latent insider threats and account compromises early by mimicking attacker lateral movement patterns within the corporate environment.
+
+**Potential tech stack:**  
+- Graph neural networks (PyTorch Geometric, DGL) for relationship and flow modeling  
+- Time-series anomaly detection (LSTM, Transformers) on account activity logs  
+- Integration with enterprise SIEM tools (Splunk, Elastic Stack) and Microsoft Graph API  
+- Dashboard UI with interactive visualizations (D3.js, Grafana)  
+- Secure multi-tenant SaaS architecture on Azure with role-based access control  
+```
+
