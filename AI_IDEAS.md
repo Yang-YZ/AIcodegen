@@ -13088,3 +13088,61 @@ It does not just translate code, it incorporates operational context, extensive 
 
 ```
 
+
+
+## 2026-05-26
+
+```markdown
+### 1. WalkThink AI
+
+**Description:**  
+Building on research that walking boosts creativity more than sitting, WalkThink AI is a context-aware creativity enhancer that actively integrates physical movement data with brainstorming sessions. Unlike typical static AI writing or ideation assistants, WalkThink AI encourages users to take intentional walking breaks, captures voice memos or gestures during these breaks, then synthesizes and expands on ideas in real-time. It combines biometric and environmental sensors (like GPS, accelerometer, and ambient sound) to adapt suggestions based on the user’s physical state and surroundings, fostering genuinely novel creative workflows that blend mobility and cognition.
+
+**Why different?**  
+Most creativity AIs are stationary or desktop-bound. This app harnesses the cognitive benefits of movement scientifically and pairs it with seamless AI augmentation — thus reframing creativity as an embodied, environmental process rather than just a mental task.
+
+**Potential tech stack:**  
+- Edge computing IoT sensors (smartwatch, phone accelerometers, GPS)  
+- Speech-to-text and NLP using transformers (e.g., OpenAI GPT, Hugging Face models)  
+- Real-time context & sentiment analysis Python backend  
+- Cross-platform mobile app (React Native / Flutter)  
+- Lightweight ML models for offline processing and data compression  
+- Cloud synchronization and data store (AWS/GCP/Azure)
+
+---
+
+### 2. FrontYard AI
+
+**Description:**  
+Inspired by the social and developmental value of kids playing freely in front yards — a practice dwindling worldwide — FrontYard AI is a community-centric spatial awareness and safety assistant for families. It combines AI-driven geo-fencing, crowdsource “trusted spot” verification, and playful AR gamification to encourage and enable parents to safely let children explore local physical spaces outside the home. Unlike tracking-only parental apps, it fosters neighborhood connections, encourages physical activity, and reduces anxiety by providing dynamic alerts of local activity patterns and safe zones that evolve through community input, not just static maps.
+
+**Why different?**  
+Current solutions focus on surveillance or restrictive lockdowns. FrontYard AI empowers communities and parents to reimagine outdoor childhood mobility with safety in an engaging, socially unifying framework rather than through isolation or control.
+
+**Potential tech stack:**  
+- Geospatial databases (PostGIS)  
+- Mobile app with ARKit/ARCore integration  
+- Federated learning for privacy-preserving crowdsourced data  
+- Real-time messaging backend (Firebase, WebSockets)  
+- Computer vision for public camera feeds where available (optional)  
+- Community moderation dashboards (React/Node.js)  
+
+---
+
+### 3. ShamirShare Vault
+
+**Description:**  
+ShamirShare Vault applies Shamir’s Secret Sharing principles to everyday digital asset management — passwords, crypto keys, confidential documents — split securely across trusted parties or devices. What makes it novel is its user-friendly interface and seamless integration into common workflows (messaging apps, cloud storage, corporate password managers), allowing users to easily create, distribute, and recover secrets with multi-factor social and technical authentication. It's designed both for personal "holy grail" data protection and corporate multi-stakeholder secrets (e.g., board approvals), helping close the gap between cryptographic theory and user adoption.
+
+**Why different?**  
+Existing secret sharing solutions are technically complex or siloed. ShamirShare Vault hides cryptographic complexity behind intuitive UX, folding secret sharing into daily digital habits with flexible policy settings and strong verifiability — an approachable bridge between military-grade security and average consumer use.
+
+**Potential tech stack:**  
+- Cryptography libraries implementing Shamir’s Secret Sharing (e.g., Python `secretsharing`, Libsodium)  
+- Backend key management server with HSM support (AWS CloudHSM / Azure Key Vault)  
+- Browser extension + mobile app for secret creation & recovery  
+- End-to-end encrypted messaging integration (Signal Protocol or equivalent)  
+- React frontend, Node.js backend API  
+- Zero-knowledge proofs for share validation  
+```
+
