@@ -13146,3 +13146,57 @@ Existing secret sharing solutions are technically complex or siloed. ShamirShare
 - Zero-knowledge proofs for share validation  
 ```
 
+
+
+## 2026-05-27
+
+```markdown
+### 1. InterviewEcho AI
+
+**Description:**  
+Most AI interview coaches focus on practicing answers or scoring responses, but they rarely engage with the *emotional aftermath* of a tough interview or help users prepare for interviews in toxic or borderline hostile environments. InterviewEcho AI captures nuanced user feedback about their interview experiences, extracts emotional and contextual signals, and provides personalized recovery guidance — including mental health support prompts, reframing exercises, and tailored future interview strategies. It also detects patterns where certain industries or companies systematically exhibit poor interview practices and anonymously aggregates this data to empower job seekers and advocate for better hiring standards.
+
+Unlike generic coaching bots, InterviewEcho AI fills the gap between post-mortem reflection and forward preparation with empathetic AI support and crowdsourced transparency about corporate interviewing cultures.
+
+**Potential tech stack:**  
+- NLP & sentiment analysis: Hugging Face transformers (e.g., RoBERTa, DistilBERT) fine-tuned for emotion & context extraction  
+- User experience: React Native for mobile/web app with journaling UX  
+- Data aggregation & anonymization: Apache Kafka & Spark for streaming interview data insights  
+- Backend: Python (FastAPI)  
+- Mental health conversation flows: Rasa/OpenDialog for empathetic natural dialogue  
+- Privacy: Differential privacy libraries  
+
+---
+
+### 2. MolTank AI
+
+**Description:**  
+Inspired by highly technical and specialized industrial challenges (like managing methyl methacrylate tanks), MolTank AI targets industrial operators and chemical plant engineers who face complex, non-intuitive system states that traditional monitoring dashboards can’t adequately interpret. It fuses physics-informed AI with real-time sensor data to predict dangerous chemical states, suggest subtle operational adjustments, and optimize preventative maintenance—not just alerting on threshold breaches but reasoning about compound risk factors before crises emerge.
+
+This specialized predictive assistant differs by deeply embedding domain-specific physics constraints and chemical kinetics models into the AI’s decision framework, supporting safer and more sustainable plant operations.
+
+**Potential tech stack:**  
+- Physics-informed neural networks (PINNs) using TensorFlow/PyTorch  
+- Real-time IoT sensor ingestion with MQTT + Apache Flink  
+- Edge computing modules in Rust or C++ for low-latency inference onsite  
+- Web dashboard: Vue.js + D3.js for interactive chemical state visualizations  
+- Integration with SCADA systems via OPC-UA protocol  
+- Explainability: SHAP/LIME adapted for physics-informed model outputs  
+
+---
+
+### 3. RecipeShrink AI
+
+**Description:**  
+While some projects aim to compress the entirety of cooking knowledge into minimal data, this application tackles *personalized, instantly adaptable recipe compression* for home cooks with limited bandwidth or storage. RecipeShrink AI converts user-available ingredients, appliance specifics, and dietary preferences into ultra-compact recipe “blueprints” (under ~50KB) that can be expanded on-device with minimal data fetching.
+
+Unlike cloud-dependent recipe apps, RecipeShrink AI enables users in bandwidth-restricted or offline environments (e.g., remote areas, travelers) to maintain a rich, interactive recipe library that *dynamically reconfigures* based on their pantry and cooking style. It incorporates procedural cooking logic rather than static instructions, allowing a recipe to “grow” or “shrink” as needed.
+
+**Potential tech stack:**  
+- Procedural content generation with probabilistic grammars (PCG) and template-based LLM fine-tuning  
+- On-device transformer inference pruning with ONNX Runtime or TensorFlow Lite  
+- React or Flutter app with offline-first data sync & caching  
+- Ingredient substitution engine using knowledge graphs (Neo4j)  
+- User feedback loop for taste/profile refinement with reinforcement learning  
+- Compression algorithms based on token-level semantic similarity (e.g., sentencepiece)  
+```
