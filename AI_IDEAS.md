@@ -13547,3 +13547,46 @@ A watchdog AI that cross-references media articles with publicly available fundi
 - Backend: Neo4j or Amazon Neptune for graph DB, Python (FastAPI), NLP models in Hugging Face Transformers ecosystem  
 ```
 
+
+
+## 2026-06-05
+
+```markdown
+### 1. **LegacyLab AI**  
+**Description:**  
+While many AI tools focus on modernizing or automating new software development, LegacyLab AI is tailored for organizations that depend on century-old or niche legacy systems (mainframes, COBOL, Fortran, or early C++) that resist modernization. It provides AI-powered contextual understanding, automatic safety audits, and incremental modernization suggestions without full rewrites. Unlike existing general-purpose code analysis tools, LegacyLab AI incorporates historical development practices, vintage compiler quirks, and hardware constraints into its reasoning—embracing the “old-school” environment rather than forcing “2024-style” paradigms. This addresses the underserved market of industries with mission-critical, decades-old systems needing sustainable evolution paths.
+
+**Potential tech stack:**  
+- Transformer-based models fine-tuned on historic codebases and vintage documentation (e.g., early 90s or before)  
+- Symbolic AI modules for legacy-specific rule-based insights  
+- Knowledge graph representing dependencies and outdated platform APIs  
+- Integration with real-time debugging and binary analysis tools (e.g., Ghidra, IDA Pro)  
+- Web interface + CLI extensions  
+
+---
+
+### 2. **SignalGuard AI**  
+**Description:**  
+With rising threats from GNSS disturbances and electronic interference globally, SignalGuard AI is an AI-driven platform designed for real-time identification, source triangulation, and predictive risk mapping of interference in communication and navigation signals. Unlike conventional spectrum analyzers or manual tracing, SignalGuard leverages distributed sensor networks combined with deep learning to classify interference types (malicious jamming, accidental overuse, atmospheric phenomena) and forecast propagation patterns. It specifically targets public sector bodies, emergency services, and transportation networks needing rapid, actionable situational awareness but lacking expertise or tools for proactive GNSS and RF security.
+
+**Potential tech stack:**  
+- Edge AI deployed on distributed SDR (Software-Defined Radio) sensors  
+- Graph neural networks (GNNs) to model spatio-temporal signal events and propagation  
+- Federated learning to aggregate data without centralizing sensitive signal information  
+- Cloud platform for visualization, alerts, and integration with public safety apps  
+- APIs for integration with GPS receivers, drones, and autonomous vehicle systems  
+
+---
+
+### 3. **Mouseless+ AI Assist**  
+**Description:**  
+Although mouseless interaction projects exist, none fully address the cognitive ergonomics and complex task-switching challenges of power users who rely heavily on keyboard-driven workflows across multiple OSes and applications. Mouseless+ AI Assist enhances keyboard-driven control with an AI that anticipates user intent from partial commands, context switches, and workflow patterns, offering dynamic micro-macros, inline command chaining, and disambiguation in real-time. Its innovation lies in blending keyboard-centric control with adaptive AI suggestions—minimizing hand movement while reducing mental load and interruption, fundamentally transforming power productivity without mouse input. It's ideal for software developers, writers, accessibility users, and multitasking professionals.
+
+**Potential tech stack:**  
+- Reinforcement learning models trained on anonymized user interaction logs and command sequences  
+- Multi-modal context sensing (active window, open docs, task priorities)  
+- Cross-platform low-latency hook system (macOS accessibility API, Linux evdev/input, Windows UI Automation)  
+- Modular plugin architecture to extend app-specific command sets  
+- Lightweight local ML inference for privacy and immediate responsiveness  
+```
+
