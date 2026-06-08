@@ -13689,3 +13689,49 @@ Current OS-level process spawning and management is static and costly, lacking i
 - Custom orchestration UI and diagnostics dashboard (Electron or web-based)  
 ```
 
+
+
+## 2026-06-08
+
+```markdown
+### 1. ReEntryMap AI
+
+**Description:**  
+Individuals rebuilding their lives post-incarceration, addiction, or felony convictions face fragmented, siloed support systems—housing, employment, legal aid, mental health—and often get overwhelmed navigating them alone. ReEntryMap AI is a personalized, dynamic life and resource navigation assistant that maps an individual’s unique barriers and goals, then orchestrates and sequences tailored micro-actions through integrated local services, peer networks, and skill-building modules. Unlike generic job boards or therapy apps, it emphasizes coordinated stepwise growth, legal compliance guidance, and relapse or recidivism risk prediction to proactively adapt pathways. It serves users who are underserved by one-off apps and fragmented social services by creating a living, adaptive “roadmap to citizenship and stability.”
+
+**Potential tech stack:**  
+- NLP + knowledge graph (Neo4j or RDF) integration for contextual resource mapping  
+- Reinforcement learning to personalize pathway sequencing  
+- Mobile-first React Native app frontend with offline capability  
+- Federated data sharing with social service agencies, legal offices, NGOs (using secure APIs)  
+- Privacy-first architecture with differential privacy and encryption
+
+---
+
+### 2. DopamineFlow AI
+
+**Description:**  
+Popular media often portrays dopamine as simply the “pleasure chemical,” leading to oversimplified usage in apps that either gamify behavior or try to “hack” motivation via push notifications. DopamineFlow AI models real-world dopamine dynamics based on rhythm, novelty, reward anticipation, and satiation personalized to users’ neurodivergence and circadian patterns. Instead of static rewards or superficial gamification, it crafts adaptive experience flows—for learning, work, creativity, or recovery—that dynamically calibrate task difficulty, sensory environment, and break timing to optimize sustainable engagement without burnout or dependency. This addresses how dopamine system dysregulation manifests in addiction, ADHD, and burnout differently, unlike generic habit apps.
+
+**Potential tech stack:**  
+- Multimodal biometric input (wearables for HRV, EEG proxies)  
+- Time-series deep learning models (LSTM/Transformer) for motivation state estimation  
+- Behavioral economics-inspired RL for adaptive task/reward scheduling  
+- Cross-platform app with integration for desktop/web/mobile UX adjustments  
+- Privacy-centric local ML inference to limit data sharing
+
+---
+
+### 3. UnlivedPaths AI
+
+**Description:**  
+While many apps focus on goal achievement or productivity, very few consciously help users reconcile with "unlived dreams"—passions or life directions abandoned or deferred due to trauma, societal pressure, or circumstance. UnlivedPaths AI uses narrative psychology and generative AI to help users explore hypothetical life trajectories in immersive written, audio, or visual formats, facilitating meaningful emotional processing and peace-making rather than forcing action or guilt. It supplements therapeutic work by making intangible “what if” scenarios concrete and compassionate, thereby enhancing self-acceptance and mental well-being. This goes beyond journaling or coaching apps by blending AI-driven storytelling with validated psychological frameworks.
+
+**Potential tech stack:**  
+- Large language models fine-tuned on therapeutic narratives and philosophy  
+- Multimodal generative AI for custom imagery and audio ambiance (e.g., Stable Diffusion + TTS)  
+- Secure cloud backend with HIPAA-compliant data handling  
+- React + WebXR frontend for immersive narrative experiences  
+- User feedback loop for progressive narrative refinement and emotion tracking via sentiment analysis
+```
+
