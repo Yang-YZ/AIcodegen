@@ -13961,3 +13961,45 @@ Cybersecurity increasingly faces threats where malicious actors embed sensitive 
 - Integration layers for SOCs (Security Operations Centers) via APIs and SIEM connectors (Splunk, ELK)
 
 ```
+
+
+## 2026-06-14
+
+```markdown
+### 1. TrustFragment AI – Context-Aware Verification for Fragmented Conversations  
+**Description:**  
+Amid concerns over the reliability of large context windows in AI, many chat applications, customer support, or cross-platform messaging struggle with partial, fragmented conversations that lose continuity and create misunderstanding. TrustFragment AI focuses on verifying and reconstructing fragmented conversational contexts dynamically, analyzing conversation snippets across multiple apps and devices without uploading private data to centralized servers. Unlike current monolithic transcript analyzers, it uses decentralized on-device heuristics combined with federated learning to ensure privacy while enhancing trust and coherence in multi-channel dialogue history — ideal for customer service bots, legal transcriptions, or multi-stakeholder collaboration tools.  
+
+**Potential tech stack:**  
+- Frontend: React + WebAssembly for in-browser lightweight context stitching  
+- Backend: Rust/Python microservices for federated learning orchestration  
+- Privacy: Differential privacy techniques + on-device encrypted context caches  
+- AI: Lightweight transformer models optimized for window-limited context prediction and gap-filling  
+- Communication: WebRTC and decentralized message syncing  
+
+---
+
+### 2. SchemaSynth AI – Instant Query-to-Concept Modeling for No-Code Innovators  
+**Description:**  
+Many no-code platforms allow users to build data-driven apps but fall short when it comes to visually and semantically designing database schema from arbitrary queries. SchemaSynth AI translates natural language descriptions or example SQL queries into rich, interactive entity-relationship (ER) diagrams directly in-browser—without sending data offsite. Going beyond simple schema reverse engineering tools, it helps product managers, citizen developers, and small teams conceptualize database designs, detect missing relations or normalization problems, and simulate query impacts in real-time, thus bridging the gap between raw SQL literacy and abstract data modeling skills.  
+
+**Potential tech stack:**  
+- Frontend: Svelte + D3.js for interactive ER diagram rendering  
+- AI: Lightweight NLP parser models (transformer-lite) running fully client-side with WASM  
+- Data: IndexedDB for managing temporary schemas in-browser  
+- Security: Zero data upload, pure local inference model  
+- Integration: REST APIs for optional connections to popular no-code platforms (e.g., Airtable, Bubble)  
+
+---
+
+### 3. GhostPath AI – Adaptive Pac-Man Ghost AI Trainer for Player-Driven Difficulty  
+**Description:**  
+While classic games like Pac-Man have preset ghost behaviors, GhostPath AI offers a novel AI-driven framework for players who want to learn or improve at ghost behavior tactics by coaching them in real-time. Instead of static ghosts or black-box AI opponents, GhostPath AI builds personalized ghost AI agents mimicking historic play styles of top players or dynamically adapting based on the player’s movement patterns and skill progression. It enables players not just to “be the ghost” but understand and craft ghost strategies themselves—a blend of gameplay, AI coaching, and AI-driven replay analysis. This empowers hobbyists and game designers to experiment with ghost AI variants without code and encourages deeper engagement with classic arcade mechanics.  
+
+**Potential tech stack:**  
+- Frontend: Phaser.js for browser-based game simulation and UI  
+- AI: Reinforcement learning models trained in browser using TensorFlow.js with on-demand cloud training fallback  
+- Backend: Node.js server for match replay storage & collaborative sharing of ghost AI profiles  
+- Analytics: Real-time player movement tracking and behavior clustering using custom heuristic pipelines  
+- Community features: WebSockets for ghost AI challenge sharing and co-op ghost design sessions  
+```
