@@ -14183,3 +14183,53 @@ Developers using private or sensitive codebases (e.g., governmental, defense, or
 - Containerized deployment with GPU acceleration support on-prem (NVIDIA Triton Inference Server or ONNX Runtime GPU)  
 ```
 
+
+
+## 2026-06-19
+
+```markdown
+### 1. RepoSentinel AI
+
+**Description:**  
+While many security tools try to detect malicious code in active projects, thousands of public GitHub repositories unknowingly distribute Trojan malware hidden deep in historical commits or obscure branches. RepoSentinel AI focuses on **persistent hidden threats spread across Git commit histories at scale** rather than just the current snapshot. It uses advanced temporal code provenance analysis, semantic anomaly detection, and multi-branch behavioral fingerprinting to flag suspicious code changes, dropped/bundled malware, or credential leaks across the entire repository timeline. Unlike existing malware scanners that mostly analyze source snapshots or dependencies, RepoSentinel AI performs a **longitudinal lineage-based threat detection** focusing on lifecycle evolution of code artifacts and patterns of attacker tactics in VCS data.
+
+**Potential Tech Stack:**  
+- Language models fine-tuned on malware code and Git change logs (e.g., CodeBERT, GPT-4 variant)  
+- Graph neural networks (GNNs) to model commit/branch DAG dependencies and suspicious propagation  
+- Custom parsers and semantic analyzers for multiple languages and config files  
+- Scalable data pipeline with Apache Kafka + Spark for streaming and historic data mining  
+- Integration with Git APIs and GitHub Actions for automated triage  
+- Visual analytics dashboard with React + D3.js for threat timelines and lineage tracing
+
+---
+
+### 2. DeepIgnore AI
+
+**Description:**  
+Developers often rely solely on `.gitignore` to exclude files during commits, but many **non-standard ignore directives (like `.dockerignore`, `.eslintignore`, IDE config ignores, or dynamic runtime ignores)** are scattered in polyglot codebases. DeepIgnore AI offers a **unified, context-aware intelligent ignore policy engine** that learns ignore patterns from a project’s entire ecosystem (including CI/CD, container builds, linting, and editor configs) and suggests a holistic, consistent ignore strategy. This minimizes accidental commit of large/binary files, secrets, or noisy artifacts by understanding project semantics and developer workflows — going far beyond static ignore lists by **predicting which files shouldn’t be tracked or deployed based on historical failures, build errors, and runtime profiling**. 
+
+**Potential Tech Stack:**  
+- Transformer-based models trained on massive open-source repos with ignore patterns  
+- Static analyzers extracting files involved in build, test, and deploy pipelines  
+- Plugins for IDEs, Docker, linters, and Git to feed back ignore failures and usage data  
+- Reinforcement learning to adapt ignore suggestions personalized per team/project  
+- Rust or Go backend microservices for high performance file system simulations  
+- Electron + TypeScript UI for ignore policy visualization and manual override
+
+---
+
+### 3. ChipDebug OS AI
+
+**Description:**  
+Understanding and debugging modern microchips involve extraordinarily complex hardware-software co-design. Inspired by MIT’s custom OS for chip research, ChipDebug OS AI is a **self-diagnostic, AI-driven embedded operating system framework designed for rapid prototyping and fault localization in novel hardware architectures and silicon prototypes**. Unlike generic hardware simulation tools or bare-metal debugging, this AI-enhanced OS embeds real-time inference engines that monitor microarchitectural signals, dynamically adjust system parameters, and interactively pinpoint root causes of hardware anomalies via explainable models. This boosts hardware researchers' productivity by drastically reducing the feedback loop between silicon testing and firmware updates, enabling emergent debugging strategies tuned for next-gen heterogeneous processors.
+
+**Potential Tech Stack:**  
+- Lightweight, modular OS kernel (e.g., based on seL4 or RISC-V minimal OS)  
+- Embedded ML models (TinyML approach) analyzing streaming telemetry at silicon scale  
+- FPGA/ASIC integration with hardware tracing via standard protocols (JTAG, ARM CoreSight)  
+- Interactive debugging dashboards using WebAssembly and Rust for safety/performance  
+- Graph neural networks and causal inference frameworks for anomaly correlation  
+- Python + C++ tooling for offline training and hardware-software co-simulation
+
+---
+```
