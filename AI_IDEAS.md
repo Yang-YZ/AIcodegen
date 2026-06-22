@@ -14322,3 +14322,50 @@ Inspired by sewing machines being lent through libraries or community hubs but l
 - P2P sync layer to enable offline content sharing among local communities (e.g., using libp2p or IPFS)  
 ```
 
+
+
+## 2026-06-22
+
+```markdown
+### 1. RetroVerify AI  
+**Description:**  
+Many people question the legitimacy or ethical foundation of legacy industries and their previous roles, especially in sectors historically plagued with fraud or opaque practices. RetroVerify AI is a platform that uses historical data mining, anomaly detection, and narrative synthesis to retrospectively audit and verify the integrity of past organizations, jobs, or industries on an individual level. Unlike generic fraud detection tools or current retrospective analyses, RetroVerify AI empowers users to understand if and how their own career or business outcomes were affected by systemic fraud or malpractice — supporting personal closure, legal decision-making, or societal research.
+
+**Potential tech stack:**  
+- Data ingestion: Apache Kafka, DBT for historical dataset pipelines  
+- ML models: Transformer-based anomaly detection (e.g., Temporal Fusion Transformer), Graph Neural Networks for relationship mapping  
+- NLP: Custom large language models fine-tuned on domain-specific corpora for narrative reconstruction  
+- Frontend: React + D3.js for interactive timeline and network visualization  
+- Backend: Python (FastAPI), PostgreSQL with PostGIS  
+
+---
+
+### 2. SovereignCache AI  
+**Description:**  
+Open foundation models (like Apertus) emphasize sovereignty and privacy but often require heavy computational resources or cloud infrastructure. SovereignCache AI is a lightweight, decentralized AI model caching and transfer system that leverages edge devices to dynamically shard and distribute parts of foundation models locally among trusted nodes. This enables communities or organizations to collaboratively maintain sovereign AI capabilities without centralized cloud dependence or massive hardware, significantly lowering barriers to open model adoption and regional AI resilience.
+
+Unlike traditional model hosting or federated learning, SovereignCache AI focuses specifically on *dynamic partial caching* of open models to optimize compute/storage balance within sovereign trust boundaries, designed for AI models too large or sensitive for individual devices but too decentralized for conventional deployment.
+
+**Potential tech stack:**  
+- Edge computing orchestration: Kubernetes + WebAssembly runtimes (e.g., Wasmtime)  
+- P2P protocols: libp2p or IPFS for distributed content addressing and shard exchange  
+- Model handling: ONNX Runtime with dynamic model partitioning plugins  
+- Security: Intel SGX or ARM TrustZone enclaves for trusted execution environments  
+- Frontend: Electron-based dashboard + Node.js backend  
+
+---
+
+### 3. WigglegramFixer AI  
+**Description:**  
+Wigglegrams (stereoscopic animated images) are an underexplored niche in personal digital media and historical media preservation, but creating or fixing them is tedious and specialized. WigglegramFixer AI uses computer vision and generative modeling to automatically detect, correct, and enhance imperfect or corrupted wigglegrams — repairing frame alignment, reducing jitter, and reconstructing missing viewpoints with minimal input. This is especially useful for digital artists, archivists, and hobbyists working with amateur 3D photography or historic stereoscopic material.
+
+This differs from existing image stabilization or 3D reconstruction pipelines by focusing specifically on *animated stereo loops* and their unique perceptual characteristics, applying AI that respects the cyclical nature of wigglegrams instead of treating frames as isolated images.
+
+**Potential tech stack:**  
+- CV models: Optical flow networks (RAFT), stereo depth estimation (MiDaS), plus custom cycle-aware GAN architectures  
+- Video/image processing: FFmpeg and OpenCV for frame extraction and reassembly  
+- Framework: PyTorch or TensorFlow for deep learning pipelines  
+- UI: Cross-platform (Flutter or Qt) app for batch processing and previewing results  
+- Optional hardware: Integration with consumer 3D cameras or smartphone stereo capture APIs  
+```
+
