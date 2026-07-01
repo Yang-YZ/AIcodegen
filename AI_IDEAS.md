@@ -14738,3 +14738,46 @@ An AI coach and step-by-step project companion for complete novices building cus
 
 ```
 
+
+
+## 2026-07-01
+
+```markdown
+### 1. **StegnoSphere AI** – Context-Enhanced Steganographic Communication Auditor  
+**Description:**  
+While steganography is traditionally used to hide data in images, text, or code, there’s a critical blind spot in auditing and detecting context-aware steganographic embedment in dynamic content flows such as API requests or conversational agents. Inspired by reports of steganographic marking in AI prompts (like Claude Code), StegnoSphere AI is designed as a real-time, adaptive auditor that can detect subtle and evolving steganographic patterns embedded in multi-modal communication streams (text, code, images) and flag suspicious contexts without requiring explicit watermark keys. Unlike existing steganalysis tools that focus on static media, this AI continuously learns from usage patterns and contextual semantics to uncover hidden payloads, aiming at securing enterprise pipelines and conversational AI deployments.  
+
+**Potential tech stack:**  
+- Transformer-based anomaly detection models (e.g., fine-tuned GPT, BERT variants)  
+- Contrastive learning for semantic pattern recognition  
+- Graph neural networks (GNN) for contextual relationship modeling  
+- Real-time streaming data processing (e.g., Apache Kafka)  
+- WebAssembly modules for inline steganalysis in browser or edge clients  
+
+---
+
+### 2. **SalarySense AI** – Dynamic Equity & Salary Optimization Advisor for Mid-Sized Companies  
+**Description:**  
+With Nintendo raising employee base salaries recently, there’s growing interest in not only benchmarking salaries but dynamically optimizing compensation to enhance fairness, motivation, and retention—especially for growing companies that lack massive compensation analytics teams. SalarySense AI combines internal workforce data, external market salary trends, employee performance metrics, and socio-economic factors to produce personalized, equity-driven salary adjustment recommendations. Unlike flat market-benchmark services, it factors in granular team dynamics, diversity goals, and projected company finances, helping companies iteratively adjust pay with transparency and fairness. This tackles the underserved mid-size company segment, which doesn’t have access to sophisticated HR analytics used by giants.  
+
+**Potential tech stack:**  
+- NLP pipeline to parse compensation policies and employee reviews  
+- Time-series forecasting models for salary trend projections  
+- Reinforcement learning for iterative adjustment strategy simulation  
+- Privacy-preserving federated learning to incorporate external anonymized compensation data  
+- React/TypeScript dashboard for HR managers with explainable AI visualizations  
+
+---
+
+### 3. **ArXiveInsight AI** – AI-Assisted Research Evolution Navigator  
+**Description:**  
+While ArXiv and similar preprint servers provide vast scientific content, researchers often struggle to keep track of the evolving landscape of ideas, cross-domain innovation, and emerging "next chapters" in their fields. ArXiveInsight AI is an AI-powered research evolution navigator that dynamically maps scientific progress by distilling salient claims, refutations, methodological advances, and theoretical breakthroughs from papers in near real-time. Unlike static citation graphs or keyword-based alerts, this system uses natural language understanding, argumentation mining, and trend extrapolation to create interactive “research timelines” and “concept genealogies” enabling scientists — especially interdisciplinary and early-career researchers — to quickly identify pivotal shifts and underexplored niches.  
+
+**Potential tech stack:**  
+- Advanced NLP models adapted to scientific text (SciBERT, Longformer)  
+- Argument mining frameworks for claim and evidence extraction  
+- Knowledge graph construction and temporal node embedding (e.g., GraphSAGE, TGN)  
+- Visual analytics front-end (D3.js, Three.js) for interactive timelines and concept maps  
+- Backend microservices on Kubernetes with elasticity for scaling ingestion pipelines  
+
+```
