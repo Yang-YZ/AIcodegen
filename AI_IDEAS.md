@@ -14916,3 +14916,46 @@ A lightweight, modular AI assistant toolkit that empowers small-medium AI resear
 - CLI utilities in Rust or Go for fast local system operations  
 ```
 
+
+
+## 2026-07-05
+
+```markdown
+### 1. MirrorGuard AI  
+**Description:**  
+With the surge of satellite constellations and orbital mirrors threatening to disrupt astronomical observation and even natural night skies, MirrorGuard AI offers a proactive, real-time tracking and mitigation solution tailored for amateur and professional astronomers worldwide. Unlike existing satellite tracking apps focused on navigation or commercial avoidance, MirrorGuard AI integrates AI-driven orbital debris prediction, dynamic observatory scheduling, and customizable visual alerts based on local dark-sky conditions. It also simulates the cumulative brightness effects of satellites and mirrors to predict future sky visibility degradation. This empowers researchers and photographers to plan observations with unprecedented precision, advocating for sustainable space activities from a user-centric grassroots level.  
+
+**Potential tech stack:**  
+- Backend: Python (FastAPI) for orbital mechanics simulations  
+- AI Models: LSTM/RNN for trajectory and brightness prediction  
+- Frontend: React Native with native maps and augmented reality overlays for iOS/macOS  
+- Data: Public & proprietary satellite orbit data, crowd-sourced sightings, dark sky monitoring APIs  
+- Cloud: AWS Lambda + S3 for scalable on-demand prediction and alert delivery  
+
+---
+
+### 2. HealJelly AI  
+**Description:**  
+Inspired by jellyfish’s extraordinary rapid wound-repair abilities, HealJelly AI is a personalized regenerative health assistant focused on wound management and accelerated healing insights. Unlike conventional health trackers or generic wound documentation apps, HealJelly AI combines real-time wound image analysis via smartphone cameras with molecular biomarker inference using non-invasive sensors (when available) to provide tailored recommendations for dressing changes, environmental factors, and topical agents modeled after jellyfish tissue repair mechanisms. It continually learns from user feedback and community data to optimize healing pathways and reduces clinical visits by empowering users with precise, science-driven wound care.  
+
+**Potential tech stack:**  
+- Mobile: Swift (iOS) / Kotlin (Android) with on-device CoreML/TensorFlow Lite for image classification  
+- AI Models: CNNs for wound imaging + graph neural networks to infer healing stages  
+- APIs: Integration with wearable biometric sensors for vitals and biochemical signals  
+- Backend: Node.js + MongoDB for data aggregation and adaptive treatment suggestions  
+- Security: HIPAA-compliant end-to-end encryption  
+
+---
+
+### 3. SQLCraft AI  
+**Description:**  
+Contrast to complex ORMs and emerging query builders, SQLCraft AI is a dedicated intelligent mentor designed to teach SQL skills contextually based on the user’s ongoing project needs rather than static tutorials. It analyzes user codebases, detects ORM antipatterns or overcomplications, and interactively suggests and auto-generates optimized, idiomatic SQL queries with explanations in plain language. Differentiating itself from general AI code assistants, SQLCraft AI is specifically architected to bridge the gap for developers stuck in an ORM mindset by combining static code analysis, query performance profiling, and progressive SQL curriculum tailored per project schema evolution. This helps users embrace raw SQL confidently and avoid ORM pitfalls.  
+
+**Potential tech stack:**  
+- Language models: Custom fine-tuned GPT derivatives for SQL and code reasoning  
+- IDE integration: Language Server Protocol (LSP) for VSCode, JetBrains IDEs  
+- Query profiling: PostgreSQL / MySQL explain plan parsers for performance hints  
+- Backend: Go microservices for low-latency static analysis and inference  
+- Frontend: Electron app for offline-first enablement with embedded tutorials and hints  
+```
+
