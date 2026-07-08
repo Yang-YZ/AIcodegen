@@ -15049,3 +15049,44 @@ Inspired by improvements to OpenStreetMap via StreetComplete quests, QuestPatch 
 - CRDT-based syncing protocols for conflict-resolution in deferred data uploads  
 - Gamification engine with AI to adjust quest difficulty and goals dynamically  
 ```
+
+
+## 2026-07-08
+
+```markdown
+### 1. ScriptSleuth AI – Contextual Deobfuscation & Intent Mapping for Embedded Code Artifacts  
+**Description:**  
+While obfuscated code often appears as a security risk, it’s increasingly used as a form of digital expression, hidden messaging, or artistic branding (e.g., on apparel like Uniqlo t-shirts). ScriptSleuth AI focuses on intelligent, context-aware deobfuscation that not only simplifies code but reconstructs the author’s high-level intent and possible cultural or domain references embedded in it. Unlike generic deobfuscators or syntax-focused parsers, it leverages code semantics, pattern recognition from niche communities, and cross-references with related symbolic or cryptic motifs (e.g., bash one-liners, memes, hacker folklore). This can help security researchers, digital anthropologists, and niche consumers decode and preserve ephemeral digital expressions embedded in everyday objects.  
+**Potential Tech Stack:**  
+- Transformer-based large language models fine-tuned for code (e.g., Codex, StarCoder)  
+- Graph Neural Networks for control/data flow analysis  
+- Multimodal inputs (text + images, e.g., the T-shirt print) via CLIP or similar models  
+- Symbolic AI algorithms for pattern and meme recognition  
+- Backend: Python, FastAPI; Frontend: React; Containerized with Docker  
+
+---
+
+### 2. WhisperGuard AI – Decentralized Moderation Framework with Adaptive Local Chat Control  
+**Description:**  
+Following recent debates on centralized chat control (e.g., Chat Control 1.0/2.0), WhisperGuard AI introduces a federated, user-empowered chat moderation system that runs primarily on edge devices or local CPUs, minimizing data exposure and censorship centralization. Unlike existing platforms that enforce blanket policies server-side, WhisperGuard AI learns individual or community moderation preferences dynamically, using privacy-preserving federated learning. It supports adaptive filtering by context, user roles, and content type, offering transparency, user override, and audit trails, while making moderation explainable. This addresses gaps in trust, privacy, and nuanced moderation needs faced by decentralized teams, gaming communities, and privacy-conscious groups.  
+**Potential Tech Stack:**  
+- On-device efficient NLP models (e.g., DistilBERT, TinyBERT, Kokoro TTS modules for audio moderation)  
+- Federated learning frameworks: TensorFlow Federated or Flower AI  
+- Secure Multiparty Computation (SMPC) and differential privacy libraries (e.g., PySyft)  
+- Frontend: Electron or mobile-native apps (React Native)  
+- Backend coordination: Rust or Go microservices  
+
+---
+
+### 3. TerraNAS AI – Autonomous, CPU-Friendly Data Lifecycle & Redundancy Planner for DIY Storage  
+**Description:**  
+DIY NAS builders who avoid pricey commercial boxes (Synology, QNAP) often face complex manual setup hurdles with ZFS or other filesystems—balancing redundancy, performance, and energy costs across heterogeneous hardware. TerraNAS AI assists in automatically designing and continuously optimizing data distribution, redundancy schemes (like ZFS RAID variants), snapshot frequency, and resource usage based on actual workload patterns and hardware health, all locally without cloud dependency. Unlike existing NAS dashboards that show stats or require manual tuning, TerraNAS AI actively learns usage rhythms and predicts failures or space crunches, helping hobbyists and small home offices maximize reliability and lifespan on minimal hardware.  
+**Potential Tech Stack:**  
+- Time series and anomaly detection models (e.g., LSTM, Prophet) for workload and health prediction  
+- Rule-based AI combined with reinforcement learning for storage configuration suggestions  
+- Systems programming: Rust or C++ for low-level integration with ZFS tools (e.g., libzfs)  
+- UI: Web-based dashboard with Vue.js or Svelte  
+- Edge-friendly orchestration with Kubernetes K3s or Podman for microservices on NAS  
+
+```
+
