@@ -15136,3 +15136,46 @@ Inspired by concerns over fragile military and supply chain logistics infrastruc
 - Dashboard powered by React + Mapbox GL for interactive visualization  
 ```
 
+
+
+## 2026-07-10
+
+```markdown
+### 1. GreenFrame AI – AI-Driven Legislative Environmental Impact Forecaster  
+**Description:**  
+While policies like the EU's Chat Control 1.0 focus on regulation, there is a significant gap in proactive environmental accountability for legislative proposals. GreenFrame AI uses advanced NLP combined with environmental data modeling to assess and forecast the ecological footprint and sustainability impact of proposed laws before they pass. Unlike existing environmental compliance tools that react post-enactment or deal with corporate projects, GreenFrame AI is designed for lawmakers, NGOs, and citizens to transparently evaluate environmental costs embedded in legal language in real-time. This anticipatory approach enables more informed debate and climate-conscious policy design at the drafting stage.  
+
+**Potential Tech Stack:**  
+- Language Models fine-tuned on legislative texts + environmental impact reports (e.g., fine-tuned GPT-4/5, BERT variants)  
+- Geospatial & climate simulation APIs (e.g., Google Earth Engine, NASA Earth Data)  
+- Explainable AI modules for transparency (SHAP, LIME)  
+- Web-based interactive dashboards (React, D3.js)  
+- Backend: Python (FastAPI), PostgreSQL/PostGIS for geo-data  
+
+---
+
+### 2. SlowCompanion AI – Lightweight, Adaptive AI for Legacy & Low-Resource Hardware  
+**Description:**  
+Inspired by the challenge of running modern AI models like GLM 5.2 on slow computers, SlowCompanion AI is a meta-framework that automatically adapts large model architectures dynamically to resource constraints without losing critical accuracy in key tasks. Instead of porting full heavyweight models to low specs, it decomposes tasks into smaller, incremental subtasks and uses progressive results caching and on-demand model swap-ins. This serves underserved users in emerging markets or older hardware environments, ensuring practical, responsive AI assistance in NLP, coding, or creativity workflows on ageing or low-powered devices.  
+
+**Potential Tech Stack:**  
+- Model distillation & pruning libraries (Hugging Face Transformers, ONNX Optimization)  
+- Adaptive inference orchestration tooling (Ray, TensorFlow Lite, PyTorch Mobile)  
+- Edge computing frameworks (OpenVINO, NVIDIA Jetson SDK)  
+- Backend control service in Rust or Golang for low-memory footprint  
+- Cross-platform desktop apps (Electron, Tauri)  
+
+---
+
+### 3. NeuroStimVid AI – Personalized AI-Generated Video Content Targeting Cognitive & Emotional Brain Regions  
+**Description:**  
+Building upon research hinting at AI-generated videos that maximally stimulate particular brain areas, NeuroStimVid AI offers next-gen personal brain-state-tailored video generators designed for cognitive training, mental health therapy, or emotional well-being. What sets this apart is the closed-loop feedback system integrating consumer wearable brain sensors (EEG, fNIRS) to adapt video content in real-time to optimize neural activation patterns unique to each user’s brain physiology. It’s not just generic “stimulating videos” — it radically personalizes audiovisual input to cultivate neuroplasticity, mood regulation, or focus enhancement. This can serve ADHD therapies, stroke recovery, or stress management with much finer granularity than current VR or biofeedback tools.  
+
+**Potential Tech Stack:**  
+- Generative video models (diffusion models adapted for video, GANs)  
+- Real-time bio-signal acquisition APIs (Muse SDK, OpenBCI, Emotiv)  
+- Reinforcement learning or closed-loop optimization algorithms  
+- Neuroimaging data processing libraries (MNE-Python)  
+- Frontend: Swift/iOS or Android app; WebGL for real-time visuals  
+- Backend: Python (FastAPI), real-time streaming servers (WebRTC)  
+```
