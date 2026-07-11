@@ -15179,3 +15179,47 @@ Building upon research hinting at AI-generated videos that maximally stimulate p
 - Frontend: Swift/iOS or Android app; WebGL for real-time visuals  
 - Backend: Python (FastAPI), real-time streaming servers (WebRTC)  
 ```
+
+
+## 2026-07-11
+
+```markdown
+### 1. DroneCloak AI  
+**Description:**  
+With growing concerns on civilian drone surveillance and privacy breaches—highlighted by tech like QuadRF that can spot drones and WiFi signals through walls—there is a gap for low-cost, user-friendly AI tools that help everyday citizens digitally detect, understand, and **counter unauthorized drone or RF surveillance** without expensive hardware or deep expertise. DroneCloak AI would fuse lightweight RF signal processing, anomaly detection, and user-friendly mobile visualizations to let individuals detect suspicious drones or signals around their homes or public spaces, offering actionable, privacy-first alerts and mitigation tips. Unlike high-end government or enterprise tools, this focuses on affordable, ethical, and community-driven defense from surveillance threats.  
+
+**Potential tech stack:**  
+- Edge ML models for RF anomaly detection (TensorFlow Lite, PyTorch Mobile)  
+- SDR (Software Defined Radio) interfacing and signal feature extraction (GNU Radio, Liquid-DSP)  
+- Mobile app frontend (React Native, Flutter)  
+- Privacy-centric architecture with data processed locally, minimal cloud use (Rust backend, Kubernetes microservices for optional cloud sync)  
+- Visualization via AR overlays or simplified heatmaps (Unity3D or WebGL)  
+
+---
+
+### 2. SubscriptAI Guard  
+**Description:**  
+As deceptive subscription and hidden recurring fee models become regulated (e.g., NYC bans), many consumers still struggle to understand the small print or identify subtle auto-renewal traps in service contracts. SubscriptAI Guard is an AI assistant that **automatically scans, decodes, and compares subscription terms** across services, highlighting potential "subscription traps," suggesting negotiation points, or flagging suspicious clauses in plain language. Unlike generic contract readers, it focuses exclusively on subscriptions, with real-time monitoring of credit card transactions, alerts for unusual billing patterns, and integration with personal finance apps to empower users proactively against deceptive billing.  
+
+**Potential tech stack:**  
+- Natural language understanding specialized in legal and financial text (OpenAI API or fine-tuned BERT models)  
+- OCR for scanning printed or handwritten contracts (Tesseract, EasyOCR)  
+- Transaction monitoring & anomaly detection (Python, scikit-learn)  
+- Browser extension for contextual alerts (TypeScript, Chrome/Firefox extension APIs)  
+- Integration with finance APIs (Plaid, Yodlee) for billing insights  
+
+---
+
+### 3. BronzeAge AI Network  
+**Description:**  
+The Late Bronze Age Collapse remains a complex, multi-causal event with many historical gaps. BronzeAge AI Network is a **collaborative AI-driven research platform** that aggregates archaeological, climatic, linguistic, and trade-route datasets from global open sources and private collections, using advanced graph neural networks and temporal causal inference models to propose new hypotheses or identify previously undetected correlations in the data. Unlike isolated AI research or static databases, this platform enables multidisciplinary experts and citizen scientists to iteratively refine, visualize, and simulate ancient societal collapses—offering a dynamic “living research network” for understanding past global systemic failures and applying lessons for modern complex crises.  
+
+**Potential tech stack:**  
+- Graph Neural Networks and temporal modeling (PyTorch Geometric, DGL)  
+- Data federation and metadata standards (JSON-LD, Wikidata integration)  
+- Interactive visualization dashboards (D3.js, Dash/Plotly)  
+- Collaborative research platform backend (Node.js, PostgreSQL with PostGIS for spatial data)  
+- Cloud-based data pipelines (Apache Airflow, AWS/GCP Dataflow)  
+- NLP models for historical text extraction and translation (transformer models with historical text fine-tuning)  
+```
+
