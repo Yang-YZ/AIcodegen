@@ -15440,3 +15440,53 @@ Governments, nonprofits, and companies increasingly support free/open-source AI 
 - Dashboard: Dash (Plotly) or React + D3.js for interactive visualization  
 ```
 
+
+
+## 2026-07-17
+
+```markdown
+### 1. **BiasScanner AI**  
+**Description:**  
+Current AI evaluation and model selection processes suffer from opaque, inconsistent benchmarking and subtle biases that skew results and perpetuate inequities in deployed models. *BiasScanner AI* is designed as a meta-evaluation platform that continuously audits model benchmarking datasets, leaderboards, and competition outcomes for statistical anomalies, demographic imbalances, and hidden biases in evaluation protocols. Unlike conventional fairness tools that focus purely on model output bias, BiasScanner inspects the *evaluation procedures and dataset construction pipelines* themselves, integrating crowdsourced user feedback and historical trends to identify systemic flaws before models reach production or publication. This approach can help organizations enforce more transparent, equitable AI competitions and benchmarks, addressing a largely underserved oversight gap in AI development ecosystems.
+
+**Potential tech stack:**  
+- ML frameworks: PyTorch, TensorFlow  
+- Statistical anomaly detection: Apache Spark, scikit-learn, Bayesian methods  
+- Data provenance and lineage: Apache Atlas, OpenLineage  
+- Web platform: React, Node.js, GraphQL  
+- Crowdsourcing integration: CrowdFlower APIs, custom microtask platforms  
+- Explainability tools: SHAP, LIME for bias attribution  
+- Cloud: AWS/GCP/Azure for scalable compute and storage  
+
+---
+
+### 2. **FontFooler AI**  
+**Description:**  
+Inspired by Decoy Font’s emerging niche but moving beyond mere obfuscation, *FontFooler AI* develops adaptive, AI-generated “semantic-disruptive” typography aimed at thwarting automated surveillance, text scraping, and adversarial visual recognition on digital platforms. Instead of static decoy fonts, this application generates context-aware font variations that subtly manipulate letterforms to fool OCR, automated bot detectors, and web scrapers, while remaining perfectly readable to humans. This serves privacy advocates, journalists, dissidents, and anti-censorship efforts, particularly on restricted or monitored networks. Unlike current CAPTCHA or static font methods, FontFooler AI dynamically evolves its patterns, effectively creating an AI-driven font “camouflage” layer for protected text.
+
+**Potential tech stack:**  
+- Generative AI: Diffusion models or GAN variants for font morphing  
+- Computer vision/OCR evasion: OpenCV, Tesseract, adversarial example generators  
+- Frontend rendering: WebGL, Canvas API for live font display  
+- User customization: Angular or Vue.js  
+- Backend: Python Flask/Django for font generation API  
+- Deployment: Docker containers, Kubernetes for scaling font-generation jobs  
+- Cryptography libs for watermarking and authenticity verification  
+
+---
+
+### 3. **AncientMaterials AI**  
+**Description:**  
+Despite extensive historical and archaeological research, the molecular and environmental mechanisms behind the durability of ancient construction materials such as Roman concrete remain only partially understood, limiting innovations in modern sustainable materials. *AncientMaterials AI* is a specialized materials science platform leveraging multi-modal AI to analyze archaeological, chemical, geological, and climatological datasets, including 3D scans, microscopic imaging, isotope data, and centuries-old environmental records, to reverse-engineer ancient material recipes and degradation patterns. Unlike generic materials AI platforms, this targets an interdisciplinary fusion of archaeology, chemistry, and climate science, accelerating the discovery of nanostructural principles and eco-friendly formulations for next-gen construction and restoration materials.
+
+**Potential tech stack:**  
+- Data ingestion: Apache NiFi for multimodal archaeological datasets  
+- ML/AI: PyTorch + transformers for multi-modal fusion (images, texts, isotope spectra)  
+- Visualization: Three.js and D3.js for 3D reconstructions and data exploration  
+- HPC: GPUs and cluster computing for large microscopy image processing  
+- Domain knowledge integration: Ontologies and knowledge graphs for materials science and archaeology  
+- Cloud: Azure HPC or AWS Batch for scalable analysis pipelines  
+- Collaboration tools: JupyterHub and MLFlow for model tracking and reproducibility  
+
+---
+```
