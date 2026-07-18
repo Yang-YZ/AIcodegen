@@ -15490,3 +15490,60 @@ Despite extensive historical and archaeological research, the molecular and envi
 
 ---
 ```
+
+
+## 2026-07-18
+
+```markdown
+### 1. **BillSight AI**
+
+**Description:**  
+Many cloud users face chronic frustration with inaccurate or unclear estimated billing data, which can lead to over-provisioning, surprise costs, and difficulty optimizing cloud spending. BillSight AI is a proactive, adaptive AI assistant tailored to SMBs and startups who want **real-time, explainable, and anomaly-aware cloud cost forecasting** across multiple providers, starting with AWS but extensible to Azure, GCP, and SaaS stacks. Unlike traditional billing dashboards or simple alert systems, BillSight AI learns from your unique usage patterns, predicts billing inaccuracies before month-end, auto-identifies misconfigured services causing spikes, and suggests corrective actions — all through natural language explanations and integration into devops/chatOps workflows.
+
+**Why different:**  
+Existing cloud cost management tools mostly focus on retrospective cost analysis and billing trends, often missing subtle anomalies or estimation errors until bills arrive or rely on static budgeting rules. BillSight AI couples predictive anomaly detection with transparent, actionable recommendations served via conversational AI, helping users understand *why* their estimates are off and *how* to fix them — making cloud costs more predictable and manageable for less mature cloud adopters.
+
+**Potential tech stack:**  
+- Backend: Python (FastAPI) or Node.js (NestJS), with time series anomaly detection libraries (e.g., Prophet, LSTM)  
+- ML: PyTorch or TensorFlow for usage pattern modeling and anomaly detection  
+- Cloud APIs: AWS Cost Explorer, GCP Billing, Azure Cost Management  
+- Frontend: React or Vue.js with conversational UI components  
+- NLP: OpenAI GPT or open-source large language models for explanation generation  
+- Integrations: Slack/Microsoft Teams bots, GitHub Actions integration for alerting  
+
+---
+
+### 2. **JPEGFixer AI**
+
+**Description:**  
+Regressive JPEG compression artifacts damage the quality of images, especially after multiple edits or web optimizations, degrading critical visual details. JPEGFixer AI is a specialized AI model for **intelligent progressive restoration and artifact-aware recompression of JPEG images**, focusing on reversing regressive compression while preserving metadata and minimizing file size. Unlike generic super-resolution or denoising tools, JPEGFixer AI understands JPEG quantization matrices and compression history "fingerprints," enabling high-fidelity restoration with minimal recompression penalty — ideal for photographers, media publishers, and web platforms dealing with legacy JPEG archives and poor prior compressions.
+
+**Why different:**  
+Most existing tools treat JPEG artifacts as general noise or blur rather than the nuanced, structure-dependent artifacts caused by JPEG's lossy compression process. JPEGFixer AI leverages domain-specific knowledge about JPEG internals to selectively repair and optimize images, rather than simply applying standard denoising or upscaling neural networks that risk flattening details or increasing file size excessively.
+
+**Potential tech stack:**  
+- ML Framework: PyTorch with custom CNN/Transformer models conditioned on JPEG quantization tables  
+- Image processing: libjpeg-turbo, OpenCV for handling JPEG internals  
+- Training Data: Public JPEG datasets + synthetically “regressed” compression variants  
+- Deployment: ONNX runtime for cross-platform CLI tools or web API  
+- Frontend: Electron or web interface with drag/drop image repair and visual diffing  
+
+---
+
+### 3. **PelicanPilot AI**
+
+**Description:**  
+Inspired by how pelicans optimize flight formations to conserve energy and coordinate complex group behavior, PelicanPilot AI is an **autonomous drone swarm coordination system** that dynamically adapts flight paths and formations to maximize energy efficiency and signal connectivity. Targeted at agricultural monitoring, environmental research, and disaster response, it improves on existing swarm algorithms by incorporating real-time atmospheric data (wind, humidity, temperature) and peer-to-peer communication latency to orchestrate adaptive repositioning — reducing energy consumption and increasing mission duration without centralized control.
+
+**Why different:**  
+While many drone swarm solutions focus on coverage or obstacle avoidance, PelicanPilot AI uniquely blends biological inspiration with environmental sensing and communication-aware networking to achieve swarm-level energy savings and robustness in unpredictable conditions. This approach benefits users with limited drone battery capacity needing longer flights and more reliable sensor data relay in challenging habitats.
+
+**Potential tech stack:**  
+- Edge AI: TensorFlow Lite/ONNX Runtime on embedded ARM devices (Raspberry Pi, Nvidia Jetson)  
+- Communication: Mesh protocols like Zigbee or custom multi-radio UDP/TCP stacks  
+- Sensors: Lightweight meteorological sensors + GPS + inter-drone ranging  
+- Simulation: ROS/Gazebo for flight path and formation testing  
+- Control Logic: Reinforcement learning models for formation optimization with online adaptation  
+- Fleet Management: Cloud dashboard built with Node.js + WebGL for 3D swarm visualization  
+```
+
