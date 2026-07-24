@@ -1,7 +1,4 @@
 [
-  "ThreadSynth: AI-Driven Synthetic Discussion Generator for Research Idea Validation",
-  "KernelScope: AI-Powered Real-Time Explanation & Impact Predictor for Kernel Patch Submission",
-  "EmotiStore: AI-Enhanced Privacy-Respecting Emotional Analytics for Physical Retail Environments",
   "ScaleShield: Adaptive Defense AI Against Adversarial Image Scaling Attacks",
   "TraceDocs: AI-Driven Transparent Attribution & AI Tool Disclosure Analyzer for Collaborative Documents",
   "JuniorBoost: AI-Augmented Mentorship Platform Focused on Empowering Junior Staff, Not Replacing Them",
@@ -998,5 +995,8 @@
   "InkScape Connect AI",
   "MathExplora AI",
   "NeuroWrite Companion",
-  "DebtRadar AI"
+  "DebtRadar AI",
+  "HandFlow AI",
+  "FluxFocus AI",
+  "SecureCamScope AI"
 ]
