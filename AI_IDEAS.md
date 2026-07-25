@@ -15828,3 +15828,46 @@ Rather than post-breach incident response or simple network scanning, SecureCamS
 
 ```
 
+
+
+## 2026-07-25
+
+```markdown
+### 1. OrbitalOps AI  
+**Description:**  
+With rapidly growing private space efforts (like India’s first private rocket launch), a major gap exists in end-to-end mission operations for small satellite constellations and launch startups. OrbitalOps AI offers a lightweight, modular, and mission-adaptive AI co-pilot for satellite owners and launch operators. Unlike traditional ground control software that is rigid and requires deep expertise, OrbitalOps AI combines real-time telemetry analysis, anomaly detection, and optimized orbital maneuver planning powered by reinforcement learning. It supports heterogeneous hardware and open telemetry standards, dramatically lowering operational costs for startups and amateur satellite operators who can’t afford pricey mission teams or custom software.  
+
+**Potential tech stack:**  
+- Python (PyTorch/TensorFlow for anomaly detection & RL)  
+- Rust/Go for low-latency telemetry ingest and control interfaces  
+- Kubernetes/ECS for cloud-based mission scenario simulations  
+- MQTT/WebSocket for real-time command & telemetry streaming  
+- OpenTelemetry + custom satellite data protocol adapters  
+
+---
+
+### 2. TokenScrub AI  
+**Description:**  
+Security is often overlooked in embedded IoT device UIs, which has resulted in major leaks like shipping accidentally exposed admin tokens in web pages. TokenScrub AI is a pre-deployment continuous AI auditor tailored for embedded device firmware and UI assets (HTML/CSS/JS) that automatically detects and flags sensitive credential leaks, secret tokens, and environment-specific unsafe configs that static scanners miss. Uniquely, it leverages multimodal code+UI screenshot embeddings to catch context-aware "leaks" where secrets appear dynamically or are accidentally rendered in debug overlays or log views—a blindspot in current secret scanners. Target users include device manufacturers, firmware integrators, and open-source IoT platforms.  
+
+**Potential tech stack:**  
+- Transformer models (e.g., CodeBERT + Vision Transformers) for code and UI image embedding  
+- Static and dynamic code analysis pipelines (Python)  
+- Electron or headless Chromium for automated UI rendering and screenshot capture  
+- CI/CD integration tooling (GitHub Actions, Jenkins plugins)  
+- Containerized microservices with REST/gRPC endpoints  
+
+---
+
+### 3. ContainerPersona AI  
+**Description:**  
+Firefox Containers pioneered isolating web identities for privacy and security, but managing and optimizing container usage across multiple devices is fragmented and manual. ContainerPersona AI is an AI-powered personal web container manager that learns your contextual habits across devices to automatically create, merge, or retire browser containers tailored to your personal and work life rhythms. It goes beyond static separation by predicting container sets needed per task, auto-syncing secure identity profiles, and suggesting cross-container safe sharing policies. This serves heavy multitaskers, freelancers, and remote workers who juggle many online personas and struggle with fragmentation, cookie fatigue, and privacy leaks.  
+
+**Potential tech stack:**  
+- Browser extension APIs (Firefox, Chromium-based forks)  
+- Federated on-device ML (TensorFlow Lite, CoreML) for private user behavior modeling  
+- Privacy-preserving synchronization protocols (e.g., Secure Enclave, WebAuthn)  
+- React/TypeScript for management dashboard  
+- Rust or C++ for extension-native performance modules  
+```
+
