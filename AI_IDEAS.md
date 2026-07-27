@@ -15916,3 +15916,50 @@ A fully edge-deployed, UAV/swarm coordination AI running on extremely low-resour
 - Open-source embedded drone control firmware (e.g., ArduPilot with AI modules)  
 ```
 
+
+
+## 2026-07-27
+
+```markdown
+### 1. AirGuard AI  
+**Description:**  
+A privacy-first AI assistant designed specifically for travelers navigating airport security and customs processes. Unlike generic travel apps or OS-level privacy tools, AirGuard AI actively monitors for risky data wipe attempts, suspicious device tampering attempts, or forced resets—like the GrapheneOS phone wipe case—and guides users in real-time to secure their data before, during, and after inspections. It integrates legal guidance on rights related to digital privacy at borders and offers encrypted evidence collection (e.g., secure logs, photos, timestamps) to support legal recourse if data privacy is violated. Unlike existing apps, it prioritizes ethical data handling, minimal permissions, and edge AI inference to avoid sending sensitive data over networks.
+
+**Potential tech stack:**  
+- Edge ML inference on mobile (TensorFlow Lite, ONNX Runtime)  
+- Secure enclave / hardware-backed key storage (e.g., Android Keystore, Secure Enclave on iOS)  
+- End-to-end encrypted logs leveraging libsodium or Noise protocols  
+- React Native or Flutter for cross-platform mobile app  
+- Legal database APIs for country-specific traveler rights  
+- Optional companion browser extension for pre-travel device health/privacy checkup
+
+---
+
+### 2. RareBook AI Curator  
+**Description:**  
+An AI-powered virtual curator and preservation assistant for rare, fragile books and manuscripts. Unlike existing digitization efforts that rely on mass scanning (often damaging the originals) or simple OCR, RareBook AI uses multispectral imaging data combined with physics-aware models to analyze and reconstruct damaged text, ink composition, and binding structure without physical contact. By facilitating virtual “handling” and detailed metadata extraction, this AI also generates rich contextual historical narratives and usage histories tailored to museums, libraries, and private collectors—empowering them to share and interpret fragile treasures digitally while minimizing physical degradation.
+
+**Potential tech stack:**  
+- Computer vision & multispectral image processing using PyTorch or TensorFlow  
+- Physics-informed neural networks for material analysis and degradation prediction  
+- NLP transformer models fine-tuned on historical texts (e.g., GPT-4, BLOOM)  
+- 3D reconstruction libraries (Open3D, Meshroom) for virtual book models  
+- WebGL/Three.js for interactive online experience  
+- Secure cloud storage with versioning for fragile data
+
+---
+
+### 3. Data-Oriented AI Compiler  
+**Description:**  
+A novel AI-powered compiler assistant targeting data-oriented design (DOD) principles in software optimization. Instead of generic AI code helpers or type-to-native compilers, this tool explicitly guides developers to restructure and refactor codebases and data layouts for cache-friendly, parallelizable, and memory-efficient execution patterns. It analyzes existing code, recommends DOD transformations, simulates performance impacts, and generates optimized Rust or C++ code—bridging the gap between AI-assisted code generation and low-level architectural optimization. This targets underserved systems developers, game devs, and embedded engineers struggling with legacy CPU bottlenecks.
+
+**Potential tech stack:**  
+- Static analysis with LLVM and Clang tooling  
+- AI model trained on large DOD-optimized codebases (using dataset curation pipelines)  
+- Rust and C++ code generation modules (based on Codex or custom transformers)  
+- Performance simulation integration (e.g., using Intel VTune or perf data)  
+- VSCode or JetBrains IDE extensions for inline suggestions  
+- Rust async runtime and WASM backend for web-based demos and lightweight inference
+
+```
+
