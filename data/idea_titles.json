@@ -1,7 +1,4 @@
 [
-  "AppTrust Auditor",
-  "QueryPilot",
-  "CrowdSense Canvas",
   "AstroSynth: AI-Powered In-Situ Resource Utilization Planner for Space Missions",
   "RubyVista: Contextual AI-Powered Cross-Version Dependency & Runtime Analyzer",
   "SchemeFlow: AI-Enhanced Debugger and Live Visual Profiler for Scheme Web Apps",
@@ -998,5 +995,8 @@
   "Data-Oriented AI Compiler",
   "QuakeAid AI",
   "Co-Op AI Facilitator",
-  "AstroText AI Concierge"
+  "AstroText AI Concierge",
+  "ArchiveRevive AI",
+  "DocWorm AI Guard",
+  "ConcurLite AI"
 ]
