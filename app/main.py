@@ -194,3 +194,141 @@ def main():
 
 if __name__ == "__main__":
     main()
+# AI generated code
+from typing import List, Optional, Set, Dict, Iterable
+
+
+class TempleRun:
+    """
+    A simple Temple Run-like game simulation on 3 lanes (0=left,1=center,2=right).
+    The runner can move 'left', 'right', or 'jump'. Jump protects from obstacles
+    for the current step only. Each step may contain obstacles on one or more lanes.
+    The game ends when the runner collides with an obstacle on their lane while not jumping.
+    """
+
+    def __init__(self, lanes: int = 3):
+        if lanes < 1:
+            raise ValueError("lanes must be >= 1")
+        self.lanes = lanes
+        # start in center lane (or leftmost if even lanes)
+        self.position = (lanes - 1) // 2
+        self.score = 0  # steps survived
+        self.alive = True
+        self.time = 0
+        self._jumping = False  # True for the current step only
+
+    def reset(self):
+        self.position = (self.lanes - 1) // 2
+        self.score = 0
+        self.alive = True
+        self.time = 0
+        self._jumping = False
+
+    def step(self, action: Optional[str] = None, obstacles: Optional[Iterable[int]] = None) -> bool:
+        """
+        Perform one step of the game.
+        action: 'left', 'right', 'jump', or None.
+        obstacles: iterable of lane indices that have obstacles this step.
+        Returns True if still alive after this step, False if died.
+        """
+        if not self.alive:
+            return False
+
+        # process action
+        if action is not None:
+            act = action.lower()
+            if act == "left":
+                if self.position > 0:
+                    self.position -= 1
+            elif act == "right":
+                if self.position < self.lanes - 1:
+                    self.position += 1
+            elif act == "jump":
+                self._jumping = True
+            else:
+                # unrecognized actions are treated as no-op
+                pass
+
+        obs_set: Set[int] = set()
+        if obstacles is not None:
+            for o in obstacles:
+                if isinstance(o, int) and 0 <= o < self.lanes:
+                    obs_set.add(o)
+
+        # collision check: if there is an obstacle on the current lane and not jumping -> dead
+        if self.position in obs_set and not self._jumping:
+            self.alive = False
+            # time does not increment after dying during this step's check in this design,
+            # but we record the time of the step when collision happened.
+            self.time += 1
+            return False
+
+        # survived this step
+        self.score += 1
+        self.time += 1
+        # jumping protects for this step only
+        self._jumping = False
+        return True
+
+    def is_alive(self) -> bool:
+        return self.alive
+
+    def state(self) -> Dict:
+        return {
+            "position": self.position,
+            "score": self.score,
+            "alive": self.alive,
+            "time": self.time,
+            "lanes": self.lanes,
+        }
+
+
+def simulate(
+    actions: Iterable[Optional[str]],
+    obstacles: Optional[Iterable[Optional[Iterable[int]]]] = None,
+    lanes: int = 3,
+) -> Dict:
+    """
+    Simulate the temple run given a sequence of actions and an optional parallel sequence of obstacles.
+
+    actions: iterable of actions where each action is 'left'|'right'|'jump'|None.
+    obstacles: iterable aligned with actions where each element is an iterable of lane indices that
+               have obstacles at that step, or None for no obstacles. If obstacles is shorter than
+               actions or is None, remaining steps have no obstacles.
+    lanes: number of lanes (default 3).
+
+    Returns a dict with keys: position, score, alive, time, lanes.
+    """
+    game = TempleRun(lanes=lanes)
+
+    if obstacles is None:
+        # no obstacles at any step
+        obs_iter = iter([])
+    else:
+        obs_iter = iter(obstacles)
+
+    # if obstacles shorter, we'll handle StopIteration
+    obs_list = list(obstacles) if obstacles is not None else []
+
+    for i, act in enumerate(actions):
+        obs = None
+        if i < len(obs_list):
+            obs = obs_list[i]
+        alive = game.step(action=act, obstacles=obs)
+        if not alive:
+            break
+
+    return game.state()
+
+
+# convenience alias
+def play(actions: Iterable[Optional[str]], obstacles: Optional[Iterable[Optional[Iterable[int]]]] = None, lanes: int = 3) -> Dict:
+    return simulate(actions=actions, obstacles=obstacles, lanes=lanes)
+
+
+if __name__ == "__main__":
+    # Example run (not executed during import)
+    # actions = ['jump', 'right', None, 'left', 'jump']
+    # obstacles = [None, [2], [1], [0], [1, 2]]
+    # print(simulate(actions, obstacles))
+    pass
